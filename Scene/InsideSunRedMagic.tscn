@@ -1,0 +1,805 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://assets/World/InsideSunRedMagic.png" type="Texture" id=1]
+[ext_resource path="res://assets/Items/sun-broker-magic.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/TorcheBase.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Day_Night.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Script/World.gd" type="Script" id=7]
+[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=8]
+[ext_resource path="res://Scene/Portal_01.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Torche.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Script/GoInsideMagicSpell.gd" type="Script" id=11]
+[ext_resource path="res://assets/World/Tileset-map/black-background.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Scepter.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Script/HiddenAreaWay.gd" type="Script" id=14]
+[ext_resource path="res://assets/World/blood_decorate.png" type="Texture" id=15]
+[ext_resource path="res://assets/World/blood_decorate_2.png" type="Texture" id=16]
+[ext_resource path="res://Scene/seek_player_change_scene.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scene/BlackCatNPC.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Script/ExitSunRedMagic.gd" type="Script" id=19]
+[ext_resource path="res://Scene/InventorySysteme/Random_Chest.tscn" type="PackedScene" id=20]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 56 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 82.9082, 30.1548 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 356.932, 124.95 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 9.69103
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sun-broker-magic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Light2D:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Light2D:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Light2D:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Light2D:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Light2D:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Light2D:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0.8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Light2D:energy")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Sun-broker-magic:scale:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Sun-broker-magic:scale:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1.4, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Sun-broker-magic2:scale:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 0.8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("Sun-broker-magic2:scale:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 0.6, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Sun-broker-magic2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("Sun-broker-magic2:modulate:r")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("Sun-broker-magic2:modulate:g")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Sun-broker-magic2:modulate:b")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("Sun-broker-magic2:modulate:a")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 0.278431, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("Sun-broker-magic2:rotation_degrees")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("CollisionShape2D:disabled")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("CollisionShape2D:scale:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/21/type = "bezier"
+tracks/21/path = NodePath("CollisionShape2D:scale:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "active"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sun-broker-magic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 10, -0.25, 0, 0.25, 0, 11, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Light2D:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Light2D:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.8, -0.25, 0, 0.25, 0, 1.6, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Light2D:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("CollisionShape2D:scale:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 20, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("CollisionShape2D:scale:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 20, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "idle"
+length = 0.5
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sun-broker-magic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 10, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Light2D:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Light2D:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Light2D:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Light2D:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Sun-broker-magic:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Sun-broker-magic:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 1.4, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Light2D:scale:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Light2D:scale:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0.8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Light2D:energy")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("CollisionShape2D:disabled")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 43.673
+height = 43.5511
+
+[node name="InsideSunRedMagic" type="StaticBody2D"]
+script = ExtResource( 7 )
+
+[node name="Day_Night" parent="." instance=ExtResource( 6 )]
+color = Color( 0.690196, 0.690196, 0.690196, 1 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 1800, 552, 1800, 200, 1272, 200, 1272, 400, 1424, 400, 1424, 448, 1272, 448, 1272, 632, 1216, 632, 1216, 272, 1104, 272, 1104, 248, 1216, 248, 1216, 200, 832, 200, 832, 296, 527.524, 296.091, 528, 160, 112, 160, 112, 488, 208, 488, 216, 616, 216, 688, 368, 688, 368, 616, 216, 616, 208, 488, 528, 488, 528, 368, 832, 368, 832, 808, 1024, 808, 1024, 608, 1112, 608, 1112, 752, 1200, 752, 1200, 720, 1408, 720, 1408, 792, 1344, 792, 1344, 888, 1304, 888, 1304, 792, 1200, 792, 1200, 768, 1112, 768, 1112, 856, 1024, 856, 1024, 848, 832, 848, 640, 848, 640, 832, 128, 832, 128, 992, 640, 992, 640, 944, 832, 944, 832, 960, 1520, 960, 1520, 568, 1408, 568, 1408, 600, 1464, 600, 1464, 656, 1432, 656, 1432, 640, 1368, 640, 1368, 600, 1400, 600, 1400, 520, 1632, 520, 1632, 480, 1592, 480, 1592, 344, 1632, 344, 1632, 304, 1528, 304, 1528, 288, 1456, 288, 1456, 328, 1400, 328, 1400, 248, 1456, 248, 1456, 280, 1528, 280, 1528, 264, 1664, 264, 1664, 304, 1648, 304, 1648, 344, 1712, 344, 1712, 392, 1640, 392, 1640, 520, 1656, 520, 1656, 568, 1576, 568, 1576, 960, 1800, 960, 1800, 728, 1640, 728, 1640, 680, 1800, 680, 1800, 600, 2304, 600, 2304, 1408, -448, 1408, -448, -448, 2304, -448, 2304, 552 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 880, 488, 944, 488, 944, 424, 1008, 424, 1008, 520, 1064, 520, 1064, 312, 1008, 312, 1008, 408, 944, 408, 944, 400, 904, 400, 904, 448, 880, 448 )
+
+[node name="FormBackground" type="Sprite" parent="."]
+z_index = -5
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BlackBackground" type="Sprite" parent="."]
+z_index = -10
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -3392, -1936, 8832, 6608 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 285.001, 650.105 )
+
+[node name="BottomRight" parent="Camera2D/Limit" index="1"]
+position = Vector2( 1919.78, 1079.63 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 285.001, 650.105 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera2D")
+
+[node name="Torches" type="YSort" parent="YSort"]
+position = Vector2( -17.75, 7.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TorcheBase" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 320, 256 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase3" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 320, 376 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase4" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 176, 376 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase2" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 176, 256 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase5" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 248, 232 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase6" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 248, 400 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase7" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 144, 312 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase8" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 352, 312 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase9" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 889.75, 176.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase10" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1025.75, 176.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase11" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1161.75, 176.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase12" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1353.75, 176.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase13" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1521.75, 176.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase14" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1681.75, 176.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase15" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1809.75, 176.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase16" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1809.75, 304.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase17" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1809.75, 448.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase18" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 1809.75, 624.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase19" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 537.75, 240.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="TorcheBase20" parent="YSort/Torches" instance=ExtResource( 5 )]
+position = Vector2( 537.75, 376.75 )
+scale = Vector2( 1, 0.8 )
+
+[node name="Torche" parent="YSort/Torches" instance=ExtResource( 10 )]
+position = Vector2( 277, 600 )
+scale = Vector2( 0.5, 0.4 )
+
+[node name="CollisionShape2D" parent="YSort/Torches/Torche/seek_player" index="0"]
+scale = Vector2( 2, 2 )
+
+[node name="Torche2" parent="YSort/Torches" instance=ExtResource( 10 )]
+position = Vector2( 350, 600 )
+scale = Vector2( 0.5, 0.4 )
+
+[node name="CollisionShape2D" parent="YSort/Torches/Torche2/seek_player" index="0"]
+scale = Vector2( 2, 2 )
+
+[node name="Portal_01" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1808, 864 )
+
+[node name="Portal_02" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 221.768, 652.636 )
+rotation = 3.14159
+
+[node name="BloodDecorate" type="Sprite" parent="YSort"]
+position = Vector2( 158.181, 149.067 )
+texture = ExtResource( 15 )
+
+[node name="BloodDecorate2" type="Sprite" parent="YSort"]
+position = Vector2( 267.148, 149.376 )
+texture = ExtResource( 16 )
+hframes = 2
+frame = 1
+
+[node name="BlackCatNPC" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( 297.756, 613.528 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Chest" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 625.295, 828.886 )
+
+[node name="Chest2" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 517.346, 163.043 )
+number_of_items = 5
+
+[node name="Chest3" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 496.434, 163.232 )
+number_of_items = 8
+
+[node name="WorldPos" type="Position2D" parent="."]
+position = Vector2( 233.508, 321.598 )
+
+[node name="InsideMagicSpellPos" type="Position2D" parent="."]
+visible = false
+position = Vector2( 1912, 576 )
+
+[node name="GoInsideMagicSpell" type="Area2D" parent="."]
+collision_layer = 16384
+collision_mask = 2
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoInsideMagicSpell"]
+visible = false
+position = Vector2( 1956, 576 )
+shape = SubResource( 1 )
+
+[node name="seek_player_exit" parent="GoInsideMagicSpell" instance=ExtResource( 17 )]
+position = Vector2( 1895.97, 568.18 )
+
+[node name="CollisionShape2D" parent="GoInsideMagicSpell/seek_player_exit" index="0"]
+visible = false
+
+[node name="Label" parent="GoInsideMagicSpell/seek_player_exit" index="1"]
+visible = false
+margin_left = -43.4673
+margin_top = 30.2381
+margin_right = -31.4673
+margin_bottom = 52.2381
+
+[node name="HiddenAreaWay" type="Area2D" parent="."]
+position = Vector2( 1924.65, 563.727 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenAreaWay"]
+visible = false
+position = Vector2( -40.6866, 12.2188 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="HiddenAreaWay"]
+position = Vector2( -48.614, 11.9337 )
+scale = Vector2( 2.34792, 0.86473 )
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 144, 64 )
+
+[node name="HiddenAreaWay2" type="Area2D" parent="."]
+position = Vector2( 390.855, 869.813 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenAreaWay2"]
+visible = false
+position = Vector2( 82.2133, 15.1371 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="HiddenAreaWay2"]
+position = Vector2( 84.3685, 13.249 )
+scale = Vector2( 11.1286, 3.92444 )
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 144, 64 )
+
+[node name="ExitSunRedMagic" type="Area2D" parent="."]
+position = Vector2( 233.241, 321.87 )
+collision_layer = 16384
+collision_mask = 2
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sun-broker-magic" type="Sprite" parent="ExitSunRedMagic"]
+position = Vector2( -1.93628, 4.85437 )
+scale = Vector2( 2, 1.4 )
+z_index = -4
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 2
+frame = 10
+
+[node name="Sun-broker-magic2" type="Sprite" parent="ExitSunRedMagic"]
+modulate = Color( 1, 1, 1, 0.278431 )
+position = Vector2( 97.6637, 333.266 )
+scale = Vector2( 0.8, 0.6 )
+z_index = -4
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitSunRedMagic"]
+position = Vector2( 0.52449, -0.734711 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ExitSunRedMagic"]
+autoplay = "idle"
+reset_on_save = false
+playback_speed = 0.7
+anims/RESET = SubResource( 5 )
+anims/active = SubResource( 6 )
+anims/idle = SubResource( 7 )
+
+[node name="Light2D" type="Light2D" parent="ExitSunRedMagic"]
+position = Vector2( 4.18872, 2.50537 )
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 8 )
+texture_scale = 0.3
+color = Color( 1, 0, 0, 1 )
+
+[node name="seek_player_exit" parent="ExitSunRedMagic" instance=ExtResource( 17 )]
+
+[node name="CollisionShape2D" parent="ExitSunRedMagic/seek_player_exit" index="0"]
+visible = false
+position = Vector2( -2.52557, 5.49255 )
+rotation = -1.5708
+shape = SubResource( 8 )
+
+[node name="Label" parent="ExitSunRedMagic/seek_player_exit" index="1"]
+visible = false
+margin_left = -60.6099
+margin_top = 40.2349
+margin_right = -48.6099
+margin_bottom = 62.2349
+
+[node name="Scepter" parent="." instance=ExtResource( 13 )]
+show_behind_parent = true
+position = Vector2( 330.837, 653.059 )
+
+[connection signal="body_entered" from="GoInsideMagicSpell" to="GoInsideMagicSpell" method="_on_ExitSunRedMagic_body_entered"]
+[connection signal="body_entered" from="GoInsideMagicSpell/seek_player_exit" to="GoInsideMagicSpell" method="_on_seek_player_exit_body_entered"]
+[connection signal="body_exited" from="GoInsideMagicSpell/seek_player_exit" to="GoInsideMagicSpell" method="_on_seek_player_exit_body_exited"]
+[connection signal="body_entered" from="HiddenAreaWay" to="HiddenAreaWay" method="_on_HiddenAreaWay_body_entered"]
+[connection signal="body_exited" from="HiddenAreaWay" to="HiddenAreaWay" method="_on_HiddenAreaWay_body_exited"]
+[connection signal="body_entered" from="HiddenAreaWay2" to="HiddenAreaWay2" method="_on_HiddenAreaWay_body_entered"]
+[connection signal="body_exited" from="HiddenAreaWay2" to="HiddenAreaWay2" method="_on_HiddenAreaWay_body_exited"]
+[connection signal="body_entered" from="ExitSunRedMagic" to="ExitSunRedMagic" method="_on_ExitSunRedMagic_body_entered"]
+[connection signal="body_entered" from="ExitSunRedMagic/seek_player_exit" to="ExitSunRedMagic" method="_on_seek_player_exit_body_entered"]
+[connection signal="body_exited" from="ExitSunRedMagic/seek_player_exit" to="ExitSunRedMagic" method="_on_seek_player_exit_body_exited"]
+
+[editable path="Camera2D"]
+[editable path="YSort/Torches/Torche"]
+[editable path="YSort/Torches/Torche2"]
+[editable path="GoInsideMagicSpell/seek_player_exit"]
+[editable path="ExitSunRedMagic/seek_player_exit"]

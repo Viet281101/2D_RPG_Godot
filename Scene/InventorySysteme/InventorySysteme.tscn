@@ -1,0 +1,130 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scene/InventorySysteme/Inventory_container.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Script/Inventory/Inventory_Manager.gd" type="Script" id=2]
+[ext_resource path="res://Scene/InventorySysteme/Item_Info.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Iventory/Chest_icon.png" type="Texture" id=4]
+[ext_resource path="res://Scene/InventorySysteme/Inventory_Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/InventorySysteme/Inventory_settings.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Iventory/setting_icon.png" type="Texture" id=9]
+[ext_resource path="res://Script/Inventory/ui_container.gd" type="Script" id=10]
+[ext_resource path="res://Scene/InventorySysteme/split_stack.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/InventorySysteme/hotbar.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Script/Inventory/scale_control.gd" type="Script" id=13]
+
+[node name="InventorySysteme" type="Node2D"]
+
+[node name="Inventory_Manager" type="Node2D" parent="."]
+script = ExtResource( 2 )
+item_in_hand_node = NodePath("../ui/ui_container/item_in_hand")
+item_info = NodePath("../ui/ui_container/Item_Info")
+item_void = NodePath("../ui/item_void")
+split_stack = NodePath("../ui/ui_container/Buttons/split_stack")
+
+[node name="ui" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="item_void" type="Control" parent="ui"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -85581.0
+margin_top = -47182.0
+margin_right = 130294.0
+margin_bottom = 78881.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ui_container" type="Control" parent="ui"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+setting = NodePath("windows/settings")
+inventory_player = NodePath("windows/Inventory_Player")
+windows = NodePath("windows")
+
+[node name="windows" type="CanvasLayer" parent="ui/ui_container"]
+layer = 50
+
+[node name="Inventory_Player" parent="ui/ui_container/windows" instance=ExtResource( 7 )]
+visible = false
+margin_left = -217.247
+margin_top = -102.08
+margin_right = -73.2472
+margin_bottom = 71.9197
+
+[node name="Inventory_container" parent="ui/ui_container/windows" instance=ExtResource( 1 )]
+visible = false
+margin_left = -69.4357
+margin_top = -118.713
+margin_right = 74.5643
+margin_bottom = -58.7128
+
+[node name="settings" parent="ui/ui_container/windows" instance=ExtResource( 8 )]
+visible = false
+margin_left = 50.0654
+margin_top = -92.5437
+margin_right = 194.065
+margin_bottom = -0.543655
+
+[node name="hotbar" parent="ui/ui_container" instance=ExtResource( 12 )]
+size = 5
+
+[node name="item_in_hand" type="Control" parent="ui/ui_container"]
+mouse_filter = 2
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item_Info" parent="ui/ui_container" instance=ExtResource( 3 )]
+visible = false
+margin_left = 111.809
+margin_top = 114.31
+margin_right = 175.809
+margin_bottom = 136.31
+
+[node name="Buttons" type="CanvasLayer" parent="ui/ui_container"]
+layer = 50
+
+[node name="split_stack" parent="ui/ui_container/Buttons" instance=ExtResource( 11 )]
+visible = false
+
+[node name="setting_btn" type="Button" parent="ui/ui_container/Buttons"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 417.622
+margin_top = -23.1104
+margin_right = 451.622
+margin_bottom = 4.88959
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 17, 14 )
+icon = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player_chest" type="Button" parent="ui/ui_container/Buttons"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -19.0674
+margin_top = -39.3613
+margin_right = 24.9326
+margin_bottom = -1.36127
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 38 )
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ui/ui_container/Buttons/setting_btn" to="ui/ui_container" method="_on_setting_btn_pressed"]
+[connection signal="pressed" from="ui/ui_container/Buttons/Player_chest" to="ui/ui_container" method="_on_Player_chest_pressed"]

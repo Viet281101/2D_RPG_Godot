@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Iventory/GoldChest.png" type="Texture" id=1]
+[ext_resource path="res://Script/Inventory/treasure_chest.gd" type="Script" id=2]
+[ext_resource path="res://Scene/InventorySysteme/interactable_chest.tscn" type="PackedScene" id=3]
+
+[node name="GoldChest" instance=ExtResource( 3 )]
+script = ExtResource( 2 )
+inventory_name = "Treasure Chest"
+items = [  ]
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource( 1 )

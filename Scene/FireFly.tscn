@@ -1,0 +1,268 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/World/luciole.png" type="Texture" id=1]
+[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=2]
+[ext_resource path="res://Script/FireFly.gd" type="Script" id=3]
+[ext_resource path="res://Script/WanderController.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sprite:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Sprite:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("CollisionShape2D:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("CollisionShape2D:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Light2D:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Light2D:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Light2D2:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Light2D2:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "wander"
+length = 6.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sprite:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 71.0642, -0.25, 0, 0.25, 0, -88.0348, -0.25, 0, 0.25, 0, -53.7401, -0.25, 0, 0.25, 0, 21.2132, -0.25, 0, 0.25, 0, -38.5374, -0.25, 0, 0.25, 0, 38.1837, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Sprite:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -36.0625, -0.25, 0, 0.25, 0, -51.6188, -0.25, 0, 0.25, 0, 98.6414, -0.25, 0, 0.25, 0, 21.5667, -0.25, 0, 0.25, 0, -64.7003, -0.25, 0, 0.25, 0, -47.0226, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("CollisionShape2D:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 71.3305, -0.25, 0, 0.25, 0, -87.9177, -0.25, 0, 0.25, 0, -53.9521, -0.25, 0, 0.25, 0, 21.2175, -0.25, 0, 0.25, 0, -37.8046, -0.25, 0, 0.25, 0, 37.9218, -0.25, 0, 0.25, 0, 0.0586243, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("CollisionShape2D:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -35.8738, -0.25, 0, 0.25, 0, -50.9077, -0.25, 0, 0.25, 0, 98.3178, -0.25, 0, 0.25, 0, 21.4778, -0.25, 0, 0.25, 0, -64.828, -0.25, 0, 0.25, 0, -47.0101, -0.25, 0, 0.25, 0, -0.794739, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Light2D:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 70.7151, -0.25, 0, 0.25, 0, -87.9763, -0.25, 0, 0.25, 0, -55.6812, -0.25, 0, 0.25, 0, 21.1589, -0.25, 0, 0.25, 0, -38.9768, -0.25, 0, 0.25, 0, 37.8632, -0.25, 0, 0.25, 0, 0.556824, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Light2D:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -36.7496, -0.25, 0, 0.25, 0, -51.2267, -0.25, 0, 0.25, 0, 99.1125, -0.25, 0, 0.25, 0, 21.7156, -0.25, 0, 0.25, 0, -64.5902, -0.25, 0, 0.25, 0, -47.8857, -0.25, 0, 0.25, 0, 0.556885, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Light2D2:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 71.9704, -0.25, 0, 0.25, 0, -88.4882, -0.25, 0, 0.25, 0, -53.0929, -0.25, 0, 0.25, 0, 21.2372, -0.25, 0, 0.25, 0, -40.1146, -0.25, 0, 0.25, 0, 37.7549, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Light2D2:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -34.2154, -0.25, 0, 0.25, 0, -51.9131, -0.25, 0, 0.25, 0, 99.1068, -0.25, 0, 0.25, 0, 22.4171, -0.25, 0, 0.25, 0, -63.7115, -0.25, 0, 0.25, 0, -46.0139, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.8, 2.7, 3.6, 4.5, 5.4, 6 )
+}
+tracks/8/type = "method"
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_timer_wander"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Animate"
+length = 0.5
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 )
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[node name="FireFly" type="KinematicBody2D"]
+scale = Vector2( 0.15, 0.15 )
+collision_layer = 262144
+collision_mask = 2048
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+wanderController = NodePath("WanderController")
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Wander" type="AnimationPlayer" parent="."]
+autoplay = "wander"
+reset_on_save = false
+anims/RESET = SubResource( 2 )
+anims/wander = SubResource( 3 )
+
+[node name="Animate" type="AnimationPlayer" parent="."]
+autoplay = "Animate"
+anims/Animate = SubResource( 4 )
+anims/RESET = SubResource( 5 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+texture_scale = 0.1
+energy = 0.8
+
+[node name="Light2D2" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+texture_scale = 0.4
+color = Color( 0.905882, 1, 0.647059, 1 )
+energy = 0.3
+
+[node name="WanderController" type="Node2D" parent="."]
+script = ExtResource( 4 )
+wander_range = 300
+
+[node name="Timer" type="Timer" parent="WanderController"]
+
+[node name="LifeTime" type="Timer" parent="."]
+
+[connection signal="timeout" from="WanderController/Timer" to="WanderController" method="_on_Timer_timeout"]
+[connection signal="timeout" from="LifeTime" to="." method="_on_LifeTime_timeout"]

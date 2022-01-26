@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Script/Camera.gd" type="Script" id=1]
+[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "normal"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6, 6 ), Vector2( 0.8, 0.8 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "view_map"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 6, 6 ) ]
+}
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2( 187, 106 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
+smoothing_enabled = true
+script = ExtResource( 1 )
+
+[node name="Limit" type="Node" parent="."]
+
+[node name="TopLeft" type="Position2D" parent="Limit"]
+position = Vector2( -0.239975, 0.0776443 )
+
+[node name="BottomRight" type="Position2D" parent="Limit"]
+position = Vector2( 374.25, 212.25 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+energy = 0.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/normal = SubResource( 1 )
+anims/view_map = SubResource( 2 )

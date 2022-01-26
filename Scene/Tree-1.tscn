@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/World/tree-01-nva.png" type="Texture" id=1]
+[ext_resource path="res://assets/Shadows/big-shadow.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Z_Index.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Script/Tree-1.gd" type="Script" id=4]
+[ext_resource path="res://Script/HurtBox.gd" type="Script" id=5]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.54774
+height = 18.7011
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 5.57955
+height = 9.74944
+
+[node name="Tree-1" type="StaticBody2D"]
+collision_mask = 2147483648
+script = ExtResource( 4 )
+time = NodePath("Timer")
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.231289, 13.9376 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0.0454483, 18.8293 )
+shape = SubResource( 2 )
+
+[node name="shadowTree" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
+show_behind_parent = true
+position = Vector2( 0.29496, 29.0831 )
+scale = Vector2( 0.848833, 0.758132 )
+texture = ExtResource( 2 )
+
+[node name="Z_Index" parent="." instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 0.875, -5 )
+
+[node name="CollisionPolygon2D" parent="Z_Index" index="0"]
+polygon = PoolVector2Array( -10.7404, 8.60841, 9.31691, 8.60841, 6.48529, -6.3756, -0.12183, -21.8315, -9.3246, -5.43173 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="HurtBox" type="Area2D" parent="."]
+visible = false
+collision_layer = 33280
+collision_mask = 0
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="HurtBox"]
+polygon = PoolVector2Array( -0.00785446, -18.707, -6, -8.25, -10.77, 10.7429, -8.07009, 18.0566, -4.14025, 21.5195, -4.05883, 24.6875, 4.9678, 24.7671, 4.92598, 21.4551, 8.00119, 18.0011, 10.2537, 11.0766, 5.66521, -7.94485 )
+
+[node name="Timer" type="Timer" parent="HurtBox"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+[connection signal="invincible_ended" from="HurtBox" to="HurtBox" method="_on_HurtBox_invincible_ended"]
+[connection signal="invincible_started" from="HurtBox" to="HurtBox" method="_on_HurtBox_invincible_started"]
+[connection signal="timeout" from="HurtBox/Timer" to="HurtBox" method="_on_Timer_timeout"]
+
+[editable path="Z_Index"]

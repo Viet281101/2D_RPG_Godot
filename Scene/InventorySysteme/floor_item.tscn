@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Iventory/sack.png" type="Texture" id=1]
+[ext_resource path="res://Script/Inventory/floor_item.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 5.90486
+
+[node name="floor_item" type="Area2D"]
+collision_layer = 0
+collision_mask = 256
+script = ExtResource( 2 )
+item_id = "axe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.594604, 2.08111 )
+shape = SubResource( 1 )
+
+[node name="Sack" type="Sprite" parent="."]
+texture = ExtResource( 1 )

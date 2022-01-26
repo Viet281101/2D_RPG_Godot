@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Script/Dialog.gd" type="Script" id=1]
+[ext_resource path="res://assets/Enemies/cat_step_sprite_nva.png" type="Texture" id=2]
+[ext_resource path="res://assets/Enemies/black_cat_dialogbox.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/Font_Textur/Pixel_Font_free.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 0, 1, 2, 3 ]
+}
+
+[node name="DialogBox" type="CanvasLayer"]
+layer = 20
+
+[node name="Dialog" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Dialog"]
+margin_left = 1.74157
+margin_top = 141.544
+margin_right = 187.742
+margin_bottom = 216.544
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog"]
+margin_left = 18.0
+margin_top = 199.0
+margin_right = 343.0
+margin_bottom = 248.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Hello "
+text = "Hello "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Dialog"]
+
+[node name="Ind" type="Sprite" parent="Dialog"]
+position = Vector2( 352.913, 241.366 )
+texture = ExtResource( 2 )
+hframes = 5
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog/Ind"]
+autoplay = "Idle"
+playback_speed = 0.2
+anims/Idle = SubResource( 3 )
+
+[connection signal="tween_completed" from="Dialog/Tween" to="Dialog" method="_on_Tween_tween_completed"]

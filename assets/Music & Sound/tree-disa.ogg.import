@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tree-disa.ogg-2c43b6a8cd4b74b3337d4dcd74ac0183.oggstr"
+
+[deps]
+
+source_file="res://assets/Music & Sound/tree-disa.ogg"
+dest_files=[ "res://.import/tree-disa.ogg-2c43b6a8cd4b74b3337d4dcd74ac0183.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

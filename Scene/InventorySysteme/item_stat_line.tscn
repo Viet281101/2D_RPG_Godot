@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/Font_Textur/Arcadepix Plus.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
+font_data = SubResource( 3 )
+
+[node name="item_stat_line" type="Label"]
+margin_right = 56.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0.317647, 0.317647, 0.317647, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Armor"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

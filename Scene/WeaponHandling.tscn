@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Script/HandlingWeapon/WeaponHandle.gd" type="Script" id=2]
+[ext_resource path="res://Script/HandlingWeapon/CenterPos.gd" type="Script" id=3]
+[ext_resource path="res://Script/HandlingWeapon/SwordSpeed.gd" type="Script" id=4]
+[ext_resource path="res://assets/Items/sword_player-1.png" type="Texture" id=5]
+[ext_resource path="res://Script/HandlingWeapon/WeaponStates.gd" type="Script" id=6]
+[ext_resource path="res://Script/HitBoxPlayer.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 78.2982, 6.88713 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 99.9532, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6.42609, 23.8185 )
+
+[node name="CenterPos" type="Position2D" groups=["Sword"]]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 3 )
+
+[node name="WeaponHandle" type="KinematicBody2D" parent="."]
+position = Vector2( 21.08, 0 )
+collision_layer = 256
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="WeaponStates" type="Node2D" parent="WeaponHandle"]
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="WeaponHandle"]
+rotation = 0.785398
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="WeaponHandle"]
+visible = false
+position = Vector2( 1.96609, -0.5 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="SwordSpeed" type="Position2D" parent="WeaponHandle"]
+position = Vector2( 89.8468, 0 )
+script = ExtResource( 4 )
+
+[node name="UpdatePrevSpeed" type="Timer" parent="WeaponHandle/SwordSpeed"]
+
+[node name="HitBox" parent="WeaponHandle" instance=ExtResource( 1 )]
+collision_mask = 8
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" parent="WeaponHandle/HitBox" index="0"]
+visible = false
+position = Vector2( -1.66855, 0 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WeaponHandle/HitBox"]
+visible = false
+position = Vector2( -59.2561, 0.318542 )
+shape = SubResource( 3 )
+
+[connection signal="timeout" from="WeaponHandle/SwordSpeed/UpdatePrevSpeed" to="WeaponHandle/SwordSpeed" method="_on_Timer_timeout"]
+
+[editable path="WeaponHandle/HitBox"]

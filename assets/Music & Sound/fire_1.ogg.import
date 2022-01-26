@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fire_1.ogg-b5775d312fde4d400d2ed4b24cc12de0.oggstr"
+
+[deps]
+
+source_file="res://assets/Music & Sound/fire_1.ogg"
+dest_files=[ "res://.import/fire_1.ogg-b5775d312fde4d400d2ed4b24cc12de0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

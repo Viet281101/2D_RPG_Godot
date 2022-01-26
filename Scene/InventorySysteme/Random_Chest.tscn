@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/Inventory/chest_rng.gd" type="Script" id=1]
+[ext_resource path="res://Scene/InventorySysteme/interactable_chest.tscn" type="PackedScene" id=2]
+
+[node name="Chest" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+size = 20
+inventory_name = "Normal Chest"
+items = [ "wood", "wood", "stone", "stone", "axe", "pickaxe", "stone", "wood", "stone", "stone", "holy_graill" ]
+number_of_items = 20

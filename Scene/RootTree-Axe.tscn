@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/World/root_tree_nva.png" type="Texture" id=1]
+[ext_resource path="res://assets/Iventory/Axe.png" type="Texture" id=2]
+[ext_resource path="res://assets/Shadows/shadow.png" type="Texture" id=3]
+[ext_resource path="res://Script/Inventory/Axe_item.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 18.1297
+
+[node name="RootTree-Axe" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -14.3658, 4.78878, -12.8632, 2.57907, -10.3883, 1.87197, -9.15086, 1.34164, -7.47148, -0.249355, -7.20632, -6.43654, -8.17859, -8.82302, -7.82504, -11.2095, -6.85276, -12.8889, -4.46628, -13.8612, -0.930744, -15.0986, 5.07967, -14.0379, 8.35003, -12.1818, 8.43842, -9.08819, 7.20098, -6.96687, 7.20098, -3.07778, 7.37776, -1.84034, 11.6204, 1.87197, 15.0676, 3.63973, 17.0121, 4.25845, 14.8908, 6.99849, 12.4159, 7.44043, 4.72611, 9.03142, -8.79731, 9.2082, -12.0677, 8.14754 )
+
+[node name="shadow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.647059 )
+position = Vector2( 2.29811, 7.15947 )
+scale = Vector2( 1.7, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="root-tree" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 2
+frame = 1
+
+[node name="Axe_item" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 256
+script = ExtResource( 4 )
+item_id = "axe"
+Axe = NodePath("Axe")
+seek_player = NodePath("CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Axe_item"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Axe" type="Sprite" parent="Axe_item"]
+position = Vector2( -4.83515, -17.4486 )
+rotation = 0.20944
+texture = ExtResource( 2 )

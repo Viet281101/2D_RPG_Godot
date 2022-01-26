@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/collect_heart.wav-9aad69a6919b9872ba6680c3d0c42448.sample"
+
+[deps]
+
+source_file="res://assets/Music & Sound/collect_heart.wav"
+dest_files=[ "res://.import/collect_heart.wav-9aad69a6919b9872ba6680c3d0c42448.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

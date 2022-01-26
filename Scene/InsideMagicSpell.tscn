@@ -1,0 +1,129 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/World/Inside_Magic_Spell.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Torche.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Day_Night.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Script/World.gd" type="Script" id=5]
+[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=6]
+[ext_resource path="res://Script/GoInsideSunRedMagic.gd" type="Script" id=7]
+[ext_resource path="res://Scene/seek_player_change_scene.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/BlackCatNPC.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/World/Tileset-map/black-background.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 36 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 35.6455, 46.3515 )
+
+[node name="InsideMagicSpell" type="StaticBody2D"]
+collision_layer = 2049
+collision_mask = 1282
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Background_black" type="Sprite" parent="."]
+z_index = -20
+texture = ExtResource( 10 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 560, 336 )
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 1.45245, 1.45419 )
+z_index = -5
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Day_Night" parent="." instance=ExtResource( 4 )]
+color = Color( 0.545098, 0.513726, 0.513726, 1 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 230.103, 124.63 )
+
+[node name="Torches" type="YSort" parent="YSort"]
+
+[node name="Torche" parent="YSort/Torches" instance=ExtResource( 3 )]
+position = Vector2( 80, 31 )
+
+[node name="Torche2" parent="YSort/Torches" instance=ExtResource( 3 )]
+position = Vector2( 230, 31 )
+
+[node name="Torche3" parent="YSort/Torches" instance=ExtResource( 3 )]
+position = Vector2( 380, 31 )
+
+[node name="Light2D" type="Light2D" parent="YSort"]
+position = Vector2( 85.1768, 116.763 )
+z_index = -1
+texture = ExtResource( 6 )
+texture_scale = 0.1
+color = Color( 1, 0.447059, 0, 1 )
+energy = 1.1
+
+[node name="BlackCatNPC" parent="YSort/Light2D" instance=ExtResource( 9 )]
+position = Vector2( 90.1763, -69.3418 )
+
+[node name="Light2D2" type="Light2D" parent="YSort"]
+position = Vector2( 369.737, 120.395 )
+z_index = -1
+texture = ExtResource( 6 )
+texture_scale = 0.1
+color = Color( 0.396078, 0.788235, 1, 1 )
+energy = 1.7
+
+[node name="Light2D3" type="Light2D" parent="YSort"]
+position = Vector2( 242.025, 155.046 )
+z_index = -1
+texture = ExtResource( 6 )
+texture_scale = 0.1
+color = Color( 0, 1, 0.0156863, 1 )
+energy = 1.2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 192, 192, 192, 272, -64, 272, -64, 144, 24, 144, 24, 192 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 24, 80, 24, 48, 440, 48, 440, 72, 520, 72, 520, 72, 520, -64, -64, -64, -64, 80 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 440, 136, 520, 136, 520, 272, 288, 272, 288, 192, 440, 192 )
+
+[node name="InsideSunRedMagicPos" type="Position2D" parent="."]
+position = Vector2( 16, 112 )
+
+[node name="GoInsideSunRedMagic" type="Area2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoInsideSunRedMagic"]
+position = Vector2( -16, 116 )
+shape = SubResource( 1 )
+
+[node name="seek_player_exit" parent="GoInsideSunRedMagic" instance=ExtResource( 8 )]
+position = Vector2( -2.41052, 116.414 )
+
+[node name="CollisionShape2D" parent="GoInsideSunRedMagic/seek_player_exit" index="0"]
+visible = false
+position = Vector2( 18.2225, 1.22865 )
+shape = SubResource( 2 )
+
+[node name="Label" parent="GoInsideSunRedMagic/seek_player_exit" index="1"]
+visible = false
+margin_left = 22.0486
+margin_top = 30.5531
+margin_right = 34.0486
+margin_bottom = 52.5531
+
+[connection signal="body_entered" from="GoInsideSunRedMagic" to="GoInsideSunRedMagic" method="_on_GoInsideSunRedMagic_body_entered"]
+[connection signal="body_entered" from="GoInsideSunRedMagic/seek_player_exit" to="GoInsideSunRedMagic" method="_on_seek_player_exit_body_entered"]
+[connection signal="body_exited" from="GoInsideSunRedMagic/seek_player_exit" to="GoInsideSunRedMagic" method="_on_seek_player_exit_body_exited"]
+
+[editable path="GoInsideSunRedMagic/seek_player_exit"]

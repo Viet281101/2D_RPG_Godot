@@ -1,0 +1,1441 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 4
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[node name="Water_Fall" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource( 1 )
+position = Vector2( 21.2334, -0.8909 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 34.166, 1.33887 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 30.7471, -2.67471 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 26.4362, 1.78482 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 37.4364, 0.00100708 )
+amount = 160
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.670588, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 40.2607, -2.37741 )
+amount = 100
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0.0431373, 0.517647, 0.862745, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D7" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 53.1933, -0.147642 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.596078, 0.858824, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D8" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 49.7744, -4.16122 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D9" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 45.4635, 0.298309 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D10" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 56.4637, -1.4855 )
+amount = 180
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D11" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 59.5853, -1.7828 )
+amount = 130
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D12" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 72.518, 0.446962 )
+amount = 190
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D13" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 48.1629, -2.67571 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D14" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 43.852, 1.78381 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D15" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 54.8522, 3.8147e-06 )
+amount = 120
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.576471, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D16" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 57.7603, 0.8909 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D17" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 70.6929, 3.12066 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D18" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 67.2739, -0.89291 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D19" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 62.963, 3.56662 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D20" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 73.9632, 1.78281 )
+amount = 160
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.670588, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D21" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 76.7876, -0.595608 )
+amount = 100
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0.0431373, 0.517647, 0.862745, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D22" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 89.7202, 1.63416 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.596078, 0.858824, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D23" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 86.3012, -2.37942 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D24" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 81.9904, 2.08011 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D25" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 92.9905, 0.296299 )
+amount = 180
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D26" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 96.1122, -0.00100327 )
+amount = 130
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D27" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 109.045, 2.22876 )
+amount = 190
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D28" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 105.626, -1.78481 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D29" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 101.315, 2.67471 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D30" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 112.315, 0.890903 )
+amount = 120
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.576471, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D31" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 116.114, 0 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D32" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 129.047, 2.22976 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D33" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 125.628, -1.78381 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D34" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 121.317, 2.67572 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D35" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 132.317, 0.891907 )
+amount = 160
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.670588, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D36" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 135.141, -1.48651 )
+amount = 100
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0.0431373, 0.517647, 0.862745, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D37" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 148.074, 0.743258 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.596078, 0.858824, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D38" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 144.655, -3.27032 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D39" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 140.344, 1.18921 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D40" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 151.344, -0.594601 )
+amount = 180
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D41" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 154.466, -0.891903 )
+amount = 130
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D42" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 167.399, 1.33786 )
+amount = 190
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D43" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 163.98, -2.67571 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D44" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 159.669, 1.78381 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D45" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 170.669, 3.8147e-06 )
+amount = 120
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.576471, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D46" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 31.4787, 56.5721 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D47" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 44.4114, 58.8018 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D48" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 40.9924, 54.7883 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D49" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 36.6815, 59.2478 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D50" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 47.6817, 57.464 )
+amount = 160
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.670588, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D51" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 50.5061, 55.0856 )
+amount = 100
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0.0431373, 0.517647, 0.862745, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D52" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 63.4387, 57.3153 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.596078, 0.858824, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D53" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 60.0197, 53.3018 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D54" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 55.7088, 57.7613 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D55" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 66.709, 55.9775 )
+amount = 180
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D56" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 69.8307, 55.6802 )
+amount = 130
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D57" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 82.7633, 57.9099 )
+amount = 190
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D58" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 79.3443, 53.8964 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D59" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 75.0334, 58.3559 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D60" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 86.0336, 56.5721 )
+amount = 120
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.576471, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D61" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 90.7235, 26.727 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D62" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 103.656, 28.9567 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D63" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 100.237, 24.9432 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D64" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 95.9263, 29.4027 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D65" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 106.926, 27.6189 )
+amount = 160
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.670588, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D66" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 109.751, 25.2405 )
+amount = 100
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0.0431373, 0.517647, 0.862745, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D67" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 122.683, 27.4702 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.596078, 0.858824, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D68" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 119.264, 23.4566 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D69" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 114.954, 27.9162 )
+amount = 200
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D70" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 125.954, 26.1324 )
+amount = 180
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D71" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 129.075, 25.8351 )
+amount = 130
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D72" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 142.008, 28.0648 )
+amount = 190
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D73" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 138.589, 24.0513 )
+amount = 101
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D74" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 134.278, 28.5108 )
+amount = 150
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.760784, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
+
+[node name="CPUParticles2D75" type="CPUParticles2D" parent="."]
+material = SubResource( 2 )
+position = Vector2( 145.278, 26.727 )
+amount = 120
+lifetime = 6.0
+speed_scale = 0.8
+lifetime_randomness = 0.05
+emission_shape = 4
+emission_points = PoolVector2Array(  )
+emission_normals = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+orbit_velocity_random = 0.42
+linear_accel_random = 1.0
+angle = 720.0
+scale_amount = 3.0
+color = Color( 0, 0.576471, 1, 1 )
+anim_speed = 1.0
+anim_speed_random = 0.47
