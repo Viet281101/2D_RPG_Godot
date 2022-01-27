@@ -111,5 +111,13 @@ func load_game():
 		game_data = parse_json(file.get_as_text())
 		file.close()
 
+func reset():
+	canPick = true
+	canPick2 = true
+	canPick3 = true
+	health = max_health
+	player_life = true
+	
+
 func _exit_tree():
 	self.queue_free()

@@ -117,6 +117,24 @@ func play_music():
 func stop_music():
 	Music.stop()
 
+func reset():
+	get_start = false
+	see_credit = false
+	direction = Vector2.ZERO
+	player = "Player"
+	in_dungeon = false
+	active_sun = false
+	sun_actived = false
+	sun_broken = false
+	take_sun_pow = false
+	take_death_pow = false
+	scepter_pos = Vector2(0,0)
+	scythe_pos = Vector2(0,0)
+	music_on = true
+	knockback_vector = Vector2.ZERO
+	is_paused = true
+	paused_on = false
+
 # Items Manager
 func get_items(id : String) -> Item:
 	return Item.new(id, items[id])

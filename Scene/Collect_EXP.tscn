@@ -175,6 +175,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10.497, 10.497 )
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 224.544
@@ -205,15 +206,17 @@ anims/idle = SubResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
 rotation = 0.785398
+scale = Vector2( 0.728474, 0.736432 )
 texture = ExtResource( 2 )
 texture_scale = 0.03
 color = Color( 0, 0.0392157, 1, 1 )
-energy = 0.8
+energy = 0.7
 
 [node name="Light2D2" type="Light2D" parent="."]
 texture = ExtResource( 2 )
+texture_scale = 0.6
 color = Color( 0, 0.0862745, 0.756863, 1 )
-energy = 0.5
+energy = 0.2
 
 [node name="experience_collect" type="Area2D" parent="." groups=["Exp_collect"]]
 collision_layer = 1024

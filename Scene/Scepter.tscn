@@ -233,7 +233,7 @@ __meta__ = {
 
 [node name="RetroExplosion" parent="." instance=ExtResource( 8 )]
 visible = false
-position = Vector2( 18.8757, -43.9924 )
+position = Vector2( -16, -14 )
 emitting = true
 amount = 50
 lifetime = 0.3

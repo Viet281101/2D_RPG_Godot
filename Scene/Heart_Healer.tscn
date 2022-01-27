@@ -254,9 +254,9 @@ anims/idle = SubResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 3 )
-texture_scale = 0.6
-color = Color( 0.545098, 0.0470588, 0.0470588, 1 )
-energy = 0.6
+texture_scale = 0.1
+color = Color( 0.745098, 0.0470588, 0.0470588, 1 )
+energy = 0.8
 
 [node name="seek_player" type="Area2D" parent="."]
 visible = false
