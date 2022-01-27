@@ -985,6 +985,15 @@ z_index = -1
 position = Vector2( -1242.56, -1131.66 )
 z_index = -1
 
+[node name="Tree-21" parent="YSort/All_Tree/Tree_1" instance=ExtResource( 2 )]
+position = Vector2( 399, -402 )
+
+[node name="Tree-25" parent="YSort/All_Tree/Tree_1" instance=ExtResource( 2 )]
+position = Vector2( 433, -373 )
+
+[node name="Tree-40" parent="YSort/All_Tree/Tree_1" instance=ExtResource( 2 )]
+position = Vector2( -182, 46 )
+
 [node name="Small_Tree" type="YSort" parent="YSort/All_Tree"]
 position = Vector2( 5.62967, 17.2838 )
 
@@ -1876,6 +1885,12 @@ position = Vector2( -1210.17, -951.547 )
 
 [node name="small-tree6" parent="YSort/All_Tree/Small_Tree" instance=ExtResource( 6 )]
 position = Vector2( -1177.53, -938.207 )
+
+[node name="small-tree19" parent="YSort/All_Tree/Small_Tree" instance=ExtResource( 6 )]
+position = Vector2( 393.37, -375.284 )
+
+[node name="small-tree21" parent="YSort/All_Tree/Small_Tree" instance=ExtResource( 6 )]
+position = Vector2( 441.37, -428.284 )
 
 [node name="Tree-2" type="YSort" parent="YSort/All_Tree"]
 

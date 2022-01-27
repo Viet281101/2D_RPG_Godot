@@ -4,7 +4,7 @@ export var ACCELERATION = 100
 export var MAX_SPEED = 40
 
 var velocity = Vector2.ZERO
-var life_time = rand_range(25,45)
+var life_time = rand_range(30,45)
 
 export (NodePath) onready var wanderController = get_node(wanderController) as Node2D
 

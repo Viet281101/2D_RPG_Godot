@@ -119,10 +119,12 @@ func stop_music():
 	Music.stop()
 
 func reset():
+	stop_music()
 	get_start = false
 	see_credit = false
 	direction = Vector2.ZERO
 	player = "Player"
+	first_level = true
 	in_dungeon = false
 	active_sun = false
 	sun_actived = false
