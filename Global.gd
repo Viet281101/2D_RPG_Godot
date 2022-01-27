@@ -23,6 +23,7 @@ onready var placeholder = {
 var get_start = false
 var see_credit = false
 var current_level
+var first_level = true
 var from
 var direction = Vector2.ZERO
 var player = "Player"

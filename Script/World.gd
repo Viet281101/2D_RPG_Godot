@@ -10,6 +10,8 @@ func _ready():
 	Global.current_level = self.name
 	var health = Health_ui.instance()
 	add_child(health)
+	if Global.first_level:
+		Effects.scene_changer.fade_in()
 	if Global.current_level == "World" and Global.sun_actived == true:
 		$ScepterApearPos.position = Global.scepter_pos
 	active_magic_effect()
