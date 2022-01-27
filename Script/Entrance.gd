@@ -19,6 +19,8 @@ func _on_Entrance_body_entered(body):
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://Scene/MiniWorld1.tscn")
 		Global.in_dungeon = true
+		if Global.first_level:
+			Effects.scene_changer.fade_out()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_drop") and enterKey.visible == true and opened == false:

@@ -22,6 +22,8 @@ func _on_Exit_body_entered(body):
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://World.tscn")
 		Global.in_dungeon = false
+		if Global.first_level:
+			Effects.scene_changer.fade_out()
 	if body.name == "Player" and stats.canPick == false or stats.canPick2 == false or stats.canPick3 == false:
 		exit_cm.visible = true
 

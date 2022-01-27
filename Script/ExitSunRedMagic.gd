@@ -24,6 +24,8 @@ func _on_ExitSunRedMagic_body_entered(body):
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://World.tscn")
 		Global.in_dungeon = false
+		if Global.first_level:
+			Effects.scene_changer.fade_out()
 	if body.name == "Player" and stats.canPick == false or stats.canPick2 == false or stats.canPick3 == false and Global.take_sun_pow == true:
 		exit_cm.visible = true
 

@@ -16,7 +16,9 @@ func _on_ExitSunRedMagic_body_entered(body):
 		Global.from = get_parent().name
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://Scene/InsideMagicSpell.tscn")
-
+		if Global.first_level:
+			Effects.scene_changer.fade_out()
+	
 
 func _on_seek_player_exit_body_entered(body):
 	if body.name == "Player" and stats.canPick == false or stats.canPick2 == false or stats.canPick3 == false:

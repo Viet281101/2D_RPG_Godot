@@ -13,3 +13,5 @@ func _on_ExitHouse_body_entered(body):
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://World.tscn")
 		Global.in_dungeon = false
+		if Global.first_level:
+			Effects.scene_changer.fade_out()

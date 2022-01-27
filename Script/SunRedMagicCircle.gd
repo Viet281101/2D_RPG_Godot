@@ -19,6 +19,8 @@ func _on_SunRedMagicCircle_body_entered(body):
 		get_tree().change_scene("res://Scene/InsideSunRedMagic.tscn")
 		Global.in_dungeon = true
 		Global.active_sun = true
+		if Global.first_level:
+			Effects.scene_changer.fade_out()
 #	if body.name == "Player" and Global.active_sun == true and Global.sun_broken == true:
 #		$AnimationPlayer.play("break")
 
