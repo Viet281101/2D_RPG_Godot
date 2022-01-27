@@ -1984,70 +1984,65 @@ anims/start = SubResource( 9 )
 
 [node name="Dungeon_Gate" type="Sprite" parent="Intro"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 220, 350 )
-scale = Vector2( 8, 8 )
+position = Vector2( 220, 80 )
 texture = ExtResource( 2 )
 offset = Vector2( -0.203476, -16.8919 )
 hframes = 8
-frame = 7
 
 [node name="Dungeon_Gate_2" type="Sprite" parent="Intro"]
-visible = false
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 220, 120 )
-scale = Vector2( 6, 6 )
+position = Vector2( 220, 2 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 11 )
 hframes = 18
-frame = 17
 
 [node name="MobLv0" type="Sprite" parent="Intro"]
 visible = false
-position = Vector2( 482.659, 101.022 )
+position = Vector2( -173.592, -45.4389 )
 texture = ExtResource( 12 )
 hframes = 3
-frame = 2
+frame = 1
 
 [node name="MobLv1" type="Sprite" parent="Intro"]
 visible = false
-position = Vector2( -28.4915, -23.2195 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 71.4564, 86.4317 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="MobLv2" type="Sprite" parent="Intro"]
 visible = false
-position = Vector2( 112.217, -134.622 )
-scale = Vector2( 1.2, 1.2 )
+position = Vector2( 361.27, -63.5655 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
 
 [node name="MobLv3" type="Sprite" parent="Intro"]
 visible = false
-position = Vector2( 512.444, 24.7436 )
-scale = Vector2( 1.8, 1.8 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 343.785, 101.891 )
 texture = ExtResource( 5 )
 
 [node name="MobLv4" type="Sprite" parent="Intro"]
 visible = false
-position = Vector2( -49.8593, 236.002 )
+modulate = Color( 1, 1, 1, 0.219608 )
+position = Vector2( 404.931, 182.824 )
+scale = Vector2( 10, 10 )
 texture = ExtResource( 4 )
 
 [node name="MobLv5" type="Sprite" parent="Intro"]
 visible = false
-position = Vector2( 221.185, -698.884 )
-scale = Vector2( 40, 40 )
+position = Vector2( 292.649, 192.271 )
 texture = ExtResource( 6 )
 
 [node name="Explosion" type="Sprite" parent="Intro"]
 visible = false
-position = Vector2( 240, 10 )
-scale = Vector2( 12, 12 )
+position = Vector2( 240, 220 )
 texture = ExtResource( 9 )
 hframes = 10
-frame = 9
 
 [node name="Light" type="Sprite" parent="Intro"]
 visible = false
 position = Vector2( 235.717, 129.083 )
-scale = Vector2( 5, 5 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 10 )
 
 [node name="Skip" type="Button" parent="Intro"]
@@ -2071,19 +2066,19 @@ __meta__ = {
 }
 
 [node name="HouseDoor" type="Sprite" parent="Intro"]
+visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 220, 35 )
 texture = ExtResource( 13 )
 hframes = 6
 
 [node name="Main" type="Sprite" parent="Intro"]
-modulate = Color( 1, 1, 1, 0 )
+visible = false
 position = Vector2( 253.329, 136.324 )
 scale = Vector2( 1.445, 1.445 )
 texture = ExtResource( 1 )
 centered = false
 offset = Vector2( -175.314, -94.342 )
 hframes = 22
-frame = 21
 
 [connection signal="pressed" from="Intro/Skip" to="Intro" method="_on_Button_pressed"]
