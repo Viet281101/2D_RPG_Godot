@@ -201,6 +201,10 @@ func reset():
 	knockback_vector = Vector2.ZERO
 	is_paused = true
 	paused_on = false
+	
+# warning-ignore:return_value_discarded
+	get_tree().reload_current_scene()
+	play_music()
 
 # Items Manager
 func get_items(id : String) -> Item:
