@@ -46,7 +46,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 setting = NodePath("windows/settings")
+setting_btn = NodePath("Buttons/setting_btn")
 inventory_player = NodePath("windows/Inventory_Player")
+player_inventory_btn = NodePath("Buttons/Player_chest")
 windows = NodePath("windows")
 
 [node name="windows" type="CanvasLayer" parent="ui/ui_container"]

@@ -48,7 +48,7 @@ func _on_mouse_exit_slot():
 	item_info.hide()
 
 func _on_gui_input_slot(event : InputEvent, slot : Inventory_Slot):
-	if slot.item and slot.item.quantity > 1 and item_in_hand == null and event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT and Input.is_key_pressed( KEY_SHIFT ):
+	if slot.item and slot.item.quantity > 1 and item_in_hand == null and event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT and Input.is_key_pressed(KEY_SHIFT):
 		if slot.item.quantity == 2:
 			_on_stack_splitted( slot, 1 )
 		else:

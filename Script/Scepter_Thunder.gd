@@ -45,7 +45,7 @@ func _Label_invisible():
 	$Label.visible = false
 
 func _on_Area2D_body_entered(body):
-	if body.name == "Player" and picked == false and stats.canPick3 == true:
+	if body.name == "Player" and picked == false and stats.canPick == true:
 		$Label.visible = true
 
 func _on_Area2D_body_exited(body):
