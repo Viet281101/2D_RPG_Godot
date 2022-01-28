@@ -2423,11 +2423,10 @@ scale = Vector2( 2.2, 1.4 )
 
 [node name="floor_item" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1207.79, -970.887 )
-item_id = "stone"
 
 [node name="floor_item2" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -1214.57, -987.656 )
-item_id = "wood"
+item_id = "stone"
 
 [node name="Scepter_Thunder" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( -827.348, -983.771 )

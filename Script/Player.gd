@@ -253,14 +253,6 @@ func _player_death_function():
 	stats.canPick3 = false
 	queue_free()
 
-func take_sword():
-	var sword_get_effect = load("res://Scene/WeaponHandling.tscn")
-	var sword_take_effect = sword_get_effect.instance()
-	var world = get_tree().current_scene
-	world.call_deferred("add_child", sword_take_effect)
-	sword_take_effect.global_position = global_position
-	Input.set_custom_mouse_cursor(cursor_target)
-
 func _level_up_sign_effect():
 	var level_up_signal = load("res://Scene/LevelUpSignal.tscn")
 	var level_up = level_up_signal.instance()

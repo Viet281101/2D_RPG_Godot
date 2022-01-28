@@ -187,8 +187,8 @@ BulletUi="*res://Scene/Bullet_UI.tscn"
 Global="*res://Global.tscn"
 SettingsManger="*res://Script/Inventory/settings_manger.gd"
 RessourceManager="*res://Script/Inventory/ressource_manager.gd"
-InventorySysteme="*res://Scene/InventorySysteme/InventorySysteme.tscn"
 Effects="*res://Scene/Effects.tscn"
+InventorySysteme="*res://Scene/InventorySysteme/InventorySysteme.tscn"
 
 [display]
 
