@@ -4,6 +4,7 @@ onready var settingmenu = load("res://Scene/MenuGlobal.tscn")
 onready var pausemenu = load("res://Scene/Pause.tscn")
 var filepath = "res://keybinds.ini"
 var configfile
+var global_data
 
 var keybinds = {}
 const ITEM_PATH = "res://Script/Inventory/items.json"
@@ -117,6 +118,69 @@ func play_music():
 
 func stop_music():
 	Music.stop()
+
+func save_game():
+	global_data = {
+		"current_level": current_level,
+		"from": from,
+		"direction": [direction.x, direction.y],
+		"get_start": get_start,
+		"see_credit": see_credit,
+		"player": player,
+		"first_level": first_level,
+		"in_dungeon": in_dungeon,
+		"active_sun": active_sun,
+		"sun_actived": sun_actived,
+		"sun_broken": sun_broken,
+		"take_sun_pow": take_sun_pow,
+		"take_death_pow": take_death_pow,
+		"scepter_pos": [scepter_pos.x, scepter_pos.y],
+		"scythe_pos": [scythe_pos.x, scythe_pos.y],
+		"music_on": music_on,
+		"is_paused": is_paused,
+		"paused_on": paused_on,
+	}
+	var file = File.new()
+	file.open("user://savegame.json", File.WRITE)
+	var json = to_json(global_data)
+	file.store_line(json)
+	file.close()
+
+func load_game():
+	var file = File.new()
+	if file.file_exists("user://savegame.json"):
+		file.open("user://savegame.json", File.READ)
+		global_data = parse_json(file.get_as_text())
+		file.close()
+		
+		current_level = global_data.current_level
+		from = global_data.from
+		direction = Vector2(global_data.direction[0], global_data.direction[1])
+		get_start = global_data.get_start
+		see_credit = global_data.see_credit
+		player = global_data.player
+		first_level = global_data.first_level
+		in_dungeon = global_data.in_dungeon
+		active_sun = global_data.active_sun
+		sun_actived = global_data.sun_actived
+		sun_broken = global_data.sun_broken
+		take_sun_pow = global_data.take_sun_pow
+		take_death_pow = global_data.take_death_pow
+		scepter_pos = Vector2(global_data.scepter_pos.x, global_data.scepter_pos.y)
+		scythe_pos = Vector2(global_data.scythe_pos.x, global_data.scythe_pos.y)
+		music_on = global_data.music_on
+		is_paused = global_data.is_paused
+		paused_on = global_data.paused_on
+		
+		if current_level != "World":
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://Scene/" + current_level + ".tscn")
+		else:
+			stop_music()
+			current_level = "World"
+# warning-ignore:return_value_discarded
+			get_tree().reload_current_scene()
+			play_music()
 
 func reset():
 	stop_music()

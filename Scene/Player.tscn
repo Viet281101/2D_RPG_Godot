@@ -18,8 +18,8 @@ shader = ExtResource( 7 )
 shader_param/active = false
 
 [sub_resource type="CapsuleShape2D" id=67]
-radius = 3.218
-height = 5.685
+radius = 15.0
+height = 18.0
 
 [sub_resource type="Animation" id=3]
 length = 0.5
@@ -5849,8 +5849,6 @@ graph_offset = Vector2( -448.09, -158.268 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=62]
 
 [sub_resource type="CapsuleShape2D" id=63]
-radius = 2.12777
-height = 7.43062
 
 [sub_resource type="CapsuleShape2D" id=64]
 radius = 6.58596
@@ -5861,8 +5859,8 @@ radius = 9.07329
 height = 12.8344
 
 [sub_resource type="CapsuleShape2D" id=66]
-radius = 3.218
-height = 5.685
+radius = 4.937
+height = 5.397
 
 [sub_resource type="DynamicFontData" id=80]
 font_path = "res://assets/Font_Textur/Pixel_Font_free.ttf"
@@ -5888,7 +5886,7 @@ material = SubResource( 1 )
 texture = ExtResource( 1 )
 hframes = 30
 vframes = 5
-frame = 40
+frame = 4
 
 [node name="shadowPlayer" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.54902 )
@@ -5898,7 +5896,7 @@ scale = Vector2( 1.0623, 1.02973 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.924556, 3.44824 )
+position = Vector2( 0.837166, 6.43214 )
 scale = Vector2( 0.3, 0.3 )
 shape = SubResource( 67 )
 
@@ -5959,8 +5957,6 @@ collision_mask = 8
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitBoxPivot/AttackHitBox" index="0"]
-position = Vector2( -0.20653, 1.02249 )
-rotation = 1.5708
 shape = SubResource( 63 )
 disabled = true
 
@@ -5969,7 +5965,7 @@ visible = false
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2( 0.986938, 2.67615 )
+position = Vector2( 0.237785, -1.06962 )
 shape = SubResource( 64 )
 
 [node name="Transport_Area" type="Area2D" parent="."]
@@ -5985,7 +5981,7 @@ collision_layer = 258
 collision_mask = 1024
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart_collect"]
-position = Vector2( 0.871696, 3.1658 )
+position = Vector2( 0.83, 6.43 )
 shape = SubResource( 66 )
 
 [node name="PositionPick" type="Position2D" parent="."]
