@@ -27,7 +27,7 @@ var current_level
 var first_level = true
 var from
 var direction = Vector2.ZERO
-var player = "Player"
+var player
 var in_dungeon = false
 var active_sun = false
 var sun_actived = false

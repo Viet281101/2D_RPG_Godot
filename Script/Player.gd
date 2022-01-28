@@ -45,6 +45,7 @@ func _ready():
 	stats.connect("no_health", self, "_player_death_function")
 # warning-ignore:return_value_discarded
 	Global.connect("item_dropped", self, "_on_item_dropped")
+	Global.player = self.name
 	animationTree.active = true
 	HitBoxPlayer.knockback_vector = teleport_vector
 #	update_data()

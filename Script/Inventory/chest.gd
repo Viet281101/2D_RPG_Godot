@@ -29,3 +29,4 @@ func out_of_range():
 	if inventory.is_open:
 		Global.emit_signal("inventory_closed", inventory)
 		$Sprite.frame = 0
+		$Sprite.self_modulate = ("bababa")
