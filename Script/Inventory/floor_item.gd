@@ -24,3 +24,14 @@ func interact():
 
 func item_picked():
 	queue_free()
+
+func _on_floor_item_body_entered(body):
+	if body.name == "Player":
+		PlayerStats.MAX_SPEED /= 2
+		PlayerStats.ACCELERATION /= 2
+
+
+func _on_floor_item_body_exited(body):
+	if body.name == "Player":
+		PlayerStats.MAX_SPEED *= 2
+		PlayerStats.ACCELERATION *= 2

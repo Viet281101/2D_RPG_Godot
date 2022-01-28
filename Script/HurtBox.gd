@@ -28,11 +28,12 @@ func create_hit_effect():
 	main.call_deferred("add_child", effect)
 	effect.global_position = global_position
 
-func fire_hurt_effect(scale_eff):
+func fire_hurt_effect(scale_eff, pos_y):
 	var effect = HitFireEffect.instance()
 	var main = get_tree().current_scene
 	main.call_deferred("add_child", effect)
-	effect.global_position = global_position
+	effect.global_position.x = global_position.x
+	effect.global_position.y = global_position.y - pos_y
 	effect.scale = Vector2(scale_eff, scale_eff)
 
 func _on_Timer_timeout():

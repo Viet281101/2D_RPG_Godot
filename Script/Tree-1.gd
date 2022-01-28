@@ -27,7 +27,7 @@ func _on_Timer_timeout():
 
 
 func _on_HurtBox_area_entered(_area):
-	hurtBox.fire_hurt_effect(0.05)
+	hurtBox.fire_hurt_effect(0.05, 1)
 	hurtBox.start_invincibility(0.4)
 	firefly_apear_time += 10
 	modulate = Color("b4b4b4")

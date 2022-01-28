@@ -97,7 +97,7 @@ func _on_HurtBox2_area_entered(area):
 	stats.health -= area.damage
 	max_hitpoints = stats.health
 	hp_bar.set_percent_value(max_hitpoints)
-	hurtBox.fire_hurt_effect(0.15)
+	hurtBox.fire_hurt_effect(0.2, 30)
 	hurtBox.start_invincibility(0.4)
 
 func _on_HurtBox2_invincible_started():

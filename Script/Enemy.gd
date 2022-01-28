@@ -116,7 +116,6 @@ func _on_Stats_no_health():
 	world.call_deferred("add_child", enemy_death_effect)
 	enemy_death_effect.global_position = global_position
 	
-	
 	var enemy_die_effect3 = load("res://Scene/Heart_Healer.tscn")
 	var enemy_death_effect3 = enemy_die_effect3.instance()
 	world.call_deferred("add_child", enemy_death_effect3)
@@ -133,7 +132,6 @@ func _on_Stats_no_health():
 
 func _on_HurtBox_invincible_started():
 	animationEnemy.play("Hurt")
-
 
 func _on_HurtBox_invincible_ended():
 	animationEnemy.play("Stop")
@@ -156,7 +154,7 @@ func _on_HurtBox2_area_entered(area):
 	stats.health -= area.damage
 	max_hitpoints = stats.health
 	hp_bar.set_percent_value(max_hitpoints)
-	hurtBox.fire_hurt_effect(0.05)
+	hurtBox.fire_hurt_effect(0.05, 30)
 	hurtBox.start_invincibility(0.4)
 
 

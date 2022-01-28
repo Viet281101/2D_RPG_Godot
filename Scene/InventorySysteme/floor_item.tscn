@@ -4,10 +4,11 @@
 [ext_resource path="res://Script/Inventory/floor_item.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 9.0
 
 [node name="floor_item" type="Area2D"]
 collision_layer = 0
-collision_mask = 256
+collision_mask = 258
 script = ExtResource( 2 )
 item_id = "wood"
 sack_item = NodePath("Sack_item")
@@ -30,3 +31,6 @@ texture = ExtResource( 1 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sack_item"]
 visible = false
 polygon = PoolVector2Array( -2, -8, -2, -5, -1, -4, -5, -3, -7, -1, -7, 4, -6, 6, -4, 8, 3, 8, 6, 5, 6, 0, 3, -3, 6, -3, 7, -4, 7, -6, 2, -8 )
+
+[connection signal="body_entered" from="." to="." method="_on_floor_item_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_floor_item_body_exited"]

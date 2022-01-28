@@ -78,7 +78,7 @@ func _on_HurtBox_invincible_started():
 
 func _on_HurtBox2_area_entered(area):
 	stats.health -= area.damage
-	hurtBox.fire_hurt_effect(0.005)
+	hurtBox.fire_hurt_effect(0.005, 12)
 	hurtBox.start_invincibility(0.4)
 #	print(area.damage)
 
