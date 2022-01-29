@@ -802,8 +802,8 @@ tracks/75/loop_wrap = true
 tracks/75/imported = false
 tracks/75/enabled = true
 tracks/75/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 25.7, 28 )
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 28 )
 }
 tracks/76/type = "bezier"
 tracks/76/path = NodePath("Main:modulate:g")
@@ -812,8 +812,8 @@ tracks/76/loop_wrap = true
 tracks/76/imported = false
 tracks/76/enabled = true
 tracks/76/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 25.7, 28 )
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 28 )
 }
 tracks/77/type = "bezier"
 tracks/77/path = NodePath("Main:modulate:b")
@@ -822,8 +822,8 @@ tracks/77/loop_wrap = true
 tracks/77/imported = false
 tracks/77/enabled = true
 tracks/77/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 25.7, 28 )
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 28 )
 }
 tracks/78/type = "bezier"
 tracks/78/path = NodePath("Main:modulate:a")
@@ -832,8 +832,8 @@ tracks/78/loop_wrap = true
 tracks/78/imported = false
 tracks/78/enabled = true
 tracks/78/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 25.7, 28 )
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 28 )
 }
 
 [sub_resource type="Animation" id=2]

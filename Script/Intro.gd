@@ -13,17 +13,24 @@ func _start_finished():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://World.tscn")
 	Global.play_music()
+	if Global.first_level:
+		Effects.scene_changer.fade_out()
 
 func _intro_finished():
+	yield(get_tree().create_timer(3), "timeout")
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scene/MainMenu.tscn")
 	Global.play_music()
+	if Global.first_level:
+		Effects.scene_changer.fade_out()
 
 func _exit_tree():
 	self.queue_free()
-
 
 func _on_Button_pressed():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scene/MainMenu.tscn")
 	Global.play_music()
+	if Global.first_level:
+		Effects.scene_changer.fade_out()
+	

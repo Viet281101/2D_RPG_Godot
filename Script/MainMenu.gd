@@ -11,6 +11,8 @@ func _ready():
 	Input.set_custom_mouse_cursor(arrow_cursor)
 	start_1.play("start")
 	comment_lbl.visible = false
+	if Global.first_level:
+		Effects.scene_changer.fade_in()
 	if Global.see_credit == false:
 		$Credit.visible = true
 	elif Global.see_credit == true:
@@ -24,7 +26,6 @@ func _process(_delta):
 	if comment_lbl.visible == true and Global.see_credit == true:
 		$CenterContainer/VBoxContainer/Quit.visible = true
 	
-
 func _on_Quit_pressed():
 	queue_free()
 	get_tree().quit()
@@ -34,6 +35,8 @@ func _on_Start_pressed():
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://Scene/Intro.tscn")
 		Global.get_start = true
+		if Global.first_level:
+			Effects.scene_changer.fade_out()
 	else:
 		comment_lbl.visible = true
 		$Credit.rect_global_position.y = 242
