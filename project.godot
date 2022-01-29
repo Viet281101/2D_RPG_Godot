@@ -176,9 +176,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="2d_rpg_project_nva"
+config/name="The Teleporter"
+config/description="A small basic 2d pixel rpg project in godot."
 run/main_scene="res://Scene/Intro.tscn"
+boot_splash/image="res://assets/Iventory/shield-item.png"
 config/icon="res://icon.png"
+config/macos_native_icon="res://assets/Iventory/shield-item.png"
+config/windows_native_icon="res://assets/Iventory/holy_graill.png"
 
 [autoload]
 
