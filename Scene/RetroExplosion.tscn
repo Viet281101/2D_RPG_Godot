@@ -51,6 +51,7 @@ anim_speed = 1.0
 material = SubResource( 1 )
 position = Vector2( 0, -20 )
 scale = Vector2( 0.005, 0.005 )
+z_index = 1
 emitting = false
 amount = 45
 lifetime = 0.4
