@@ -343,3 +343,7 @@ ui_inventory={
 2d_physics/layer_17="Flame"
 2d_physics/layer_18="Keys"
 2d_physics/layer_19="Insect"
+
+[rendering]
+
+environment/default_clear_color=Color( 0, 0, 0, 1 )

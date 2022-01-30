@@ -493,15 +493,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BlackBackground" type="Sprite" parent="."]
-z_index = -10
-texture = ExtResource( 12 )
-region_enabled = true
-region_rect = Rect2( -3392, -1936, 8832, 6608 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 285.001, 650.105 )
 
