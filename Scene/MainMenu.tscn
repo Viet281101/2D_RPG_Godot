@@ -774,6 +774,66 @@ tracks/14/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("BlueCircleMagic:self_modulate:r")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("BlueCircleMagic:self_modulate:g")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("BlueCircleMagic:self_modulate:b")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("BlueCircleMagic:self_modulate:a")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 0.741176, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("BlueCircleMagic:scale:x")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( 0.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("BlueCircleMagic:scale:y")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 0.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=17]
 resource_name = "start"
@@ -917,6 +977,66 @@ tracks/12/keys = {
 "points": PoolRealArray( 11, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 11, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1.5, 3 )
 }
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("BlueCircleMagic:self_modulate:r")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 3 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("BlueCircleMagic:self_modulate:g")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 3 )
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("BlueCircleMagic:self_modulate:b")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 3 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("BlueCircleMagic:self_modulate:a")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0.741176, -0.25, 0, 0.25, 0, 0.180392, -0.25, 0, 0.25, 0, 0.780392, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 3 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("BlueCircleMagic:scale:x")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 0.06, -0.25, 0, 0.25, 0, 0.05, -0.25, 0, 0.25, 0, 0.03, -0.25, 0, 0.25, 0, 0.06, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 1.7, 3 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("BlueCircleMagic:scale:y")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 0.06, -0.25, 0, 0.25, 0, 0.05, -0.25, 0, 0.25, 0, 0.03, -0.25, 0, 0.25, 0, 0.06, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 1.7, 3 )
+}
 
 [node name="MainMenu" type="CanvasLayer"]
 pause_mode = 2
@@ -941,10 +1061,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BlueCircleMagic" type="Sprite" parent="."]
+[node name="GreenCircleMagic" type="Sprite" parent="."]
 modulate = Color( 0, 1, 0.133333, 0.290196 )
 position = Vector2( 227.954, 128.17 )
 scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="BlueCircleMagic" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.741176 )
+position = Vector2( 60, 196 )
+scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 2 )
 
 [node name="Sun-broker-magic" type="Sprite" parent="."]
@@ -1016,9 +1142,9 @@ __meta__ = {
 
 [node name="Credit" type="Button" parent="."]
 margin_left = 166.0
-margin_top = 150.5
+margin_top = 151.0
 margin_right = 295.0
-margin_bottom = 172.5
+margin_bottom = 173.0
 rect_pivot_offset = Vector2( 67, 12 )
 custom_fonts/font = SubResource( 27 )
 custom_styles/hover = SubResource( 36 )
@@ -1031,9 +1157,9 @@ __meta__ = {
 
 [node name="Quit" type="Button" parent="."]
 margin_left = 166.0
-margin_top = 180.5
+margin_top = 181.0
 margin_right = 295.0
-margin_bottom = 202.5
+margin_bottom = 203.0
 rect_min_size = Vector2( 70, 0 )
 rect_pivot_offset = Vector2( 65, 12 )
 custom_fonts/font = SubResource( 43 )

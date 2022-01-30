@@ -687,6 +687,9 @@ autostart = true
 position = Vector2( 0, -60 )
 scale = Vector2( 0.3, 0.3 )
 
+[node name="Icon" parent="OffScreenMaker/Sprite" index="0"]
+modulate = Color( 1, 0, 0, 1 )
+
 [node name="Light2D" parent="OffScreenMaker/Sprite/Icon" index="0"]
 color = Color( 1, 0, 0, 1 )
 
