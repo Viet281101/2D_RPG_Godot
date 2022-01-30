@@ -40,6 +40,7 @@ zoom = Vector2( 0.8, 0.8 )
 smoothing_enabled = true
 script = ExtResource( 1 )
 camera_zoom = NodePath("ZoomAnimate")
+light = NodePath("Light2D")
 
 [node name="Limit" type="Node" parent="."]
 
@@ -52,6 +53,7 @@ position = Vector2( 374.25, 212.25 )
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 2 )
 energy = 0.5
+shadow_enabled = true
 
 [node name="ZoomAnimate" type="AnimationPlayer" parent="."]
 reset_on_save = false
