@@ -2,6 +2,7 @@ extends Camera2D
 
 onready var topLeft = $Limit/TopLeft
 onready var bottomRight = $Limit/BottomRight
+export (NodePath) onready var camera_zoom = get_node(camera_zoom) as AnimationPlayer
 
 func _ready():
 	limit_top = topLeft.position.y
@@ -9,11 +10,10 @@ func _ready():
 	limit_bottom = bottomRight.position.y
 	limit_right = bottomRight.position.x
 
-
-func _physics_process(_delta):
+func _input(_event):
 	if Input.is_action_just_pressed("ui_view_map"):
-		$AnimationPlayer.play("view_map")
+		camera_zoom.play("view_map")
 	if Input.is_action_just_pressed("ui_view_normal"):
-		$AnimationPlayer.play("normal")
+		camera_zoom.play("normal")
 	
 
