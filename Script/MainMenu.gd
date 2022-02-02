@@ -13,6 +13,7 @@ func _ready():
 	Input.set_custom_mouse_cursor(arrow_cursor)
 	start_1.play("start")
 	comment_lbl.visible = false
+	Global.current_level = self.name
 	if Global.first_level:
 		Effects.scene_changer.fade_in()
 	if Global.see_credit == false:

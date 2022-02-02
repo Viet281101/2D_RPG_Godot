@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Enemy
 
 export var ACCELERATION = 300
 export var MAX_SPEED = 100

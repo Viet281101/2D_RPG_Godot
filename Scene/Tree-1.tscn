@@ -33,7 +33,7 @@ position = Vector2( 0.0454483, 18.8293 )
 shape = SubResource( 2 )
 
 [node name="shadowTree" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.498039 )
+modulate = Color( 1, 1, 1, 0.392157 )
 show_behind_parent = true
 position = Vector2( 0.29496, 29.0831 )
 scale = Vector2( 0.848833, 0.758132 )

@@ -1,6 +1,7 @@
 extends Node2D
 
 var Health_ui = preload("res://Scene/HeartUI.tscn")
+var Level_Name = preload("res://Scene/LevelName.tscn")
 onready var scepter = preload("res://Scene/Scepter.tscn")
 var scepter_picked = false
 
@@ -10,6 +11,8 @@ func _ready():
 	Global.current_level = self.name
 	var health = Health_ui.instance()
 	add_child(health)
+	var lvl_name = Level_Name.instance()
+	add_child(lvl_name)
 	if Global.first_level:
 		Effects.scene_changer.fade_in()
 	if Global.current_level == "World" and Global.sun_actived == true:
@@ -18,6 +21,8 @@ func _ready():
 	if Global.from != null:
 		get_node("YSort/" + Global.player).set_position(get_node(Global.from + "Pos").position)
 		get_node("YSort/" + Global.player).transition()
+	yield(get_tree().create_timer(1.5), "timeout")
+	
 
 func active_magic_effect():
 	if Global.current_level == "World" and Global.take_sun_pow == true and Global.take_sun_pow == true and Global.sun_broken == true:

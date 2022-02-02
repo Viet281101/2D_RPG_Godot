@@ -4,6 +4,7 @@ export (NodePath) onready var anim_intro = get_node(anim_intro) as AnimationPlay
 
 func _ready():
 	Global.stop_music()
+	Global.current_level = self.name
 	if Global.get_start:
 		anim_intro.play("start")
 	elif Global.get_start == false:
