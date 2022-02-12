@@ -195,12 +195,12 @@ config/windows_native_icon="res://assets/World/Inside_Magic_Spell.png"
 [autoload]
 
 PlayerStats="*res://Scene/PlayerStats.tscn"
-BulletUi="*res://Scene/Bullet_UI.tscn"
 Global="*res://Global.tscn"
 SettingsManger="*res://Script/Inventory/settings_manger.gd"
 RessourceManager="*res://Script/Inventory/ressource_manager.gd"
 Effects="*res://Scene/Effects.tscn"
 InventorySysteme="*res://Scene/InventorySysteme/InventorySysteme.tscn"
+BulletUi="*res://Scene/Bullet_UI.tscn"
 
 [display]
 

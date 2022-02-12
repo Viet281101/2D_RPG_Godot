@@ -625,7 +625,7 @@ hframes = 2
 frame = 1
 
 [node name="BlackCatNPC" parent="YSort" instance=ExtResource( 18 )]
-position = Vector2( 297.756, 613.528 )
+position = Vector2( 346, 614 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Chest" parent="YSort" instance=ExtResource( 20 )]

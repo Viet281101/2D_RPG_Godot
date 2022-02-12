@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Script/BlackCatNPC.gd" type="Script" id=1]
 [ext_resource path="res://assets/Enemies/black-cat-01.png" type="Texture" id=2]
@@ -125,6 +125,9 @@ radius = 18.6821
 [sub_resource type="CapsuleShape2D" id=29]
 height = 9.31261
 
+[sub_resource type="OccluderPolygon2D" id=30]
+polygon = PoolVector2Array( 0, 10, -4, 14, -6, 20, 12, 20, 4, 12 )
+
 [node name="BlackCatNPC" type="Area2D"]
 scale = Vector2( 0.5, 0.5 )
 collision_mask = 2
@@ -181,6 +184,9 @@ collision_layer = 33288
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 position = Vector2( 2.89542, 5.12267 )
 shape = SubResource( 29 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 30 )
 
 [connection signal="body_entered" from="." to="." method="_on_BlackCatNPC_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_BlackCatNPC_body_exited"]
