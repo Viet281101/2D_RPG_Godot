@@ -65,8 +65,7 @@ de l’avoir
 
 - Pour les bruits de pas aussi je me suis permis de prendre un son 
 libre de droit qui est le suivant : 
-[_walk step sound_](https://opengameart.org/content/
-rock-walk-step-sound-yo-frankie)
+[_walk step sound_](https://opengameart.org/content/rock-walk-step-sound-yo-frankie)
 
 - Pour le son d’ambiance en background, il a été fait via beepbox et 
 c’est le suivant:
