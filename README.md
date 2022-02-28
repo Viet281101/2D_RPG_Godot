@@ -8,7 +8,9 @@
 
 
 - Pixel Font:
+
 [_Peepo Regular font_](https://www.urbanfonts.com/fonts/Peepo_Regular.font)
+
 [_mincraftia font_](https://www.dafont.com/minecraftia.font)
 
 
@@ -39,6 +41,9 @@ Et tout le reste comme les arbres, les armes, les personnages, l'eau, l'herbe, l
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
 Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. N'hésitez pas à nous demander.
 Mais la plupart des instructions sont en anglais.
+
+
+![alt text](assets/World/tree-02-nva.png)
 
 
 ----------------------------------------------------------------------------------------------------------------------------
