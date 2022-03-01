@@ -7,7 +7,7 @@
 
 
 
-### 1) [**Viet NGUYEN**](https://github.com/Viet281101) / L1-C / 20006303 :
+### <ins>1) [**Viet NGUYEN**](https://github.com/Viet281101) / L1-C / 20006303 :</ins>
 
 
 - Pixel Font:
@@ -51,7 +51,7 @@ Mais la plupart des instructions sont en anglais.
 ----------------------------------------------------------------------------------------------------------------------------
 
 
-### 2) [**EBOUREFE ELIE**](https://github.com/Opus404) / L1-C / 21001586 :
+### 2) <ins>[**EBOUREFE ELIE**](https://github.com/Opus404) / L1-C / 21001586 :</ins>
 
 
 - En pixel art, j’ai pu réaliser les explosions ( notamment des 
