@@ -39,6 +39,7 @@ c'est un tuto en ligne avec des ressources ouvertes associées.
 
 
 Et tout le reste comme les arbres, les armes, les personnages, l'eau, l'herbe, la fleur ... sont entièrement dessinés à la main par nos soins.
+![alt text](assets/World/rock_base_nva.png)
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
 Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. N'hésitez pas à nous demander.
 Mais la plupart des instructions sont en anglais.
@@ -66,7 +67,9 @@ en pixel art des lucioles coloré à l’aide de mon imagination, mais
 le problème étant que la couleur de fond devait être transparent sur 
 libresprite et j’ai peiné à la trouver
 
-- J’ai pu trouver un son de rivière sur Opengameart, étant libre de 
+![alt text](assets/World/luciole.png)
+
+- J’ai pu trouver un son de rivière sur [_OpenGameArt.org_](https://opengameart.org/), étant libre de 
 droit et très bien réalisé, je me suis dis que ce ne serait pas mal 
 de l’avoir 
 [_water fall sound_](https://opengameart.org/content/water-flowing-sound)
