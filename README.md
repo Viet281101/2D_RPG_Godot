@@ -2,12 +2,12 @@
 
 -----------------------------------------------------------------------------------------------------------------------
 
-##### Ressource du jeux, pour ce que nous avons prendre en ligne:
+#### Ressource du jeux, pour ce que nous avons prendre en ligne:
 
 
 
 
-### <ins>1) [**Viet NGUYEN**](https://github.com/Viet281101) / L1-C / 20006303 :</ins>
+### 1) <ins>[**Viet NGUYEN**](https://github.com/Viet281101) / L1-C / 20006303 :</ins>
 
 
 - Pixel Font:
