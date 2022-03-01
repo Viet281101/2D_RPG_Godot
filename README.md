@@ -15,7 +15,7 @@
 [_mincraftia font_](https://www.dafont.com/minecraftia.font)
 
 
-- En pixilart.com, j'ai pris cette chose:
+- En [_pixilart.com_](https://www.pixilart.com/), j'ai pris 
 [_magic circle blue_](https://www.pixilart.com/art/magic-circle-c2b40ee745b9816)
 
 
@@ -25,7 +25,7 @@ mais je l'ai choisi pour la simplicité du dessin et c'est très sympa pour moi.
 [_enemy style_](https://www.dreamstime.com/video-game-bit-space-aliens-spaceship-pixel-art-video-game-bit-space-aliens-spaceship-pixel-art-embroidery-flowers-elements-image105139418)
 
 
-- En OpenGameArt.org, j'ai pris cette chose:
+- En OpenGameArt.org, j'ai pris 
 [_wooden house_](https://opengameart.org/content/wooden-house-with-animated-door-pixel-art)
 
 
