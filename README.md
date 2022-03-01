@@ -8,9 +8,7 @@
 
 
 - Pixel Font:
-
-[_Peepo Regular font_](https://www.urbanfonts.com/fonts/Peepo_Regular.font)
-
+[_Peepo Regular font_](https://www.urbanfonts.com/fonts/Peepo_Regular.font) et
 [_mincraftia font_](https://www.dafont.com/minecraftia.font)
 
 
@@ -58,6 +56,8 @@ fortement aidé surtout sur les choix des couleurs et de l’animation
 et c’est pour cela que nous avons donc réussi à créer une explosion 
 à l’image de notre jeux 
 
+![alt text](assets/Explosion/Explosion.png)
+
 - Meme si ca n’a pas été très concluant, j’ai aussi essayé de faire 
 en pixel art des lucioles coloré à l’aide de mon imagination, mais 
 le problème étant que la couleur de fond devait être transparent sur 
@@ -72,7 +72,7 @@ de l’avoir
 libre de droit qui est le suivant : 
 [_walk step sound_](https://opengameart.org/content/rock-walk-step-sound-yo-frankie)
 
-- Pour le son d’ambiance en background, il a été fait via beepbox et 
+- Pour le son d’ambiance en background, il a été fait via [_beepbox_](https://www.beepbox.co/#9n31s0k0l00e03t2ma7g0fj07r1i0o432T1v1u65f0q0x10t51d08A1F2B9Q00d0Pfc47E3b662878T1v1uabf0qo1411d23AcF4B5Q2600Pdc00E21174T5v1u43f0qwx10n511d03HT_QT_ItRAJJAAzh0E1b7T4v1uf0f0q011z6666ji8k8k3jSBKSJJAArriiiiii07JCABrzrrrrrrr00YrkqHrsrrrrjr005zrAqzrjzrrqr1jRjrqGGrrzsrsA099ijrABJJJIAzrrtirqrqjqixzsrAjrqjiqaqqysttAJqjikikrizrHtBJJAzArzrIsRCITKSS099ijrAJS____Qg99habbCAYrDzh00E0b4h400000000h4g000000014h000000004h400000000p16000000) et 
 c’est le suivant:
 [_main theme_](https://www.beepbox.co/#9n31s0k0l00e04t2ma7g0fj07r1i0o432T3v1ud9f0q0x10l51d03SM005050wwpbaaihE1b2T1v1uadf0q0z10o531d03A1F0B2Q31bdPb525E2b263bT1v1u97f0q0z10t231d4aA9F3B6Q5428Paa74E3ba63975T4v1uf0f0q011z6666ji8k8k3jSBKSJJAArriiiiii07JCABrzrrrrrrr00YrkqHrsrrrrjr005zrAqzrjzrrqr1jRjrqGGrrzsrsA099ijrABJJJIAzrrtirqrqjqixzsrAjrqjiqaqqysttAJqjikikrizrHtBJJAzArzrIsRCITKSS099ijrAJS____Qg99habbCAYrDzh00E0b4h4w0000000h4h000000014h800000004h4w0000000p225FEYFjePhIyqfk8Y1pieNFNtPhWb6aCzQCqfoiAzJPewFBR6nluhR5Zhu18QQuiArd7IfUMAutV7kzx79SpoCpDuhw9TWqf9rHmqfrOczML0idd6shQTBXd6nVuCzf8YgMOM0)
 
@@ -81,7 +81,7 @@ Et pour l'intro du jeux:
 
 
 - Enfin, pour les sons comme le power up, les portails, les 
-attaques, les arbres qui se cassent etc… ils ont été fait sur rfxgen
+attaques, les arbres qui se cassent etc… ils ont été fait sur [_rfxgen_](https://raylibtech.itch.io/rfxgen)
 
 
 
