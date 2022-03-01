@@ -4,6 +4,9 @@
 
 ##### Ressource du jeux, pour ce que nous avons prendre en ligne:
 
+
+
+
 #### 1) Viet NGUYEN / L1-C / 20006303 :
 
 
