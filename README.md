@@ -25,7 +25,7 @@ mais je l'ai choisi pour la simplicité du dessin et c'est très sympa pour moi.
 [_enemy style_](https://www.dreamstime.com/video-game-bit-space-aliens-spaceship-pixel-art-video-game-bit-space-aliens-spaceship-pixel-art-embroidery-flowers-elements-image105139418)
 
 
-- En OpenGameArt.org, j'ai pris 
+- En [_OpenGameArt.org_](https://opengameart.org/), j'ai pris 
 [_wooden house_](https://opengameart.org/content/wooden-house-with-animated-door-pixel-art)
 
 
