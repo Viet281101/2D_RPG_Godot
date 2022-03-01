@@ -4,7 +4,7 @@
 
 ##### Ressource du jeux, pour ce que nous avons prendre en ligne:
 
-##### 1) Viet NGUYEN / L1-C / 20006303:
+#### 1) Viet NGUYEN / L1-C / 20006303 :
 
 
 - Pixel Font:
@@ -47,7 +47,7 @@ Mais la plupart des instructions sont en anglais.
 ----------------------------------------------------------------------------------------------------------------------------
 
 
-##### 2) EBOUREFE ELIE/ L1-C / 21001586 :
+#### 2) EBOUREFE ELIE / L1-C / 21001586 :
 
 
 - En pixel art, j’ai pu réaliser les explosions ( notamment des 
