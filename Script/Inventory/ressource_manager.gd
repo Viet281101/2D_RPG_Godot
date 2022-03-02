@@ -35,7 +35,8 @@ var colors = {
 var tscn = {
 	"splitter": preload("res://Scene/InventorySysteme/splitter.tscn"),
 	"hotbar_slot": preload("res://Scene/InventorySysteme/hotbar_slot.tscn"),
-	"floor_item": preload("res://Scene/InventorySysteme/floor_item.tscn")
+	"floor_item": preload("res://Scene/InventorySysteme/floor_item.tscn"),
+	"cooldown": preload("res://Scene/InventorySysteme/cooldown.tscn"),
 }
 
 var stat_info = {}
@@ -49,6 +50,9 @@ func _ready():
 		stat_info[Game_Enums.STAT[stat]] = data[stat]
 	
 	file.close()
+
+func get_instance(id):
+	return tscn[id].instance()
 
 func _exit_tree():
 	self.queue_free()

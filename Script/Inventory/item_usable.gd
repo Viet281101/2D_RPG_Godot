@@ -49,10 +49,34 @@ func get_can_use():
 func use():
 	if get_can_use():
 		executed()
+		
+		if not unlimited_use:
+			item.quantity -= 1
+		
+		is_in_cooldown = true
+		cooldown_remaining = cooldown
+		item.add_child(get_cooldown_instance())
+		emit_signal("start_cooldown", self)
 
 func executed():
 	pass
 
+func get_cooldown_instance():
+	var cooldown_node = RessourceManager.get_instance("cooldown")
+	cooldown_node.set_data(self)
+	return cooldown_node
+
 func _on_item_placed_in_player_inventory(value):
+	emit_signal("can_use_changed", get_can_use())
+
+func get_use_text():
 	pass
+
+func set_info(item_info):
+	item_info.add_splitter()
+	item_info.add_line(Item_Info_Line.new("On use:", Game_Enums.RARITY.NORMAL))
+	item_info.add_line(Item_Info_Line.new(get_use_text(), item.rarity))
+	item_info.add_line(Item_Info_Line.new("Condition:", Game_Enums.RARITY.NORMAL))
+	item_info.add_line(Item_Info_Line.new(condition, item.rarity))
+
 

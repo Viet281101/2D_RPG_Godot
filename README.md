@@ -38,7 +38,7 @@ c'est un tuto en ligne avec des ressources ouvertes associées.
 
 
 
-Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, la fleur![alt text](assets/World/flower-nva.png) ... sont entièrement dessinés à la main par nos soins.
+Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png) ... sont entièrement dessinés à la main par nos soins.
 ![alt text](assets/World/rock_base_nva.png)
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
 Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. N'hésitez pas à nous demander.

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Font_Textur/font_8.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Iventory/cooldown.png" type="Texture" id=2]
+[ext_resource path="res://Script/Inventory/cooldown.gd" type="Script" id=3]
+
+[node name="cooldown" type="TextureProgress"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture_progress = ExtResource( 2 )
+fill_mode = 4
+script = ExtResource( 3 )
+lbl = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0.109804, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.596078, 0.780392, 0.945098, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "42"
+align = 1
+valign = 1
