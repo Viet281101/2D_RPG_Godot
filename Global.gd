@@ -351,3 +351,5 @@ func write_config():
 
 func _exit_tree():
 	self.queue_free()
+
+
