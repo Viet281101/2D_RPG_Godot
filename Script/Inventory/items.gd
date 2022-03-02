@@ -1,5 +1,9 @@
 class_name Item extends TextureRect
 
+signal item_placed_in_player_inventory(is_on_player)
+signal quantity_changed(quantity)
+signal depleted()
+
 var id
 var item_name
 var rarity = Game_Enums.RARITY.NORMAL
@@ -11,6 +15,7 @@ var components = {}
 var unique_data = null
 
 var lbl_quantity
+var item_slot setget set_slot
 
 func _init(item_id, data):
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -31,23 +36,31 @@ func _init(item_id, data):
 	if data.has("base_stats"):
 		components["base_stats"] = Base_stat.new(data.base_stats)
 	
-	if data.has( "unique" ): 
-		unique_data = data[ "unique" ]
+	if data.has("unique"): 
+		unique_data = data["unique"]
+	
+	if data.has("usable"):
+		components["usable"] = Global.get_usable(data.usable, self)
+		add_child(components.usable)
 
 func _ready():
-	lbl_quantity = Label.new()
-	lbl_quantity.set("custom_fonts/font", RessourceManager.font[8])
-	lbl_quantity.set( "custom_colors/font_color", Color.white )
-	lbl_quantity.set("rect_position", Vector2(-1.0, -3.5))
+	lbl_quantity = RessourceManager.get_instance("quantity")
+#	lbl_quantity.set("custom_fonts/font", RessourceManager.font[8])
+#	lbl_quantity.set( "custom_colors/font_color", Color.white )
+#	lbl_quantity.set("rect_position", Vector2(-1.0, -3.5))
 	add_child( lbl_quantity )
 	set_quantity( quantity )
 
 func set_quantity( value ):
 	quantity = value
+	emit_signal("quantity_changed", quantity)
 	
 	if lbl_quantity:
-		lbl_quantity.text = str( quantity )
-		lbl_quantity.visible = quantity > 1
+		lbl_quantity.quantity = quantity
+	
+	if quantity <= 0:
+		emit_signal( "depleted" )
+		destroy()
 
 func add_item_quantity( value ):
 	var remainder = quantity + value - stack_size
@@ -68,3 +81,12 @@ func get_name():
 				suffix = affix_item.affix.affix_name
 		return ( "%s %s %s" % [ prefix, item_name, suffix ] ).strip_edges()
 	return item_name
+
+func set_slot( value ):
+	item_slot = value
+	emit_signal( "item_placed_in_player_inventory", item_slot.is_on_player if item_slot else false )
+
+func destroy():
+	if item_slot:
+		item_slot.remove_item()
+

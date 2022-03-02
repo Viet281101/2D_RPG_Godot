@@ -20,6 +20,9 @@ onready var placeholder = {
 	Game_Enums.EQUIPEMENT_TYPE.OFFHAND: preload("res://assets/Iventory/placeholder_offhand.png"),
 	Game_Enums.EQUIPEMENT_TYPE.MAIN_HAND: preload("res://assets/Iventory/placeholder_main_hand.png")
 }
+var usable = {
+	"healing": preload("res://Script/Inventory/item_healing.gd"),
+}
 
 var get_start = false
 var see_credit = false
@@ -58,6 +61,9 @@ signal ui_scale_changed(value)
 signal item_picked( item, sender )
 # warning-ignore:unused_signal
 signal item_dropped( item )
+
+# warning-ignore:unused_signal
+signal player_life_changed(health, max_health)
 
 func _init():
 	randomize()
@@ -309,10 +315,15 @@ func set_rare_name(item):
 func roll_unique(item):
 	var scales = []
 	for s in item.unique_data.stats:
-		scales.append( randf() )
+		scales.append(randf())
 	
 	item.item_name = item.unique_data.name
 	item.components["unique_stats"] = Item_Unique_Stats.new(item.unique_data.stats, scales)
+
+
+# Usable Item:
+func get_usable(data_usable, item):
+	return usable[data_usable.type].new(data_usable.data, item)
 
 
 # Key Blinds Control

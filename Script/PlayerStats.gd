@@ -1,10 +1,5 @@
 extends Node
 
-signal no_health
-signal health_changed(value)
-signal max_health_changed(value)
-
-signal experience_gained(growth_data)
 
 var game_data : Dictionary
 
@@ -28,6 +23,13 @@ var canPick2 = true
 var canPick3 = true
 
 var growth_data = []
+
+# SIGNAL
+signal no_health
+signal health_changed(value)
+signal max_health_changed(value)
+
+signal experience_gained(growth_data)
 
 #func _process(delta):
 #	if health <= 0:

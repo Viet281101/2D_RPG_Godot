@@ -66,7 +66,7 @@ func get_cooldown_instance():
 	cooldown_node.set_data(self)
 	return cooldown_node
 
-func _on_item_placed_in_player_inventory(value):
+func _on_item_placed_in_player_inventory(_value):
 	emit_signal("can_use_changed", get_can_use())
 
 func get_use_text():

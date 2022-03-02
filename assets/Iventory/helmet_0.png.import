@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heads-items.png-9a823993145cac2f60ad210c5432cc15.stex"
+path="res://.import/helmet_0.png-288283d848f6a9238bd46918ec734226.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Iventory/heads-items.png"
-dest_files=[ "res://.import/heads-items.png-9a823993145cac2f60ad210c5432cc15.stex" ]
+source_file="res://assets/Iventory/helmet_0.png"
+dest_files=[ "res://.import/helmet_0.png-288283d848f6a9238bd46918ec734226.stex" ]
 
 [params]
 

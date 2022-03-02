@@ -7,7 +7,7 @@
 
 
 
-### 1) <ins>[**Viet NGUYEN**](https://github.com/Viet281101) / L1-C / 20006303 :</ins>
+### 1) <ins>*[**Viet NGUYEN**](https://github.com/Viet281101) / L1-C / 20006303 :*</ins>
 
 
 - Pixel Font:
@@ -38,7 +38,7 @@ c'est un tuto en ligne avec des ressources ouvertes associées.
 
 
 
-Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png) ... sont entièrement dessinés à la main par nos soins.
+Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png), ... sont entièrement dessinés à la main par nos soins.
 ![alt text](assets/World/rock_base_nva.png)
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
 Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. N'hésitez pas à nous demander.
@@ -51,7 +51,7 @@ Mais la plupart des instructions sont en anglais.
 ----------------------------------------------------------------------------------------------------------------------------
 
 
-### 2) <ins>[**EBOUREFE ELIE**](https://github.com/Opus404) / L1-C / 21001586 :</ins>
+### 2) <ins>*[**EBOUREFE ELIE**](https://github.com/Opus404) / L1-C / 21001586 :*</ins>
 
 
 - En pixel art, j’ai pu réaliser les explosions ( notamment des 

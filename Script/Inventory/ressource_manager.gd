@@ -15,9 +15,10 @@ var sprites = {
 	"potion_purple": preload("res://assets/Iventory/Potion.png"),
 	"stone": preload("res://assets/Iventory/Stone.png"),
 	"wood": preload("res://assets/Iventory/Wood.png"),
-	"axe": preload("res://assets/Iventory/Axe.png"),
-	"pickaxe": preload("res://assets/Iventory/Pickaxe.png"),
-	"holy_graill": preload("res://assets/Iventory/holy_graill.png")
+	"axe": preload("res://assets/Iventory/axe.png"),
+	"pickaxe": preload("res://assets/Iventory/pickaxe.png"),
+	"holy_graill": preload("res://assets/Iventory/holy_graill.png"),
+	"rarity_upgrade": preload("res://assets/Iventory/rarity_upgrade.png"),
 }
 
 var font = {
@@ -37,6 +38,7 @@ var tscn = {
 	"hotbar_slot": preload("res://Scene/InventorySysteme/hotbar_slot.tscn"),
 	"floor_item": preload("res://Scene/InventorySysteme/floor_item.tscn"),
 	"cooldown": preload("res://Scene/InventorySysteme/cooldown.tscn"),
+	"quantity": preload("res://Scene/InventorySysteme/quantity.tscn"),
 }
 
 var stat_info = {}

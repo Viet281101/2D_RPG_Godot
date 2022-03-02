@@ -186,6 +186,7 @@ position = Vector2( 2.89542, 5.12267 )
 shape = SubResource( 29 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource( 30 )
 
 [connection signal="body_entered" from="." to="." method="_on_BlackCatNPC_body_entered"]

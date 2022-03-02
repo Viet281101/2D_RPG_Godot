@@ -1,14 +1,22 @@
 {
+
 	"potion_red" : {
 		"name": "Potion Red",
 		"type": "POTION",
 		"stack_size": 30,
-		"level": 1,
+		"level": 5,
 		"base_stats": [{
 			"stat": "LIFE_POINT",
 			"minimum": 2,
 			"maximum": 3
-		}]
+		}],
+		"usable": {
+			"type": "healing",
+			"data": {
+				"healing": 1,
+				"cooldown": 1
+			}
+		}
 	},
 	"potion_blue" : {
 		"name": "Potion Blue",
@@ -46,6 +54,15 @@
 		}]
 
 	},
+	"rarity_upgrade": {
+		"name": "Rarity Upgrade Kit",
+		"level": 50,
+		"rarity": "RARE",
+		"usable": {
+			"type": "upgrade",
+			"data": {}
+		}
+	},
 	"stone" : {
 		"name": "Stone",
 		"stack_size": 20,
@@ -76,7 +93,15 @@
 			"stat": "DEFENCE",
 			"minimum": 2,
 			"maximum": 3
-		}]
+		}],
+		"usable": {
+			"type": "healing",
+			"data": {
+				"healing": 2,
+				"cooldown": 5,
+				"unlimited_use": true,
+			}
+		}		
 	},
 	"tshirt": {
 		"name": "T-Shirt",
@@ -173,7 +198,17 @@
 				"stat": "LIFE_POINT",
 				"minimum": 20,
 				"maximum": 40
-			}]
+			}],
+			"usable": {
+				"type": "healing",
+				"data": {
+					"healing": 5,
+					"cooldown": 5,
+					"unlimited_use": true,
+				}
+			}	
 		}
 	}
+
 }
+
