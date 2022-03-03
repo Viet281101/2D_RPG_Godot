@@ -2,7 +2,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------
 
-#### Ressource du jeux, pour ce que nous avons prendre en ligne:
+#### ![alt text](icon.png) Ressource du jeux, pour ce que nous avons prendre en ligne:
 
 
 

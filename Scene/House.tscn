@@ -1,10 +1,13 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/World/House.png" type="Texture" id=1]
 [ext_resource path="res://assets/World/house_door_open.png" type="Texture" id=2]
 [ext_resource path="res://Script/House.gd" type="Script" id=3]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=4]
 [ext_resource path="res://assets/World/flower-nva.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 18.125, 8.125 )
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.76577
@@ -54,6 +57,18 @@ tracks/3/keys = {
 "points": PoolRealArray( 35.6, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("House/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "close"
@@ -79,6 +94,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("House/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -106,6 +133,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("House/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -152,6 +191,18 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "points": PoolRealArray( 14, -0.25, 0, 0.25, 0, 35.6, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 0.5 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("House/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -240,6 +291,11 @@ texture = ExtResource( 5 )
 position = Vector2( -89.0223, 61.538 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House"]
+position = Vector2( -26.875, 45 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -26.5, 35.6 )
