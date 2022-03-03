@@ -21,7 +21,7 @@ func _ready():
 	if Global.from != null:
 		get_node("YSort/" + Global.player).set_position(get_node(Global.from + "Pos").position)
 		get_node("YSort/" + Global.player).transition()
-	yield(get_tree().create_timer(1.5), "timeout")
+#	yield(get_tree().create_timer(1.5), "timeout")
 	
 
 func active_magic_effect():
