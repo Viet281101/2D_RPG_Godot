@@ -9,7 +9,7 @@ func _init( data, parent_item ).( data, parent_item ):
 func get_use_text():
 	return on_use_text
 
-func execute():
+func executed():
 	Global.emit_signal("upgrade_item")
 
 func _on_has_upgradable_item( value ):

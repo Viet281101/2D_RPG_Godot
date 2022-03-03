@@ -1,6 +1,5 @@
 class_name Inventory extends NinePatchRect
 
-# warning-ignore:unused_signal
 signal content_changed()
 
 var inventory_slot_res = preload("res://Scene/InventorySysteme/inventory_slot.tscn")

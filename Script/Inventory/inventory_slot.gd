@@ -10,6 +10,7 @@ var is_on_player
 
 func _ready():
 	ready = true
+	
 	if item:
 		item_container.add_child( item )
 		item.item_slot = self
@@ -29,13 +30,14 @@ func try_put_item( new_item : Item ) -> bool:
 
 func put_item( new_item : Item ) -> Item:
 	if new_item:
-		return has_new_item(new_item)
+		return has_new_item( new_item )
 	elif item:
 		new_item = item
 		set_item( null )
 	
 	emit_signal( "item_changed" )
 	return new_item
+
 
 func has_new_item( new_item ):
 	if item:
