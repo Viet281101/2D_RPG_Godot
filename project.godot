@@ -114,6 +114,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Script/Inventory/item_unique_stats.gd"
 }, {
+"base": "Item_Usable",
+"class": "Item_Upgrade",
+"language": "GDScript",
+"path": "res://Script/Inventory/item_upgrade.gd"
+}, {
 "base": "Node",
 "class": "Item_Usable",
 "language": "GDScript",
@@ -181,6 +186,7 @@ _global_script_class_icons={
 "Item_Info": "",
 "Item_Info_Line": "",
 "Item_Unique_Stats": "",
+"Item_Upgrade": "",
 "Item_Usable": "",
 "Resource_Manager": "",
 "Scale_Control": "",
@@ -213,6 +219,10 @@ RessourceManager="*res://Script/Inventory/ressource_manager.gd"
 Effects="*res://Scene/Effects.tscn"
 InventorySysteme="*res://Scene/InventorySysteme/InventorySysteme.tscn"
 BulletUi="*res://Scene/Bullet_UI.tscn"
+
+[debug]
+
+gdscript/warnings/return_value_discarded=false
 
 [display]
 

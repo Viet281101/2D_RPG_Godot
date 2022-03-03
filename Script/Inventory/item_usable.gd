@@ -44,10 +44,10 @@ func set_can_use(value):
 	emit_signal("can_use_changed", get_can_use())
 
 func get_can_use():
-	return (can_use or can_always_use) and item.item_slot and item.item_slot.is_on_player and not is_in_cooldown
+	return (can_use or can_always_use) and item.item_slot and item.item_slot.is_on_player
 
 func use():
-	if get_can_use():
+	if get_can_use() and not is_in_cooldown:
 		executed()
 		
 		if not unlimited_use:

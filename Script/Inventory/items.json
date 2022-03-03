@@ -2,7 +2,8 @@
 
 	"potion_red" : {
 		"name": "Potion Red",
-		"type": "POTION",
+		"type": "CONSUMABLE",
+		"equipment_type": "POTION",
 		"stack_size": 30,
 		"level": 5,
 		"base_stats": [{
@@ -14,13 +15,14 @@
 			"type": "healing",
 			"data": {
 				"healing": 1,
-				"cooldown": 1
+				"cooldown": 3,
 			}
 		}
 	},
 	"potion_blue" : {
 		"name": "Potion Blue",
-		"type": "POTION",
+		"type": "CONSUMABLE",
+		"equipment_type": "POTION",
 		"stack_size": 20,
 		"level": 1,
 		"base_stats": [{
@@ -32,7 +34,8 @@
 	},
 	"potion_green" : {
 		"name": "Potion Green",
-		"type": "POTION",
+		"type": "CONSUMABLE",
+		"equipment_type": "POTION",
 		"stack_size": 10,
 		"level": 1,
 		"base_stats": [{
@@ -44,7 +47,8 @@
 	},
 	"potion_purple" : {
 		"name": "Potion Purple",
-		"type": "POTION",
+		"type": "CONSUMABLE",
+		"equipment_type": "POTION",
 		"stack_size": 5,
 		"level": 1,
 		"base_stats": [{
@@ -56,6 +60,7 @@
 	},
 	"rarity_upgrade": {
 		"name": "Rarity Upgrade Kit",
+		"type": "CONSUMABLE",
 		"level": 50,
 		"rarity": "RARE",
 		"usable": {
@@ -65,17 +70,20 @@
 	},
 	"stone" : {
 		"name": "Stone",
+		"type": "MATERIAL",
 		"stack_size": 20,
 		"level": 1
 	},
 	"wood" : {
 		"name": "Wood",
+		"type": "MATERIAL",
 		"stack_size": 20,
 		"level": 1
 	},
 	"sword_stock": {
 		"name": "Sword Stock",
-		"type": "MAIN_HAND",
+		"type": "EQUIPMENT",
+		"equipment_type": "MAIN_HAND",
 		"stack_size": 1,
 		"level": 2,
 		"base_stats": [{
@@ -86,7 +94,8 @@
 	},
 	"helmet": {
 		"name": "Helmet",
-		"type": "HEAD",
+		"type": "EQUIPMENT",
+		"equipment_type": "HEAD",
 		"stack_size": 1,
 		"level": 2,
 		"base_stats": [{
@@ -98,14 +107,15 @@
 			"type": "healing",
 			"data": {
 				"healing": 2,
-				"cooldown": 5,
+				"cooldown": 10,
 				"unlimited_use": true,
 			}
 		}		
 	},
 	"tshirt": {
 		"name": "T-Shirt",
-		"type": "CHEST",
+		"type": "EQUIPMENT",
+		"equipment_type": "CHEST",
 		"stack_size": 1,
 		"level": 1,
 		"base_stats": [{
@@ -116,7 +126,8 @@
 	},
 	"chestplate": {
 		"name": "Chestplate",
-		"type": "CHEST",
+		"type": "EQUIPMENT",
+		"equipment_type": "CHEST",
 		"stack_size": 1,
 		"level": 7,
 		"base_stats": [{
@@ -127,7 +138,8 @@
 	},
 	"golden_armor": {
 		"name": "Golden Armor",
-		"type": "CHEST",
+		"type": "EQUIPMENT",
+		"equipment_type": "CHEST",
 		"stack_size": 1,
 		"rarity": "RARE",
 		"level": 15,
@@ -139,7 +151,8 @@
 	},
 	"shield": {
 		"name": "Shield",
-		"type": "OFFHAND",
+		"type": "EQUIPMENT",
+		"equipment_type": "OFFHAND",
 		"stack_size": 1,
 		"level": 1,
 		"base_stats": [{
@@ -150,7 +163,8 @@
 	},
 	"axe": {
 		"name": "Axe",
-		"type": "MAIN_HAND",
+		"type": "EQUIPMENT",
+		"equipment_type": "MAIN_HAND",
 		"stack_size": 1,
 		"level": 1,
 		"base_stats": [{
@@ -161,7 +175,8 @@
 	},
 	"pickaxe": {
 		"name": "Pickaxe",
-		"type": "MAIN_HAND",
+		"type": "EQUIPMENT",
+		"equipment_type": "MAIN_HAND",
 		"stack_size": 1,
 		"level": 1,
 		"base_stats": [{
@@ -172,7 +187,8 @@
 	},
 	"holy_graill": {
 		"name": "Holy Graill",
-		"type": "OFFHAND",
+		"type": "EQUIPMENT",
+		"equipment_type": "OFFHAND",
 		"stack_size": 1,
 		"level": 1,
 		"base_stats": [{
@@ -203,7 +219,7 @@
 				"type": "healing",
 				"data": {
 					"healing": 5,
-					"cooldown": 5,
+					"cooldown": 8,
 					"unlimited_use": true,
 				}
 			}	

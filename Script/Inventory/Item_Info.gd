@@ -3,15 +3,6 @@ class_name Item_Info extends NinePatchRect
 export (NodePath) onready var item_name = get_node(item_name) as Label
 export (NodePath) onready var line_container = get_node(line_container) as Control
 
-var type_names = {
-	Game_Enums.EQUIPEMENT_TYPE.NONE: "Material",
-	Game_Enums.EQUIPEMENT_TYPE.POTION: "Potion",
-	Game_Enums.EQUIPEMENT_TYPE.HEAD: "Head",
-	Game_Enums.EQUIPEMENT_TYPE.CHEST: "Armor",
-	Game_Enums.EQUIPEMENT_TYPE.OFFHAND: "Offhand",
-	Game_Enums.EQUIPEMENT_TYPE.MAIN_HAND: "Weapon"
-}
-
 func display(slot : Inventory_Slot):
 	for c in line_container.get_children():
 		line_container.remove_child(c)
@@ -21,7 +12,7 @@ func display(slot : Inventory_Slot):
 	rect_global_position = (slot.rect_size * SettingsManger.scale) + slot.rect_global_position
 	item_name.text = slot.item.get_name()
 	var rarity_name = Game_Enums.RARITY.keys()[ slot.item.rarity ].capitalize()
-	var line_type = Item_Info_Line.new(rarity_name + "   " + type_names[slot.item.equipment_type], slot.item.rarity)
+	var line_type = Item_Info_Line.new(rarity_name + "   " + Global.get_type_name( slot.item ), slot.item.rarity )
 	line_container.add_child(line_type)
 	
 	for c in slot.item.components.values():

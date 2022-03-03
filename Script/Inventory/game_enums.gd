@@ -1,5 +1,13 @@
 class_name Game_Enums
 
+
+enum ITEM_TYPE {
+	MATERIAL,
+	CURRENCY,
+	CONSUMABLE,
+	EQUIPMENT,
+}
+
 enum EQUIPEMENT_TYPE {
 	NONE,
 	POTION,

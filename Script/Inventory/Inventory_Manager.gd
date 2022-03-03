@@ -53,22 +53,26 @@ func _on_gui_input_slot(event : InputEvent, slot : Inventory_Slot):
 			_on_stack_splitted( slot, 1 )
 		else:
 			split_stack.display( slot )
-	elif event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
-		Input.set_custom_mouse_cursor(mouse)
-		var had_empty_hand = item_in_hand == null
-		
-		if item_in_hand:
-			item_in_hand_node.remove_child( item_in_hand )
-		
-		item_in_hand = slot.put_item( item_in_hand )
-		
-		if item_in_hand:
-			if had_empty_hand:
-				item_offset = event.global_position - slot.rect_global_position
+	elif event is InputEventMouseButton and event.pressed:
+		if event.button_index == BUTTON_LEFT:
+			Input.set_custom_mouse_cursor(mouse)
+			var had_empty_hand = item_in_hand == null
 			
-			item_in_hand_node.add_child( item_in_hand )
-		
-		set_hand_position( event.global_position )
+			if item_in_hand:
+				item_in_hand_node.remove_child( item_in_hand )
+			
+			item_in_hand = slot.put_item( item_in_hand )
+			
+			if item_in_hand:
+				if had_empty_hand:
+					item_offset = event.global_position - slot.rect_global_position
+				
+				item_in_hand_node.add_child( item_in_hand )
+			
+			set_hand_position( event.global_position )
+			
+		elif event.button_index == BUTTON_RIGHT and slot.item and slot.item.components.has( "usable" ):
+			slot.item.components.usable.use()
 
 func set_hand_position( pos ):
 	set_item_void_filter()

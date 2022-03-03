@@ -42,7 +42,8 @@ parameters/playback = SubResource( 3 )
 
 [node name="Chest" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 284.765, 68.8134 )
-items = [ "potion_green", "potion_blue", "potion_purple", "tshirt", "sword_stock", "potion_red", "helmet" ]
+size = 15
+items = [ "potion_green", "potion_blue", "potion_purple", "tshirt", "sword_stock", "potion_red", "helmet", "potion_red", "potion_red", "rarity_upgrade", "rarity_upgrade", "rarity_upgrade", "rarity_upgrade", "rarity_upgrade", "rarity_upgrade", "potion_red" ]
 
 [node name="ExitHouse" type="Area2D" parent="."]
 position = Vector2( 233, 280 )

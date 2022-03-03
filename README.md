@@ -1,4 +1,4 @@
-### My first 2D RPG project in Godot 
+### My first 2D RPG project in [Godot](https://godotengine.org/) 
 
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -27,9 +27,7 @@ mais je l'ai choisi pour la simplicité du dessin et c'est très sympa pour moi.
 
 - En [_OpenGameArt.org_](https://opengameart.org/), j'ai pris 
 [_wooden house_](https://opengameart.org/content/wooden-house-with-animated-door-pixel-art)
-
-
-Et le pont que j'ai dessiné est une référence à ce modèle du pont même si je ne l'ai pas très bien dessiné:
+et le pont que j'ai dessiné est une référence à ce modèle du pont même si je ne l'ai pas très bien dessiné:
 [_wooden bridge_](https://opengameart.org/content/lpc-wooden-bridge-rework)
 
 - Le clift tileset , j'ai pris ici: 
@@ -37,11 +35,11 @@ Et le pont que j'ai dessiné est une référence à ce modèle du pont même si 
 c'est un tuto en ligne avec des ressources ouvertes associées.
 
 
-
-Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png), ... sont entièrement dessinés à la main par nos soins.
+- Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png), ... sont entièrement dessinés à la main par nos soins.
 ![alt text](assets/World/rock_base_nva.png)
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
-Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. N'hésitez pas à nous demander.
+Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. 
+N'hésitez pas à nous demander.
 Mais la plupart des instructions sont en anglais.
 
 

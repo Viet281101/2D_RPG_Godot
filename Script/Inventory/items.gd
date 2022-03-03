@@ -4,8 +4,9 @@ signal item_placed_in_player_inventory(is_on_player)
 signal quantity_changed(quantity)
 signal depleted()
 
-var id
-var item_name
+var id : String
+var type # Game_Enums.ITEM_TYPE
+var item_name : String
 var rarity = Game_Enums.RARITY.NORMAL
 var equipment_type = Game_Enums.EQUIPEMENT_TYPE.NONE
 var stack_size : int = 1
@@ -23,15 +24,18 @@ func _init(item_id, data):
 	item_name = data.name
 	level = data.level
 	texture = RessourceManager.sprites[id]
+	type = Game_Enums.ITEM_TYPE[data.type]
+	
+#	if data.has("type"):
+#		equipment_type = Game_Enums.EQUIPEMENT_TYPE[data.type]
+	if type == Game_Enums.ITEM_TYPE.EQUIPMENT: 
+		equipment_type = Game_Enums.EQUIPEMENT_TYPE[data.equipment_type]
 	
 	if data.has("rarity"): 
 		rarity = Game_Enums.RARITY[data.rarity]
 	
 	if data.has("stack_size"):
 		stack_size = data.stack_size
-	
-	if data.has("type"):
-		equipment_type = Game_Enums.EQUIPEMENT_TYPE[data.type]
 	
 	if data.has("base_stats"):
 		components["base_stats"] = Base_stat.new(data.base_stats)
@@ -65,7 +69,7 @@ func set_quantity( value ):
 func add_item_quantity( value ):
 	var remainder = quantity + value - stack_size
 # warning-ignore:narrowing_conversion
-	quantity = min( quantity + value, stack_size )
+	quantity = int(min( quantity + value, stack_size ))
 	set_quantity( quantity )
 	return remainder
 

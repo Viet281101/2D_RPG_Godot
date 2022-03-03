@@ -15,6 +15,7 @@ func _input( event ):
 
 func set_scale(value):
 	.set_scale(value)
+	yield(get_tree(), "idle_frame")
 	set_pos(rect_position)
 
 func set_pos(pos):

@@ -1,5 +1,8 @@
 class_name Inventory extends NinePatchRect
 
+# warning-ignore:unused_signal
+signal content_changed()
+
 var inventory_slot_res = preload("res://Scene/InventorySysteme/inventory_slot.tscn")
 
 export(String) var inventory_name
@@ -13,6 +16,7 @@ var is_open = false
 
 func _ready():
 	for s in slots:
+		s.connect("item_changed", self, "_on_item_changed")
 		slot_container.add_child( s )
 	
 	set_title()
@@ -35,6 +39,10 @@ func add_item( item ):
 			item = s.put_item( item )
 			
 			if not item:
+				emit_signal( "content_changed" )
 				return null
 	return item
+
+func _on_item_changed():
+	emit_signal( "content_changed" )
 
