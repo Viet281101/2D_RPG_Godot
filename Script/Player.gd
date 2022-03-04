@@ -70,7 +70,8 @@ func _physics_process(delta):
 		TRANSITION:
 			transition_state()
 
-#level up systeme
+############################## LEVEL UP SYSTEME ################################
+
 # warning-ignore:shadowed_variable
 func get_required_experience(level):
 	return round(pow(level, 1.8) + level * 4)
@@ -105,7 +106,23 @@ func level_up(lv_up):
 	emit_signal("leveling_up", lv_up)
 	_level_up_sign_effect()
 
+func _get_level(var_exp):
+	gain_experience(var_exp)
+	max_var_exp += var_exp
+#	exp_bar.set_percent_value(max_var_exp)
+	exp_ui.update_text(stats.level, stats.experience, stats.experience_required)
+
+func _level_up_sign_effect():
+	var level_up_signal = load("res://Scene/LevelUpSignal.tscn")
+	var level_up = level_up_signal.instance()
+	$playerSprite.add_child(level_up)
+	level_up.global_position = global_position
+
+############################ END OF LEVEL UP SYSTEME ###########################
+
+
 func _process( _delta ):
+	_invisible()
 	if not current_interactable:
 		var overlapping_area = interact_zone.get_overlapping_areas()
 		if overlapping_area.size() > 0 and overlapping_area[ 0 ].has_method( "interact" ):
@@ -115,6 +132,7 @@ func _process( _delta ):
 func _input( event ):
 	if event.is_action_pressed("ui_pick") and current_interactable:
 		current_interactable.interact()
+
 
 #State systeme function
 func move_state(delta):
@@ -221,6 +239,8 @@ func transition_state():
 	animationState.travel("Run")
 	move()
 
+################################# HURT ########################################
+
 func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage
 	if stats.max_health >= 15:
@@ -236,6 +256,11 @@ func _on_HurtBox_invincible_started():
 func _on_HurtBox_invincible_ended():
 	BlinkAnimationPlayer.play("Stop")
 
+############################### END OF HURT ####################################
+
+
+################################ PORTAL ########################################
+
 func teleport_portal(area):
 	for portal in get_tree().get_nodes_in_group("Portal_01"):
 		if portal != area:
@@ -248,17 +273,13 @@ func _on_Transport_Area_area_entered(area):
 	if (area.is_in_group("Portal_01")):
 		teleport_portal(area)
 
+############################### END OF PORTAL ##################################
+
 func _player_death_function():
 	stats.canPick = false
 	stats.canPick2 = false
 	stats.canPick3 = false
 	queue_free()
-
-func _level_up_sign_effect():
-	var level_up_signal = load("res://Scene/LevelUpSignal.tscn")
-	var level_up = level_up_signal.instance()
-	$playerSprite.add_child(level_up)
-	level_up.global_position = global_position
 
 func _on_Heart_collect_area_entered(area):
 	if (area.is_in_group("heart_collect")):
@@ -270,16 +291,12 @@ func _on_Heart_collect_area_entered(area):
 	if (area.is_in_group("Exp_collect")):
 		_get_level(10)
 
-func _get_level(var_exp):
-	gain_experience(var_exp)
-	max_var_exp += var_exp
-#	exp_bar.set_percent_value(max_var_exp)
-	exp_ui.update_text(stats.level, stats.experience, stats.experience_required)
-
 func _on_Transition_timeout():
 	animationTree.set("parameters/Idle/blend_position", Global.direction)
 	animationState.travel("Idle")
 	state = MOVE
+
+########################## Item Interact #######################################
 
 func _on_interactable_zone_area_exited(area):
 	if current_interactable == area:
@@ -293,3 +310,11 @@ func _on_item_dropped(item):
 	floor_item.item = item
 	get_parent().add_child(floor_item)
 	floor_item.position = position
+
+############################################### Using Repellent ###
+func _invisible():
+	if Global.repellent == true:
+		self.modulate = Color(1,1,1,0.3)
+	else:
+		self.modulate = Color(1,1,1,1)
+

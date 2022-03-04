@@ -57,6 +57,8 @@ var scepter_pos = Vector2(0,0)
 var scythe_pos = Vector2(0,0)
 var music_on = true
 var knockback_vector = Vector2.ZERO
+# item effect:
+var repellent = false
 
 var is_paused = true
 var paused_on = false
