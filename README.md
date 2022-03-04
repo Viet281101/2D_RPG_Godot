@@ -35,10 +35,11 @@ et le pont que j'ai dessiné est une référence à ce modèle du pont même si 
 c'est un tuto en ligne avec des ressources ouvertes associées.
 
 
-- Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png), ... sont entièrement dessinés à la main par nos soins.
+- Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png), ... sont entièrement dessinés à la main par nos soins sur [libresprite](https://libresprite.github.io/#!/).
 ![alt text](assets/World/rock_base_nva.png)
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
 Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. 
+[!alt text](assets/heart-ui-nva.png)
 N'hésitez pas à nous demander.
 Mais la plupart des instructions sont en anglais.
 
@@ -60,10 +61,16 @@ et c’est pour cela que nous avons donc réussi à créer une explosion
 
 ![alt text](assets/Explosion/Explosion.png)
 
+
+![alt text](assets/Explosion/BigExplosion.png)
+
+
+![alt text](assets/Explosion/MiniExplosion.png)
+
 - Meme si ca n’a pas été très concluant, j’ai aussi essayé de faire 
 en pixel art des lucioles coloré à l’aide de mon imagination, mais 
 le problème étant que la couleur de fond devait être transparent sur 
-libresprite et j’ai peiné à la trouver
+[libresprite](https://libresprite.github.io/#!/) et j’ai peiné à la trouver
 
 ![alt text](assets/World/luciole.png)
 
