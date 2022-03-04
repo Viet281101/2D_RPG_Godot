@@ -39,7 +39,7 @@ c'est un tuto en ligne avec des ressources ouvertes associées.
 ![alt text](assets/World/rock_base_nva.png)
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
 Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. 
-[!alt text](assets/heart-ui-nva.png)
+![alt text](assets/heart-ui-nva.png)
 N'hésitez pas à nous demander.
 Mais la plupart des instructions sont en anglais.
 
