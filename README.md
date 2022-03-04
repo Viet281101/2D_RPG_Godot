@@ -35,7 +35,7 @@ et le pont que j'ai dessiné est une référence à ce modèle du pont même si 
 c'est un tuto en ligne avec des ressources ouvertes associées.
 
 
-- Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png), ... sont entièrement dessinés à la main par nos soins sur [libresprite](https://libresprite.github.io/#!/).
+- Et tout le reste comme les arbres![alt text](assets/World/tree-01-nva.png), les armes, les personnages, l'eau, l'herbe, les fleurs![alt text](assets/World/flower-nva.png), ... sont entièrement dessinés à la main par nos soins sur [LibreSprite](https://libresprite.github.io/#!/).
 ![alt text](assets/World/rock_base_nva.png)
 En cours de route, nous avons regardé des tutoriels de dessin sur youtube, et cela a plutôt bien fonctionné pour nous.
 Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour créer les images de ce projet. 
@@ -64,7 +64,7 @@ et c’est pour cela que nous avons donc réussi à créer une explosion
 - Meme si ca n’a pas été très concluant, j’ai aussi essayé de faire 
 en pixel art des lucioles coloré à l’aide de mon imagination, mais 
 le problème étant que la couleur de fond devait être transparent sur 
-[libresprite](https://libresprite.github.io/#!/) et j’ai peiné à la trouver
+[LibreSprite](https://libresprite.github.io/#!/) et j’ai peiné à la trouver
 
 ![alt text](assets/World/luciole.png)
 
@@ -88,4 +88,6 @@ et pour l'intro du jeux:
 attaques, les arbres qui se cassent etc… ils ont été fait sur [_rfxgen_](https://raylibtech.itch.io/rfxgen)
 
 
+------------------------------------------------------------------------------------------------------
+![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)![alt text](assets/heart-ui-nva.png)
 
