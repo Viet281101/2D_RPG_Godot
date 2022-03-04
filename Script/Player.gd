@@ -222,8 +222,10 @@ func skill_state():
 
 func combo_state():
 	animationPlayer.play("Combo")
+	yield($AnimationPlayer, "animation_finished")
 	move()
 	animationPlayer.play("Combo")
+	yield($AnimationPlayer, "animation_finished")
 
 func  power_up_state():
 	animationState.travel("PowerUp")

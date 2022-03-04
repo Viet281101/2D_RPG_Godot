@@ -11,6 +11,7 @@ func _ready():
 		anim_intro.play("Intro")
 
 func _start_finished():
+	yield($AnimationPlayer, "animation_finished")
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://World.tscn")
 	Global.play_music()

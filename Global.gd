@@ -59,6 +59,7 @@ var music_on = true
 var knockback_vector = Vector2.ZERO
 # item effect:
 var repellent = false
+var timer
 
 var is_paused = true
 var paused_on = false
@@ -92,6 +93,7 @@ signal player_life_changed(health, max_health)
 ## listen to
 # warning-ignore:unused_signal
 signal heal_player( health_points )
+signal repellent_time
 
 func _init():
 	randomize()
@@ -379,6 +381,22 @@ func get_type_name( item ):
 		return equipment_names[ item.equipment_type ]
 	else:
 		return type_names[ item.type ]
+
+
+########## Repellent Potion Effect ###
+func _on_repellent():
+	repellent = true
+	timer = 11
+	_countdown()
+
+func _countdown():
+	while timer > 0:
+		yield(get_tree().create_timer(1 , false),"timeout")
+		timer -= 1
+		if repellent == true:
+			emit_signal("repellent_time")
+	if timer == 0:
+		print("time over")
 
 
 ################ Key Blinds Control
