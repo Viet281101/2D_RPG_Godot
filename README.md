@@ -61,12 +61,6 @@ et c’est pour cela que nous avons donc réussi à créer une explosion
 
 ![alt text](assets/Explosion/Explosion.png)
 
-
-![alt text](assets/Explosion/BigExplosion.png)
-
-
-![alt text](assets/Explosion/MiniExplosion.png)
-
 - Meme si ca n’a pas été très concluant, j’ai aussi essayé de faire 
 en pixel art des lucioles coloré à l’aide de mon imagination, mais 
 le problème étant que la couleur de fond devait être transparent sur 
