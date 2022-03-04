@@ -1,8 +1,8 @@
-### My first 2D RPG project in [Godot](https://godotengine.org/) 
+### ![alt text](icon.png)My first 2D RPG project in [Godot](https://godotengine.org/) 
 
 -----------------------------------------------------------------------------------------------------------------------
 
-#### ![alt text](icon.png) Ressource du jeux, pour ce que nous avons prendre en ligne:
+#### Ressource du jeux, pour ce que nous avons prendre en ligne:
 
 
 

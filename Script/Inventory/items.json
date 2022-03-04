@@ -27,8 +27,8 @@
 		"level": 1,
 		"base_stats": [{
 			"stat": "BONUS_EXPERIENCE",
-			"minimum": 2,
-			"maximum": 3
+			"minimum": 1,
+			"maximum": 2,
 		}]
 
 	},
@@ -53,8 +53,8 @@
 		"level": 1,
 		"base_stats": [{
 			"stat": "ALL_STATS",
-			"minimum": 2,
-			"maximum": 3
+			"minimum": 1,
+			"maximum": 2,
 		}]
 
 	},

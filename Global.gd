@@ -64,7 +64,7 @@ var is_paused = true
 var paused_on = false
 export (NodePath) onready var Music = get_node(Music) as AudioStreamPlayer
 
-#Inventory Signal : 
+################## Inventory Signal : 
 # warning-ignore:unused_signal
 signal inventory_opened(inventory)
 # warning-ignore:unused_signal
@@ -79,6 +79,8 @@ signal ui_scale_changed(value)
 signal item_picked( item, sender )
 # warning-ignore:unused_signal
 signal item_dropped( item )
+
+#### Usable Items Signal 
 # warning-ignore:unused_signal
 signal upgrade_item()
 # warning-ignore:unused_signal
@@ -87,7 +89,7 @@ signal has_upgradable_item( value )
 # warning-ignore:unused_signal
 signal player_life_changed(health, max_health)
 
-# listen to
+## listen to
 # warning-ignore:unused_signal
 signal heal_player( health_points )
 
@@ -144,12 +146,14 @@ func _ready():
 	
 	set_game_binds()
 
-# Music Control
+################ Music Control ###############
 func play_music():
 	Music.play()
 
 func stop_music():
 	Music.stop()
+
+################ End of Music Control ###############
 
 func save_game():
 	global_data = {
@@ -238,7 +242,7 @@ func reset():
 	get_tree().reload_current_scene()
 	play_music()
 
-# Items Manager
+######### Items Manager
 func get_items(id : String) -> Item:
 	return Item.new(id, items[id])
 
@@ -249,7 +253,7 @@ func get_placholder(id):
 	else:
 		return placeholder[id]
 
-# Get random equipable item
+############### Get random equipable item
 func rng_generate_rarity( ilvl ) -> Item:
 	var valid_items_key = []
 	for i in items:
@@ -261,7 +265,7 @@ func rng_generate_rarity( ilvl ) -> Item:
 func generate_random_rarity( item, ilvl ):
 	item.components.base_stats.scale = randf()
 	
-	# Get random rarity
+	## Get random rarity
 	var rarity = Game_Enums.RARITY.NORMAL
 	var rng = randf()
 	if rng >= 0 and item.unique_data: # 1%
@@ -292,7 +296,7 @@ func generate_rarity( item, ilvl, rarity ) -> Item:
 	else:
 		return item
 	
-	# Set the affixes
+	## Set the affixes
 	var random_affix_group = get_random_affix_group(number_of_affixes, item.equipment_type, ilvl)
 	var item_affix_list_data = []
 	
@@ -362,7 +366,7 @@ func roll_unique(item):
 		set_usable( item, item.unique_data )
 
 
-# Usable Item:
+############ Usable Item:
 func get_usable(data_usable, item):
 	return usable[data_usable.type].new(data_usable.data, item)
 
@@ -377,7 +381,7 @@ func get_type_name( item ):
 		return type_names[ item.type ]
 
 
-# Key Blinds Control
+################ Key Blinds Control
 func set_game_binds():
 	for key in keybinds.keys():
 		var value = keybinds[key]

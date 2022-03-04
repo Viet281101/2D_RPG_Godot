@@ -631,6 +631,12 @@ scale = Vector2( 0.4, 0.4 )
 [node name="Chest" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( 625.295, 828.886 )
 
+[node name="Chest4" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 603, 829 )
+
+[node name="Chest5" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 580, 829 )
+
 [node name="Chest2" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( 517.346, 163.043 )
 number_of_items = 5

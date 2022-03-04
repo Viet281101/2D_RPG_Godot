@@ -6,8 +6,9 @@
 
 [node name="GoldChest" instance=ExtResource( 3 )]
 script = ExtResource( 2 )
+size = 1
 inventory_name = "Treasure Chest"
-items = [  ]
+items = [ "rarity_upgrade", "chestplate", "golden_armor", "tshirt", "sword_stock", "shield", "holy_graill", "pickaxe", "axe" ]
 
 [node name="Sprite" parent="." index="2"]
 texture = ExtResource( 1 )
