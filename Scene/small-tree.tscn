@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/World/tree-02-nva.png" type="Texture" id=1]
-[ext_resource path="res://Script/small-tree.gd" type="Script" id=2]
+[ext_resource path="res://Script/Tree/small-tree.gd" type="Script" id=2]
 [ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Shadows/big-shadow.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Z_Index.tscn" type="PackedScene" id=5]

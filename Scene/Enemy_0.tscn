@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/Enemies/mob_lv0.png" type="Texture" id=1]
-[ext_resource path="res://Script/Enemy_0.gd" type="Script" id=2]
+[ext_resource path="res://Script/Enemies/Enemy_0.gd" type="Script" id=2]
 [ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Stats.tscn" type="PackedScene" id=5]

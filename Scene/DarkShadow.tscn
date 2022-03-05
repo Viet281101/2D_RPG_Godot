@@ -3,7 +3,7 @@
 [ext_resource path="res://white_color.shader" type="Shader" id=1]
 [ext_resource path="res://assets/Enemies/Dark_Shadow_Player.png" type="Texture" id=2]
 [ext_resource path="res://assets/Shadows/shadow.png" type="Texture" id=3]
-[ext_resource path="res://Script/DarkShadow.gd" type="Script" id=4]
+[ext_resource path="res://Script/Enemies/DarkShadow.gd" type="Script" id=4]
 [ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Music & Sound/power_up_1.ogg" type="AudioStream" id=7]

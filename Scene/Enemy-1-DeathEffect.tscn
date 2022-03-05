@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Enemies/mob_lv1-death-sheet.png" type="Texture" id=1]
-[ext_resource path="res://Script/Enemy-1-DeathEffect.gd" type="Script" id=2]
+[ext_resource path="res://Script/Enemies/Enemy-1-DeathEffect.gd" type="Script" id=2]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=3]
 [ext_resource path="res://assets/Music & Sound/EnemyDie.wav" type="AudioStream" id=4]
 
