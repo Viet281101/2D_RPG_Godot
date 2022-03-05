@@ -8,8 +8,8 @@
 		"level": 5,
 		"base_stats": [{
 			"stat": "LIFE_POINT",
-			"minimum": 2,
-			"maximum": 3
+			"minimum": 1,
+			"maximum": 2
 		}],
 		"usable": {
 			"type": "healing",
@@ -40,8 +40,8 @@
 		"level": 1,
 		"base_stats": [{
 			"stat": "VITALITY",
-			"minimum": 2,
-			"maximum": 3
+			"minimum": 1,
+			"maximum": 2
 		}]
 
 	},

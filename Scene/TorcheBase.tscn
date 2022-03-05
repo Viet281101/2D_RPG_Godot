@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scene/Torche.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/World/torche_base_nva.png" type="Texture" id=2]
-[ext_resource path="res://Scene/Z_Index.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Tree/Z_Index.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 1.10623, 1.73313 )

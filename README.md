@@ -1,5 +1,5 @@
-### ![alt text](icon.png)Mon premier projet RPG 2D dans [*Godot*](https://godotengine.org/) 
-##### My first 2D RPG project in [*Godot*](https://godotengine.org/) 
+### ![alt text](icon.png)Notre premier projet RPG 2D dans [**Godot**](https://godotengine.org/) 
+##### My first 2D RPG project in [**Godot**](https://godotengine.org/) 
 
 -----------------------------------------------------------------------------------------------------------------------
 

@@ -6,7 +6,7 @@ var rng = RandomNumberGenerator.new()
 var my_number
 
 func create_tree_effect():
-	var small_tree_effect = load("res://Scene/smal-tree-effect.tscn")
+	var small_tree_effect = load("res://Scene/Tree/smal-tree-effect.tscn")
 	var tree_effect = small_tree_effect.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", tree_effect)
