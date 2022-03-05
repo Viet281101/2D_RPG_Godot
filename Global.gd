@@ -26,8 +26,6 @@ var usable = {
 }
 
 var equipment_names = {
-#	Game_Enums.EQUIPEMENT_TYPE.NONE: "Material",
-	Game_Enums.EQUIPEMENT_TYPE.POTION: "Potion",
 	Game_Enums.EQUIPEMENT_TYPE.HEAD: "Head",
 	Game_Enums.EQUIPEMENT_TYPE.CHEST: "Armor",
 	Game_Enums.EQUIPEMENT_TYPE.OFFHAND: "Offhand",
