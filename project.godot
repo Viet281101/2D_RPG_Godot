@@ -137,12 +137,12 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Scepter",
 "language": "GDScript",
-"path": "res://Script/Scepter.gd"
+"path": "res://Script/Artifacts/Scepter.gd"
 }, {
 "base": "Area2D",
 "class": "Scythe",
 "language": "GDScript",
-"path": "res://Script/Scythe.gd"
+"path": "res://Script/Artifacts/Scythe.gd"
 }, {
 "base": "ColorRect",
 "class": "Split_Stack",

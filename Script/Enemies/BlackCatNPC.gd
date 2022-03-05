@@ -2,7 +2,7 @@ extends Area2D
 
 var can_interact = false
 var inputed = false
-const DIALOG = preload("res://Scene/DialogBox.tscn")
+const DIALOG = preload("res://Scene/Enemies/DialogBox.tscn")
 
 onready var hurtBox = $HurtBox
 

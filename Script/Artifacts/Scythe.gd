@@ -1,7 +1,7 @@
 class_name Scythe extends Area2D
 
 
-const Comment_text = preload("res://Scene/TextBoxScythe.tscn")
+const Comment_text = preload("res://Scene/Artifact/TextBoxScythe.tscn")
 var picked = false
 var stats = PlayerStats
 onready var light_label = $Label/Light2D

@@ -1,8 +1,8 @@
 class_name Scepter extends Area2D
 
 
-onready var Bullet_Player = preload("res://Scene/Bullet_Player.tscn")
-const Comment_text = preload("res://Scene/TextBox.tscn")
+onready var Bullet_Player = preload("res://Scene/Artifact/Bullet_Player.tscn")
+const Comment_text = preload("res://Scene/Artifact/TextBox.tscn")
 
 var cursor_target = load("res://assets/Items/cursor-2.png")
 var cursor_target_click = load("res://assets/Items/cursor.png")

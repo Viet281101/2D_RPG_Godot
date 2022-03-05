@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Explosion/Explosion.png" type="Texture" id=3]
 [ext_resource path="res://assets/Music & Sound/explosion_03.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Script/FireBallExplosion.gd" type="Script" id=5]
+[ext_resource path="res://Script/Artifacts/FireBallExplosion.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=1]
 length = 0.001

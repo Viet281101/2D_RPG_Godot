@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scene/dirt-tile-map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/wall_tile_map.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Scythe.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Artifact/Scythe.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Enemies/summoner-base-red.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Camera.tscn" type="PackedScene" id=7]
