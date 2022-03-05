@@ -12,7 +12,7 @@ func create_tree_effect():
 	world.call_deferred("add_child", tree_effect)
 	tree_effect.global_position = global_position
 	
-	var enemy_die_effect = load("res://Scene/Enemy_0.tscn")
+	var enemy_die_effect = load("res://Scene/Enemies/Enemy_0.tscn")
 	var enemy_death_effect = enemy_die_effect.instance()
 	world.call_deferred("add_child", enemy_death_effect)
 	enemy_death_effect.global_position = $Hide_1.global_position

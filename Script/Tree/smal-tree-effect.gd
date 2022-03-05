@@ -8,7 +8,7 @@ func _ready():
 
 
 func _on_AnimatedSprite_animation_finished():
-	var enemy_die_effect = load("res://Scene/Enemy_0.tscn")
+	var enemy_die_effect = load("res://Scene/Enemies/Enemy_0.tscn")
 	var enemy_death_effect = enemy_die_effect.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect)

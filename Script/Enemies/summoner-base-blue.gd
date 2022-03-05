@@ -18,7 +18,7 @@ func _desactive_summon_finish():
 	$AnimationPlayer.play("idle")
 
 func _call_blue_enemies():
-	var enemy_die_effect4 = load("res://Scene/Enemy_2.tscn")
+	var enemy_die_effect4 = load("res://Scene/Enemies/Enemy_2.tscn")
 	var enemy_death_effect4 = enemy_die_effect4.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect4)

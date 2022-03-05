@@ -1,22 +1,22 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://assets/Enemies/mob_lv1-sheet.png" type="Texture" id=1]
-[ext_resource path="res://assets/Shadows/shadow.png" type="Texture" id=2]
-[ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Script/Enemies/Enemy.gd" type="Script" id=4]
-[ext_resource path="res://Scene/Stats.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/PlayerDetectionZone.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scene/SoftCollision.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/WanderController.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scene/OffScreenMaker.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scene/HP_Bar.tscn" type="PackedScene" id=12]
-[ext_resource path="res://white_color.shader" type="Shader" id=13]
-[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=14]
+[ext_resource path="res://Script/Enemies/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=2]
+[ext_resource path="res://white_color.shader" type="Shader" id=3]
+[ext_resource path="res://Scene/Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Enemies/SoftCollision.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Shadows/shadow.png" type="Texture" id=8]
+[ext_resource path="res://Scene/Enemies/WanderController.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Enemies/mob_lv1-sheet.png" type="Texture" id=10]
+[ext_resource path="res://Scene/PlayerDetectionZone.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Enemies/HP_Bar.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scene/Enemies/OffScreenMaker.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
-shader = ExtResource( 13 )
+shader = ExtResource( 3 )
 shader_param/active = false
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -611,7 +611,7 @@ radius = 48.696
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 16
 collision_mask = 0
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -620,13 +620,13 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.768627, 0, 0, 1 )
 material = SubResource( 1 )
-texture = ExtResource( 1 )
+texture = ExtResource( 10 )
 offset = Vector2( 0, -60 )
 hframes = 6
 
 [node name="ShadowSprite" type="Sprite" parent="."]
 scale = Vector2( 2, 3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -644,7 +644,7 @@ anims/Idle = SubResource( 6 )
 anims/RESET = SubResource( 14 )
 anims/Stop = SubResource( 7 )
 
-[node name="HurtBox" parent="." instance=ExtResource( 3 )]
+[node name="HurtBox" parent="." instance=ExtResource( 5 )]
 visible = false
 collision_layer = 8
 
@@ -652,10 +652,10 @@ collision_layer = 8
 position = Vector2( 0.0843045, -60.4736 )
 shape = SubResource( 8 )
 
-[node name="Stats" parent="." instance=ExtResource( 5 )]
+[node name="Stats" parent="." instance=ExtResource( 4 )]
 max_health = 6
 
-[node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 11 )]
 visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
@@ -663,7 +663,7 @@ modulate = Color( 1, 1, 1, 0.341176 )
 position = Vector2( -0.749176, -60.7352 )
 shape = SubResource( 9 )
 
-[node name="HitBox" parent="." instance=ExtResource( 7 )]
+[node name="HitBox" parent="." instance=ExtResource( 6 )]
 visible = false
 collision_mask = 4
 
@@ -671,7 +671,7 @@ collision_mask = 4
 position = Vector2( 1.94093, -78.5585 )
 shape = SubResource( 10 )
 
-[node name="SoftCollision" parent="." instance=ExtResource( 8 )]
+[node name="SoftCollision" parent="." instance=ExtResource( 7 )]
 visible = false
 
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
@@ -683,7 +683,7 @@ shape = SubResource( 11 )
 one_shot = true
 autostart = true
 
-[node name="OffScreenMaker" parent="." instance=ExtResource( 11 )]
+[node name="OffScreenMaker" parent="." instance=ExtResource( 13 )]
 position = Vector2( 0, -60 )
 scale = Vector2( 0.3, 0.3 )
 
@@ -704,7 +704,7 @@ collision_mask = 192
 position = Vector2( 0.374573, -61.4306 )
 shape = SubResource( 12 )
 
-[node name="HurtBox2" parent="." instance=ExtResource( 3 )]
+[node name="HurtBox2" parent="." instance=ExtResource( 5 )]
 visible = false
 collision_layer = 33280
 
@@ -713,7 +713,7 @@ position = Vector2( 0.264862, -60.6543 )
 shape = SubResource( 13 )
 
 [node name="Light2D" type="Light2D" parent="."]
-texture = ExtResource( 14 )
+texture = ExtResource( 2 )
 color = Color( 0.717647, 0, 0, 1 )
 energy = 0.8
 shadow_enabled = true
@@ -723,7 +723,7 @@ shadow_filter_smooth = 50.0
 
 [node name="Light2D2" type="Light2D" parent="."]
 enabled = false
-texture = ExtResource( 14 )
+texture = ExtResource( 2 )
 color = Color( 0.717647, 0, 0, 1 )
 energy = 0.5
 shadow_enabled = true

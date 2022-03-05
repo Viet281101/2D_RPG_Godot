@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=6]
 [ext_resource path="res://Script/GoInsideSunRedMagic.gd" type="Script" id=7]
 [ext_resource path="res://Scene/seek_player_change_scene.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/BlackCatNPC.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Enemies/BlackCatNPC.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 36 )

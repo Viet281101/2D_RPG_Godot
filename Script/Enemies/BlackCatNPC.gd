@@ -42,7 +42,7 @@ func _on_Area2D_body_exited(_body):
 	pass
 
 func _on_HurtBox_area_entered(_area):
-	var black_cat_disapear = load("res://Scene/BlackCatDisapear.tscn")
+	var black_cat_disapear = load("res://Scene/Enemies/BlackCatDisapear.tscn")
 	var black_cat_effect = black_cat_disapear.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", black_cat_effect)

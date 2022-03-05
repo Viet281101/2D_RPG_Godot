@@ -7,7 +7,7 @@ func _ready():
 
 
 func _on_AnimationPlayer_animation_finished(_anim_name):
-	var enemy_die_effect6 = load("res://Scene/Enemy_0.tscn")
+	var enemy_die_effect6 = load("res://Scene/Enemies/Enemy_0.tscn")
 	var enemy_death_effect6 = enemy_die_effect6.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect6)

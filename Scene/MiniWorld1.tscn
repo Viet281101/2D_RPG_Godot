@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/wall_tile_map.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Scythe.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/summoner-base-red.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Enemies/summoner-base-red.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Camera.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/Day_Night.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Script/Exit.gd" type="Script" id=9]
@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=12]
 [ext_resource path="res://Scene/Torche.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/World/stair-nva.png" type="Texture" id=14]
-[ext_resource path="res://Scene/BlackCatNPC.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scene/Enemies/BlackCatNPC.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Animation" id=1]
 resource_name = "active"

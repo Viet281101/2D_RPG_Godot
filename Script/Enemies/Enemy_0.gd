@@ -53,7 +53,7 @@ func _on_HurtBox_area_entered(area):
 
 
 func _on_Stats_no_health():
-	var enemy_die_effect3 = load("res://Scene/Enemy_0_DeathEffect.tscn")
+	var enemy_die_effect3 = load("res://Scene/Enemies/Enemy_0_DeathEffect.tscn")
 	var enemy_death_effect3 = enemy_die_effect3.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect3)

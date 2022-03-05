@@ -19,7 +19,7 @@ func _desactive_summon_finish():
 	$AnimationPlayer.play("idle")
 
 func _call_red_enemies():
-	var enemy_die_effect4 = load("res://Scene/Enemy.tscn")
+	var enemy_die_effect4 = load("res://Scene/Enemies/Enemy.tscn")
 	var enemy_death_effect4 = enemy_die_effect4.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect4)
@@ -32,7 +32,7 @@ func _on_Timer_timeout():
 	nbr += 1
 
 func _on_HurtBox_area_entered(_area):
-	var enemy_die_effect2 = load("res://Scene/EnemyExplosion.tscn")
+	var enemy_die_effect2 = load("res://Scene/Enemies/EnemyExplosion.tscn")
 	var enemy_death_effect2 = enemy_die_effect2.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect2)

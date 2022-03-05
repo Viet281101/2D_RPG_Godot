@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/World/blood_decorate.png" type="Texture" id=15]
 [ext_resource path="res://assets/World/blood_decorate_2.png" type="Texture" id=16]
 [ext_resource path="res://Scene/seek_player_change_scene.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scene/BlackCatNPC.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scene/Enemies/BlackCatNPC.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Script/ExitSunRedMagic.gd" type="Script" id=19]
 [ext_resource path="res://Scene/InventorySysteme/Random_Chest.tscn" type="PackedScene" id=20]
 

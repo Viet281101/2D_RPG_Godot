@@ -27,7 +27,7 @@ onready var hurtBox = $HurtBox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 
-const Drop = preload("res://Scene/Enemy_0.tscn")
+const Drop = preload("res://Scene/Enemies/Enemy_0.tscn")
 var rng = RandomNumberGenerator.new()
 var my_number
 
@@ -111,7 +111,7 @@ func _on_HurtBox_area_entered(area):
 
 func _on_Stats_no_health():
 #	animationEnemy.play("Die")
-	var enemy_die_effect = load("res://Scene/Enemy-1-DeathEffect.tscn")
+	var enemy_die_effect = load("res://Scene/Enemies/Enemy-1-DeathEffect.tscn")
 	var enemy_death_effect = enemy_die_effect.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect)

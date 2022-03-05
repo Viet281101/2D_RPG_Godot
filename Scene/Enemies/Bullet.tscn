@@ -1,45 +1,45 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://assets/Enemies/Bullet_Enemy.png" type="Texture" id=1]
-[ext_resource path="res://Script/Enemies/Bullet.gd" type="Script" id=2]
+[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=1]
+[ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=4]
-[ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Enemies/Bullet_Enemy.png" type="Texture" id=4]
+[ext_resource path="res://Script/Enemies/Bullet.gd" type="Script" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 64, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 64, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 64, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 128, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=10]
@@ -62,7 +62,7 @@ radius = 19.0364
 [node name="Bullet" type="Area2D"]
 collision_layer = 0
 collision_mask = 2048
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
@@ -82,14 +82,14 @@ shape = SubResource( 12 )
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
 [node name="Light2D" type="Light2D" parent="."]
-texture = ExtResource( 4 )
+texture = ExtResource( 1 )
 color = Color( 0.0588235, 1, 0.843137, 1 )
 energy = 0.8
 shadow_enabled = true
 shadow_filter = 2
 shadow_filter_smooth = 50.0
 
-[node name="HurtBox" parent="." instance=ExtResource( 5 )]
+[node name="HurtBox" parent="." instance=ExtResource( 2 )]
 collision_layer = 512
 collision_mask = 2
 

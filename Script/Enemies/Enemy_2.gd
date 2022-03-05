@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var FRICTION = 200
 
-onready var Bullet = preload("res://Scene/Bullet.tscn")
+onready var Bullet = preload("res://Scene/Enemies/Bullet.tscn")
 onready var hurtBox = $HurtBox
 onready var stats = $Stats
 onready var hp_bar = $HP_Bar_2
@@ -16,7 +16,7 @@ var velocity = Vector2.ZERO
 var knockback = Vector2.ZERO
 var max_hitpoints = 18
 
-const Drop = preload("res://Scene/Enemy.tscn")
+const Drop = preload("res://Scene/Enemies/Enemy.tscn")
 var rng = RandomNumberGenerator.new()
 var my_number
 
@@ -65,7 +65,7 @@ func _on_HurtBox_area_entered(area):
 	hurtBox.start_invincibility(0.4)
 
 func _on_Stats_no_health():
-	var enemy_die_effect2 = load("res://Scene/Enemy2_death.tscn")
+	var enemy_die_effect2 = load("res://Scene/Enemies/Enemy2_death.tscn")
 	var enemy_death_effect2 = enemy_die_effect2.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect2)
