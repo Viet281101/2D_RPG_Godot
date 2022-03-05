@@ -23,7 +23,8 @@ func _process(_delta):
 		$RetroExplosion.visible = false
 	elif stats.level >= 15:
 		$Sprite.scale = Vector2(1.1, 1.1)
-		$RetroExplosion.visible = true
+		if $RetroExplosion != null:
+			$RetroExplosion.visible = true
 		
 
 func _physics_process(delta):

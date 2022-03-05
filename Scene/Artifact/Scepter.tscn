@@ -1,8 +1,8 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Script/Bullet_UI.gd" type="Script" id=1]
 [ext_resource path="res://assets/Items/fire-3.png" type="Texture" id=2]
-[ext_resource path="res://Scene/RetroExplosion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Explosion/Explosion_Sheet.png" type="Texture" id=3]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=4]
 [ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Script/HitBoxPlayer.gd" type="Script" id=6]
@@ -20,6 +20,12 @@ particles_anim_loop = true
 resource_local_to_scene = true
 offsets = PoolRealArray( 0, 0.244094, 0.897638, 1 )
 colors = PoolColorArray( 1, 0.591797, 0, 1, 0.746094, 0, 0, 1, 0.422033, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=21]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
 [sub_resource type="Gradient" id=11]
 offsets = PoolRealArray( 0, 0.389423, 0.413462, 0.548077, 0.567308, 0.701923, 0.745192, 1 )
@@ -42,7 +48,7 @@ _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 width = 40
 curve = SubResource( 7 )
 
-[sub_resource type="ParticlesMaterial" id=17]
+[sub_resource type="ParticlesMaterial" id=22]
 resource_local_to_scene = true
 lifetime_randomness = 0.46
 trail_size_modifier = SubResource( 10 )
@@ -54,7 +60,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 angle = 720.0
 angle_random = 1.0
-scale = 0.7
+scale = 0.8
 scale_curve = SubResource( 6 )
 color_ramp = SubResource( 12 )
 anim_speed = 1.0
@@ -64,26 +70,6 @@ radius = 27.8188
 
 [sub_resource type="Animation" id=9]
 length = 0.001
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("RetroExplosion:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"points": PoolRealArray( 18.8757, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("RetroExplosion:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( -43.9924, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
 
 [sub_resource type="Animation" id=13]
 length = 0.5
@@ -244,14 +230,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="RetroExplosion" parent="." instance=ExtResource( 3 )]
+[node name="RetroExplosion" type="Particles2D" parent="."]
 visible = false
+material = SubResource( 21 )
 position = Vector2( -16, -14 )
-emitting = true
+scale = Vector2( 0.005, 0.005 )
+z_index = 1
 amount = 50
-lifetime = 0.3
-one_shot = false
-process_material = SubResource( 17 )
+lifetime = 0.4
+explosiveness = 0.3
+visibility_rect = Rect2( -50, -50, 100, 100 )
+local_coords = false
+process_material = SubResource( 22 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
@@ -402,5 +396,3 @@ __meta__ = {
 [connection signal="p_down" from="." to="Bullet_UI" method="_on_Scepter_p_down"]
 [connection signal="p_up" from="." to="Bullet_UI" method="_on_Scepter_p_up"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-
-[editable path="RetroExplosion"]

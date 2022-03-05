@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/World/tree-02-nva.png" type="Texture" id=1]
 [ext_resource path="res://Script/Tree/small-tree.gd" type="Script" id=2]
 [ext_resource path="res://Scene/HurtBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Shadows/big-shadow.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Tree/Z_Index.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Script/HurtBox.gd" type="Script" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.16079
@@ -13,6 +14,9 @@ height = 5.9127
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 2.25948
 height = 14.1578
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 7.0
 
 [node name="small-tree" type="StaticBody2D"]
 light_mask = 0
@@ -56,8 +60,23 @@ position = Vector2( 0.488102, 0.208046 )
 [node name="CollisionPolygon2D" parent="Z_Index" index="0"]
 polygon = PoolVector2Array( -4.55462, 4.93599, 3.78813, 5.01942, 3.37099, -3.49019, 0.117321, -18.4237, -4.05405, -3.32333 )
 
+[node name="HurtBox2" type="Area2D" parent="."]
+collision_layer = 33280
+collision_mask = 0
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox2"]
+position = Vector2( 0, 6 )
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="HurtBox2"]
+
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="area_exited" from="HurtBox" to="." method="_on_HurtBox_area_exited"]
+[connection signal="area_entered" from="HurtBox2" to="." method="_on_HurtBox2_area_entered"]
+[connection signal="invincible_ended" from="HurtBox2" to="HurtBox2" method="_on_HurtBox_invincible_ended"]
+[connection signal="invincible_started" from="HurtBox2" to="HurtBox2" method="_on_HurtBox_invincible_started"]
+[connection signal="timeout" from="HurtBox2/Timer" to="HurtBox2" method="_on_Timer_timeout"]
 
 [editable path="HurtBox"]
 [editable path="Z_Index"]

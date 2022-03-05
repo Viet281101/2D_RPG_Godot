@@ -154,8 +154,13 @@ amount = 50
 lifetime = 0.6
 one_shot = false
 process_material = SubResource( 13 )
+script = null
+
+[node name="Timer" parent="RetroExplosion" index="1"]
+wait_time = 2.0
 
 [connection signal="body_entered" from="." to="." method="_on_Bullet_Player_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
 
 [editable path="HitBox"]
+[editable path="RetroExplosion"]

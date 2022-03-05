@@ -174,7 +174,7 @@ margin_bottom = 54.0
 
 [node name="HurtBox2" parent="." instance=ExtResource( 4 )]
 visible = false
-collision_layer = 33280
+collision_layer = 512
 
 [node name="CollisionShape2D" parent="HurtBox2" index="0"]
 shape = SubResource( 9 )
