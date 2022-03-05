@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-const Drop = preload("res://Scene/FireFly.tscn")
+const Drop = preload("res://Scene/Tree/FireFly.tscn")
 var rng = RandomNumberGenerator.new()
 var my_number
 var firefly_apear_time = rand_range(30, 55)

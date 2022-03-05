@@ -5,6 +5,7 @@ export (NodePath) onready var anim_intro = get_node(anim_intro) as AnimationPlay
 func _ready():
 	Global.stop_music()
 	Global.current_level = self.name
+	Global.can_pause = false
 	if Global.get_start:
 		anim_intro.play("start")
 	elif Global.get_start == false:
@@ -15,6 +16,7 @@ func _start_finished():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://World.tscn")
 	Global.play_music()
+	Global.can_pause = true
 	if Global.first_level:
 		Effects.scene_changer.fade_out()
 
@@ -23,10 +25,12 @@ func _intro_finished():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scene/MainMenu.tscn")
 	Global.play_music()
+	Global.can_pause = true
 	if Global.first_level:
 		Effects.scene_changer.fade_out()
 
 func _exit_tree():
+	Global.can_pause = true
 	self.queue_free()
 
 func _on_Button_pressed():

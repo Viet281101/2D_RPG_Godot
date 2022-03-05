@@ -4,6 +4,7 @@ onready var animated = $AnimatedSprite
 
 func _ready():
 	animated.play("collect")
+	yield(animated, "animation_finished")
 
 func colleted_finished():
 	queue_free()

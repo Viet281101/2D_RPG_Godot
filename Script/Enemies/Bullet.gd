@@ -42,7 +42,7 @@ func _on_Timer_timeout():
 	_explosion()
 
 func _explosion():
-	var bullet_explosion = load("res://Scene/BulletExplosion.tscn")
+	var bullet_explosion = load("res://Scene/Enemies/BulletExplosion.tscn")
 	var explosion = bullet_explosion.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", explosion)

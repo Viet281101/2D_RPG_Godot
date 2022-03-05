@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/Shadows/shadow.png" type="Texture" id=8]
 [ext_resource path="res://Scene/Enemies/WanderController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/Enemies/mob_lv1-sheet.png" type="Texture" id=10]
-[ext_resource path="res://Scene/PlayerDetectionZone.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Enemies/HP_Bar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Enemies/OffScreenMaker.tscn" type="PackedScene" id=13]
 

@@ -16,13 +16,9 @@ func _ready():
 
 func _input(_event):
 	if Input.is_key_pressed(KEY_ESCAPE) and Global.is_paused == false:
-		queue_free()
-		Global.is_paused = true
-		get_tree().paused = false
-	elif Input.is_key_pressed(KEY_SPACE) and Global.is_paused == false:
-		queue_free()
-		Global.is_paused = true
-		get_tree().paused = false
+		_on_Resume_pressed()
+	if Input.is_key_pressed(KEY_SPACE) and Global.is_paused == false and Global.can_pause == false:
+		_on_Resume_pressed()
 
 #func set_is_paused(value):
 #	is_paused = value
@@ -33,6 +29,7 @@ func _on_Resume_pressed():
 	queue_free()
 #	self.is_paused = !is_paused
 	Global.is_paused = true
+	Global.can_pause = true
 	get_tree().paused = false
 
 

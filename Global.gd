@@ -63,6 +63,7 @@ var timer
 
 var is_paused = true
 var paused_on = false
+var can_pause = true
 export (NodePath) onready var Music = get_node(Music) as AudioStreamPlayer
 
 ################## Inventory Signal : 
@@ -106,13 +107,13 @@ func _input(_event):
 		if paused_on == false:
 			get_tree().paused = true
 	
-	if Input.is_key_pressed(KEY_SPACE) and is_paused == true:
+	if Input.is_key_pressed(KEY_SPACE) and is_paused == true and can_pause == true:
 		add_child(pausemenu.instance())
 		get_tree().paused = true
 		paused_on = true
 		is_paused = false
-	if Input.is_key_pressed(KEY_SPACE) and is_paused == false:
-		is_paused = false
+		can_pause = false
+	
 
 func _ready():
 	var file = File.new()
