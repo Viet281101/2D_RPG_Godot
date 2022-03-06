@@ -6,7 +6,7 @@
 [ext_resource path="res://Scene/UI/Day_Night.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Script/World.gd" type="Script" id=5]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=6]
-[ext_resource path="res://Script/GoInsideSunRedMagic.gd" type="Script" id=7]
+[ext_resource path="res://Script/ChangeScene/GoInsideSunRedMagic.gd" type="Script" id=7]
 [ext_resource path="res://Scene/seek_player_change_scene.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene/Enemies/BlackCatNPC.tscn" type="PackedScene" id=9]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Items/sun-broker-magic.png" type="Texture" id=1]
-[ext_resource path="res://Script/SunRedMagicCircle.gd" type="Script" id=2]
+[ext_resource path="res://Script/ChangeScene/SunRedMagicCircle.gd" type="Script" id=2]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=2]
