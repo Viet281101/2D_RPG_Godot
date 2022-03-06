@@ -22,15 +22,15 @@ var heart_healer_id = 0
 var max_var_exp = 10
 var lv_up_var = rand_range(0,1)
 
-onready var animationPlayer = $AnimationPlayer
-onready var animationTree = $AnimationTree
+export (NodePath) onready var animationPlayer = get_node(animationPlayer) as AnimationPlayer
+export (NodePath) onready var animationTree = get_node(animationTree) as AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
-onready var HitBoxPlayer = $HitBoxPivot/AttackHitBox
-onready var hurtBox = $HurtBox
-onready var BlinkAnimationPlayer = $BlinkAnimationPlayer2
-onready var exp_bar = $ExperienceBar/EmptyBar
-onready var exp_ui = $ExperienceBar/EmptyBar/EXP
-onready var damage_hitbox = $HitBoxPivot/AttackHitBox.damage
+export (NodePath) onready var HitBoxPlayer = get_node(HitBoxPlayer) as Area2D
+export (NodePath) onready var hurtBox = get_node(hurtBox) as Area2D
+export (NodePath) onready var BlinkAnimationPlayer = get_node(BlinkAnimationPlayer) as AnimationPlayer
+export (NodePath) onready var exp_bar = get_node(exp_bar) as TextureRect
+export (NodePath) onready var exp_ui = get_node(exp_ui) as Label
+onready var damage_hitbox = HitBoxPlayer.damage
 
 var cursor_target = load("res://assets/Items/cursor_target_right.png")
 
@@ -47,6 +47,7 @@ func _ready():
 	Global.connect("item_dropped", self, "_on_item_dropped")
 	Global.connect("get_experience_point", self, "_get_level")
 	Global.connect("heal_player", self, "_on_healing_player")
+	
 	Global.player = self.name
 	animationTree.active = true
 	HitBoxPlayer.knockback_vector = teleport_vector

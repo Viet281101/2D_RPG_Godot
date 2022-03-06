@@ -5878,6 +5878,13 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_lock_": true
 }
+animationPlayer = NodePath("AnimationPlayer")
+animationTree = NodePath("AnimationTree")
+HitBoxPlayer = NodePath("HitBoxPivot/AttackHitBox")
+hurtBox = NodePath("HurtBox")
+BlinkAnimationPlayer = NodePath("BlinkAnimationPlayer")
+exp_bar = NodePath("ExperienceBar/EmptyBar")
+exp_ui = NodePath("ExperienceBar/EmptyBar/EXP")
 interact_zone = NodePath("Heart_collect")
 interact_labels = NodePath("interactable_labels")
 
@@ -5932,7 +5939,7 @@ anims/power-up-right = SubResource( 23 )
 anims/power-up-up = SubResource( 24 )
 anims/power_up = SubResource( 25 )
 
-[node name="BlinkAnimationPlayer2" type="AnimationPlayer" parent="."]
+[node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 26 )
 anims/Stop = SubResource( 27 )
 
