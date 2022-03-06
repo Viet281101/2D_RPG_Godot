@@ -8,7 +8,7 @@ var cursor_target = load("res://assets/Items/cursor-2.png")
 var cursor_target_click = load("res://assets/Items/cursor.png")
 var arrow_cursor = load("res://assets/Items/arrow-cursor.png")
 
-onready var light_label = $Label/Light2D
+export (NodePath) onready var light_label = get_node(light_label) as Label
 onready var hitbox = $HitBoxPivot/HitBox
 onready var light_fire = $Light
 var stats = PlayerStats
@@ -26,15 +26,16 @@ func _ready():
 	randomize()
 	if Global.take_sun_pow == true and Global.current_level != "World":
 		self.position = Global.scepter_pos
-	$Label.visible = false
+	light_label.visible = false
 	self.scale = Vector2(0.5, 0.5)
 	for key in InputMap.get_action_list("ui_pick"):
 		if key is InputEventKey:
-			$Label.text = String(OS.get_scancode_string(key.scancode))
+			light_label.text = String(OS.get_scancode_string(key.scancode))
 #	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _physics_process(_delta):
 	hitbox.knockback_vector = Global.knockback_vector
+	flame_rotate()
 	if picked == true:
 		self.position = get_node("../YSort/Player/PositionPick2").global_position
 #		_Label_invisible()
@@ -54,7 +55,7 @@ func _input(_event):
 			if body.name == "Player" and stats.canPick2 == true:
 				picked = true
 				Input.set_custom_mouse_cursor(cursor_target)
-				$Label.visible = false
+				light_label.visible = false
 				stats.canPick2 = false
 				$AnimationPlayer2.play("teleport")
 				var text = Comment_text.instance()
@@ -103,14 +104,14 @@ func fire():
 
 func _on_Scepter_body_entered(body):
 	if body.name == "Player" and picked == false and stats.canPick2 == true:
-		$Label.visible = true
+		light_label.visible = true
 
 func _Label_invisible():
-	$Label.visible = false
+	light_label.visible = false
 
 func _on_Scepter_body_exited(body):
 	if body.name == "Player":
-		$Label.visible = false
+		light_label.visible = false
 
 func _bullet_limit_number():
 	if bullet_number > 0:
@@ -130,14 +131,18 @@ func light_fire_on():
 		_Label_invisible()
 
 func light_fire_off():
-	$Label.visible = true
+	light_label.visible = true
 	$fire.visible = false
 	$RetroExplosion.visible = false
 	light_fire.visible = false
 
+func flame_rotate():
+	if $fire.global_rotation != 0:
+		$fire.global_rotation = 0
+
 func _on_Area2D_body_entered(body):
 	if body.name == "Player" and picked == false and stats.canPick2 == true:
-		$Label.visible = true
+		light_label.visible = true
 
 func _exit_tree():
 	self.queue_free()

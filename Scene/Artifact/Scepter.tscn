@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Script/Bullet_UI.gd" type="Script" id=1]
 [ext_resource path="res://assets/Items/fire-3.png" type="Texture" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Script/Artifacts/Scepter.gd" type="Script" id=7]
 [ext_resource path="res://assets/Items/player-weapon-2.png" type="Texture" id=8]
 [ext_resource path="res://assets/Items/fire-1.png" type="Texture" id=9]
-[ext_resource path="res://Script/Artifacts/flame_scepter.gd" type="Script" id=10]
 
 [sub_resource type="CanvasItemMaterial" id=8]
 particles_animation = true
@@ -192,6 +191,7 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+light_label = NodePath("Label")
 
 [node name="scepter" type="Sprite" parent="."]
 position = Vector2( 11, 0 )
@@ -205,7 +205,6 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 hframes = 4
 frame = 2
-script = ExtResource( 10 )
 
 [node name="Particles2D" type="CPUParticles2D" parent="fire"]
 modulate = Color( 1, 0, 0, 1 )
@@ -288,18 +287,25 @@ polygon = PoolVector2Array( 3.36589, -20.5346, 8.68834, -26.422, 8.87563, -32.13
 position = Vector2( 0.200817, 33.9994 )
 shape = SubResource( 14 )
 
+[node name="fireballpos" type="Position2D" parent="."]
+position = Vector2( 35, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Label" type="Label" parent="."]
 visible = false
 modulate = Color( 1, 0, 0, 1 )
-margin_left = 18.9091
-margin_top = -35.7132
-margin_right = 26.9091
-margin_bottom = -19.7132
+margin_left = -50.0
+margin_top = -38.0
+margin_right = -42.0
+margin_bottom = -22.0
 rect_scale = Vector2( 1.7, 1.7 )
+rect_pivot_offset = Vector2( 4.17112, 8.65482 )
 custom_fonts/font = SubResource( 16 )
 text = "P"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
 [node name="Light2D" type="Light2D" parent="Label"]
@@ -309,12 +315,6 @@ texture = ExtResource( 4 )
 texture_scale = 0.4
 color = Color( 1, 0, 0, 1 )
 energy = 0.7
-
-[node name="fireballpos" type="Position2D" parent="."]
-position = Vector2( 35, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Light" type="Node2D" parent="."]
 position = Vector2( 37, 0 )
