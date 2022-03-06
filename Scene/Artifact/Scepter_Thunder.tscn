@@ -420,11 +420,12 @@ anims/teleport = SubResource( 19 )
 [node name="Label" type="Label" parent="."]
 visible = false
 modulate = Color( 0, 1, 1, 1 )
-margin_left = 14.6498
-margin_top = -34.7057
-margin_right = 22.6498
-margin_bottom = -18.7057
+margin_left = 60.0
+margin_top = -9.0
+margin_right = 68.0
+margin_bottom = 7.0
 rect_scale = Vector2( 1.7, 1.7 )
+rect_pivot_offset = Vector2( 4.09705, 8.68294 )
 custom_fonts/font = SubResource( 10 )
 text = "P"
 __meta__ = {
