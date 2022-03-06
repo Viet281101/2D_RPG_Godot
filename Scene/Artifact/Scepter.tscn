@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Script/Bullet_UI.gd" type="Script" id=1]
 [ext_resource path="res://assets/Items/fire-3.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Script/Artifacts/Scepter.gd" type="Script" id=7]
 [ext_resource path="res://assets/Items/player-weapon-2.png" type="Texture" id=8]
 [ext_resource path="res://assets/Items/fire-1.png" type="Texture" id=9]
+[ext_resource path="res://Script/Artifacts/flame_scepter.gd" type="Script" id=10]
 
 [sub_resource type="CanvasItemMaterial" id=8]
 particles_animation = true
@@ -193,24 +194,23 @@ __meta__ = {
 }
 
 [node name="scepter" type="Sprite" parent="."]
+position = Vector2( 11, 0 )
+rotation = 2.35643
 texture = ExtResource( 8 )
 flip_h = true
 
 [node name="fire" type="Sprite" parent="."]
-position = Vector2( -13.3, -19 )
+position = Vector2( 35, 0 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 hframes = 4
 frame = 2
-__meta__ = {
-"_edit_lock_": true
-}
+script = ExtResource( 10 )
 
 [node name="Particles2D" type="CPUParticles2D" parent="fire"]
 modulate = Color( 1, 0, 0, 1 )
 show_behind_parent = true
 material = SubResource( 8 )
-position = Vector2( -9.11137, 10.04 )
 amount = 50
 lifetime = 2.0
 explosiveness = 0.03
@@ -233,7 +233,7 @@ __meta__ = {
 [node name="RetroExplosion" type="Particles2D" parent="."]
 visible = false
 material = SubResource( 21 )
-position = Vector2( -16, -14 )
+position = Vector2( 35, 2 )
 scale = Vector2( 0.005, 0.005 )
 z_index = 1
 amount = 50
@@ -243,18 +243,12 @@ visibility_rect = Rect2( -50, -50, 100, 100 )
 local_coords = false
 process_material = SubResource( 22 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
-position = Vector2( 4.93548, 3.03834 )
-rotation = -1.57317
+position = Vector2( 5, 1 )
+rotation = 0.777393
 polygon = PoolVector2Array( 3.58573, -21.4004, 9.0832, -26.8162, 9.06752, -31.939, 14.8529, -31.9234, 19.5519, -37.2949, 24.6409, -31.8675, 30.0955, -31.8077, 29.9895, -26.5639, 35.666, -21.3532, 30.0609, -16.0517, 30.0692, -10.8549, 25.2362, -10.9225, 19.5997, -5.45694, 14.252, -10.9355, 12.1141, -10.9255, -24.0061, 24.8883, -26.9879, 24.9864, -27.0162, 22.11, 9.08091, -14.1209, 9.08534, -15.9862 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
@@ -277,19 +271,21 @@ reset_on_save = false
 anims/teleport = SubResource( 19 )
 
 [node name="HitBoxPivot" type="Position2D" parent="."]
-visible = false
-position = Vector2( 2.18268, -2.18268 )
+position = Vector2( -4.76837e-07, 4.76837e-07 )
 rotation = -1.56489
 
 [node name="HitBox" parent="HitBoxPivot" instance=ExtResource( 5 )]
+visible = false
 collision_mask = 8
 script = ExtResource( 6 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitBoxPivot/HitBox"]
-polygon = PoolVector2Array( 3.63155, -21.6462, 8.68834, -26.422, 8.87563, -32.1343, 14.7752, -32.228, 19.1765, -37.1911, 19.5511, -37.6593, 24.4206, -32.5089, 30.1329, -32.4152, 30.2265, -26.2347, 35.6579, -21.5525, 30.6011, -16.3084, 30.5074, -10.3152, 24.7015, -10.4089, 20.0193, -5.44572, 14.5879, -10.1279, 11.5913, -10.6898, -30.8048, 32.271, -34.2264, 32.625, -34.4624, 28.7315, 7.894, -13.2709, 8.60191, -16.8104 )
+position = Vector2( -0.964545, 6.0058 )
+rotation = 2.35856
+polygon = PoolVector2Array( 3.36589, -20.5346, 8.68834, -26.422, 8.87563, -32.1343, 14.7752, -32.228, 19.1765, -37.1911, 24.4848, -32.0233, 30.1415, -32.0701, 30.1883, -26.4134, 35.6579, -21.5525, 30.6011, -16.3084, 30.5074, -10.3152, 23.959, -10.0979, 19.0503, -5.10741, 14.0598, -10.0161, 11.5913, -10.6898, -24.5316, 26.3667, -29.4636, 28.5288, -26.6821, 22.8488, 8.37977, -12.7976, 8.35638, -15.626 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBoxPivot/HitBox"]
-position = Vector2( 19.3406, -21.5687 )
+position = Vector2( 0.200817, 33.9994 )
 shape = SubResource( 14 )
 
 [node name="Label" type="Label" parent="."]
@@ -315,13 +311,13 @@ color = Color( 1, 0, 0, 1 )
 energy = 0.7
 
 [node name="fireballpos" type="Position2D" parent="."]
-position = Vector2( 7.17477, 4.83879 )
+position = Vector2( 35, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Light" type="Node2D" parent="."]
-position = Vector2( -16.5354, -15.7087 )
+position = Vector2( 37, 0 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -333,6 +329,7 @@ texture_scale = 0.5
 color = Color( 1, 0.352941, 0, 1 )
 
 [node name="Light2D2" type="Light2D" parent="Light"]
+position = Vector2( -2, 0 )
 scale = Vector2( 0.246093, 0.265625 )
 texture = ExtResource( 4 )
 texture_scale = 0.1

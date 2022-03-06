@@ -38,6 +38,7 @@ func _physics_process(_delta):
 	if picked == true:
 		self.position = get_node("../YSort/Player/PositionPick2").global_position
 #		_Label_invisible()
+		global_rotation += get_local_mouse_position().angle()
 	if PlayerStats.player_life == false:
 		picked = false
 		Input.set_custom_mouse_cursor(arrow_cursor)

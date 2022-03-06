@@ -5991,7 +5991,6 @@ __meta__ = {
 }
 
 [node name="PositionPick2" type="Position2D" parent="."]
-position = Vector2( -7, -5 )
 __meta__ = {
 "_edit_lock_": true
 }
