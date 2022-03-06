@@ -23,6 +23,7 @@ onready var placeholder = {
 var usable = {
 	"healing": preload("res://Script/Inventory/item_healing.gd"),
 	"upgrade": preload("res://Script/Inventory/item_upgrade.gd"),
+	"experience": preload("res://Script/Inventory/item_experience.gd"),
 }
 
 var equipment_names = {
@@ -84,7 +85,12 @@ signal item_dropped( item )
 # warning-ignore:unused_signal
 signal upgrade_item()
 # warning-ignore:unused_signal
-signal has_upgradable_item( value )
+signal has_upgradable_item(value)
+
+# warning-ignore:unused_signal
+signal has_experience_item(value)
+# warning-ignore:unused_signal
+signal get_experience_point(experience)
 
 # warning-ignore:unused_signal
 signal player_life_changed(health, max_health)

@@ -95,6 +95,11 @@ _global_script_classes=[ {
 "path": "res://Script/Inventory/item_affix_list.gd"
 }, {
 "base": "Item_Usable",
+"class": "Item_Experience",
+"language": "GDScript",
+"path": "res://Script/Inventory/item_experience.gd"
+}, {
+"base": "Item_Usable",
 "class": "Item_Healing",
 "language": "GDScript",
 "path": "res://Script/Inventory/item_healing.gd"
@@ -182,6 +187,7 @@ _global_script_class_icons={
 "Inventory_Slot": "",
 "Item": "",
 "Item_Affix_List": "",
+"Item_Experience": "",
 "Item_Healing": "",
 "Item_Info": "",
 "Item_Info_Line": "",

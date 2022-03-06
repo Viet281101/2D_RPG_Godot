@@ -45,6 +45,8 @@ func _ready():
 	stats.connect("no_health", self, "_player_death_function")
 # warning-ignore:return_value_discarded
 	Global.connect("item_dropped", self, "_on_item_dropped")
+	Global.connect("get_experience_point", self, "_get_level")
+	Global.connect("heal_player", self, "_on_healing_player")
 	Global.player = self.name
 	animationTree.active = true
 	HitBoxPlayer.knockback_vector = teleport_vector
@@ -99,9 +101,9 @@ func level_up(lv_up):
 	my_number = rng.randi_range(0,20)
 	if my_number <= 5:
 		stats.damage_hitbox += lv_up
-	if stats.level >= 5 and stats.damage_hitbox == 1:
+	elif stats.level >= 5 and stats.damage_hitbox == 1:
 		stats.damage_hitbox += lv_up
-	if stats.level >= 10 and stats.damage_hitbox == 2:
+	elif stats.level >= 10 and stats.damage_hitbox == 2:
 		stats.damage_hitbox += lv_up
 	emit_signal("leveling_up", lv_up)
 	_level_up_sign_effect()
@@ -292,6 +294,9 @@ func _on_Heart_collect_area_entered(area):
 			stats.health += 0
 	if (area.is_in_group("Exp_collect")):
 		_get_level(10)
+
+func _on_healing_player(health):
+	stats.health += health
 
 func _on_Transition_timeout():
 	animationTree.set("parameters/Idle/blend_position", Global.direction)

@@ -20,5 +20,4 @@ func _on_player_life_changed(health, max_health):
 
 func executed():
 	Global.emit_signal("heal_player", healing_amount)
-	print("Healing th player for %s life point!" % healing_amount)
-	PlayerStats.health += healing_amount
+	print("Healing to player for %s life point!" % healing_amount)
