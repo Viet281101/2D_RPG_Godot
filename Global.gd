@@ -1,7 +1,7 @@
 extends Node
 
-onready var settingmenu = load("res://Scene/MenuGlobal.tscn")
-onready var pausemenu = load("res://Scene/Pause.tscn")
+onready var settingmenu = load("res://Scene/UI/MenuGlobal.tscn")
+onready var pausemenu = load("res://Scene/UI/Pause.tscn")
 var filepath = "res://keybinds.ini"
 var configfile
 var global_data

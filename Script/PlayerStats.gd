@@ -45,7 +45,7 @@ func set_health(value):
 	emit_signal("health_changed", health)
 	if health <= 0:
 		emit_signal("no_health")
-		var player_die = load("res://Scene/GameOverTest.tscn")
+		var player_die = load("res://Scene/UI/GameOverTest.tscn")
 		var player_death = player_die.instance()
 		var world3 = get_tree().current_scene
 		player_life = false

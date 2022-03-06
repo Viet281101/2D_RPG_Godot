@@ -1,18 +1,18 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://assets/intro.png" type="Texture" id=1]
-[ext_resource path="res://assets/World/dungeon_door_1.png" type="Texture" id=2]
-[ext_resource path="res://assets/Enemies/mob_lv1.png" type="Texture" id=3]
-[ext_resource path="res://assets/Enemies/mob_lv4.png" type="Texture" id=4]
-[ext_resource path="res://assets/Enemies/mob_lv3.png" type="Texture" id=5]
-[ext_resource path="res://assets/Enemies/mob_lv5.png" type="Texture" id=6]
-[ext_resource path="res://assets/Enemies/mob_lv2.png" type="Texture" id=7]
-[ext_resource path="res://Script/Intro.gd" type="Script" id=8]
-[ext_resource path="res://assets/Explosion/Explosion.png" type="Texture" id=9]
-[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=10]
-[ext_resource path="res://assets/Items/Door_nva.png" type="Texture" id=11]
-[ext_resource path="res://assets/Enemies/mob_lv0.png" type="Texture" id=12]
-[ext_resource path="res://assets/World/house_door_open.png" type="Texture" id=13]
+[ext_resource path="res://assets/Explosion/Explosion.png" type="Texture" id=1]
+[ext_resource path="res://assets/Enemies/mob_lv5.png" type="Texture" id=2]
+[ext_resource path="res://assets/Enemies/mob_lv2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Enemies/mob_lv3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Enemies/mob_lv0.png" type="Texture" id=5]
+[ext_resource path="res://assets/Shadows/light.png" type="Texture" id=6]
+[ext_resource path="res://Script/Intro.gd" type="Script" id=7]
+[ext_resource path="res://assets/Items/Door_nva.png" type="Texture" id=8]
+[ext_resource path="res://assets/World/house_door_open.png" type="Texture" id=9]
+[ext_resource path="res://assets/World/dungeon_door_1.png" type="Texture" id=10]
+[ext_resource path="res://assets/intro.png" type="Texture" id=11]
+[ext_resource path="res://assets/Enemies/mob_lv1.png" type="Texture" id=12]
+[ext_resource path="res://assets/Enemies/mob_lv4.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Intro"
@@ -1970,7 +1970,7 @@ layer = 128
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1985,7 +1985,7 @@ anims/start = SubResource( 9 )
 [node name="Dungeon_Gate" type="Sprite" parent="Intro"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 220, 80 )
-texture = ExtResource( 2 )
+texture = ExtResource( 10 )
 offset = Vector2( -0.203476, -16.8919 )
 hframes = 8
 
@@ -1993,13 +1993,13 @@ hframes = 8
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 220, 2 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 11 )
+texture = ExtResource( 8 )
 hframes = 18
 
 [node name="MobLv0" type="Sprite" parent="Intro"]
 visible = false
 position = Vector2( -173.592, -45.4389 )
-texture = ExtResource( 12 )
+texture = ExtResource( 5 )
 hframes = 3
 frame = 1
 
@@ -2007,43 +2007,43 @@ frame = 1
 visible = false
 position = Vector2( 71.4564, 86.4317 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
+texture = ExtResource( 12 )
 
 [node name="MobLv2" type="Sprite" parent="Intro"]
 visible = false
 position = Vector2( 361.27, -63.5655 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 7 )
+texture = ExtResource( 3 )
 
 [node name="MobLv3" type="Sprite" parent="Intro"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 343.785, 101.891 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="MobLv4" type="Sprite" parent="Intro"]
 visible = false
 modulate = Color( 1, 1, 1, 0.219608 )
 position = Vector2( 404.931, 182.824 )
 scale = Vector2( 10, 10 )
-texture = ExtResource( 4 )
+texture = ExtResource( 13 )
 
 [node name="MobLv5" type="Sprite" parent="Intro"]
 visible = false
 position = Vector2( 292.649, 192.271 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Explosion" type="Sprite" parent="Intro"]
 visible = false
 position = Vector2( 240, 220 )
-texture = ExtResource( 9 )
+texture = ExtResource( 1 )
 hframes = 10
 
 [node name="Light" type="Sprite" parent="Intro"]
 visible = false
 position = Vector2( 235.717, 129.083 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 
 [node name="Skip" type="Button" parent="Intro"]
 visible = false
@@ -2069,14 +2069,14 @@ __meta__ = {
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 220, 35 )
-texture = ExtResource( 13 )
+texture = ExtResource( 9 )
 hframes = 6
 
 [node name="Main" type="Sprite" parent="Intro"]
 visible = false
 position = Vector2( 253.329, 136.324 )
 scale = Vector2( 1.445, 1.445 )
-texture = ExtResource( 1 )
+texture = ExtResource( 11 )
 centered = false
 offset = Vector2( -175.314, -94.342 )
 hframes = 22

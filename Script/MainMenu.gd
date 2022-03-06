@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-onready var settingmenu = load("res://Scene/MenuGlobal.tscn")
-onready var soundmenu = load("res://Scene/Music_Sound_Menu.tscn")
+onready var settingmenu = load("res://Scene/UI/MenuGlobal.tscn")
+onready var soundmenu = load("res://Scene/UI/Music_Sound_Menu.tscn")
 var arrow_cursor = load("res://assets/Items/Mouse1.png")
 export (NodePath) onready var start_1 = get_node(start_1) as AnimationPlayer
 export (NodePath) onready var comment_lbl = get_node(comment_lbl) as Label
@@ -29,7 +29,7 @@ func _on_Quit_pressed():
 func _on_Start_pressed():
 	if check_key:
 # warning-ignore:return_value_discarded
-		get_tree().change_scene("res://Scene/Intro.tscn")
+		get_tree().change_scene("res://Scene/UI/Intro.tscn")
 		Global.get_start = true
 		if Global.first_level:
 			Effects.scene_changer.fade_out()
@@ -48,6 +48,6 @@ func _exit_tree():
 
 func _on_Credit_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scene/Credit.tscn")
+	get_tree().change_scene("res://Scene/UI/Credit.tscn")
 	Global.play_music()
 	Global.see_credit = true

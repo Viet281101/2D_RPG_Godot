@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 #var is_paused = false setget set_is_paused
-onready var settingmenu = load("res://Scene/MenuGlobal.tscn")
-onready var soundmenu = load("res://Scene/Music_Sound_Menu.tscn")
+onready var settingmenu = load("res://Scene/UI/MenuGlobal.tscn")
+onready var soundmenu = load("res://Scene/UI/Music_Sound_Menu.tscn")
 var arrow_cursor = load("res://assets/Items/arrow-cursor.png")
 
 

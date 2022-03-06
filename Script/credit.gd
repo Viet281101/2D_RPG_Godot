@@ -15,7 +15,7 @@ func _process(_delta):
 
 func _on_Return_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scene/MainMenu.tscn")
+	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
 	Global.play_music()
 
 

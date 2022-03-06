@@ -202,7 +202,7 @@ _global_script_class_icons={
 
 config/name="The Teleporter"
 config/description="A small basic 2d pixel rpg project in godot."
-run/main_scene="res://Scene/Intro.tscn"
+run/main_scene="res://Scene/UI/Intro.tscn"
 boot_splash/image="res://assets/World/Inside_Magic_Spell.png"
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
@@ -218,7 +218,7 @@ SettingsManger="*res://Script/Inventory/settings_manger.gd"
 RessourceManager="*res://Script/Inventory/ressource_manager.gd"
 Effects="*res://Scene/Effects.tscn"
 InventorySysteme="*res://Scene/InventorySysteme/InventorySysteme.tscn"
-BulletUi="*res://Scene/Bullet_UI.tscn"
+BulletUi="*res://Scene/UI/Bullet_UI.tscn"
 
 [debug]
 

@@ -1,7 +1,7 @@
 extends Node2D
 
-var Health_ui = preload("res://Scene/HeartUI.tscn")
-var Level_Name = preload("res://Scene/LevelName.tscn")
+var Health_ui = preload("res://Scene/UI/HeartUI.tscn")
+var Level_Name = preload("res://Scene/UI/LevelName.tscn")
 onready var scepter = preload("res://Scene/Artifact/Scepter.tscn")
 var scepter_picked = false
 

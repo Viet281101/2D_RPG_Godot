@@ -113,7 +113,7 @@ func _get_level(var_exp):
 	exp_ui.update_text(stats.level, stats.experience, stats.experience_required)
 
 func _level_up_sign_effect():
-	var level_up_signal = load("res://Scene/LevelUpSignal.tscn")
+	var level_up_signal = load("res://Scene/UI/LevelUpSignal.tscn")
 	var level_up = level_up_signal.instance()
 	$playerSprite.add_child(level_up)
 	level_up.global_position = global_position

@@ -23,7 +23,7 @@ func _start_finished():
 func _intro_finished():
 	yield(get_tree().create_timer(3), "timeout")
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scene/MainMenu.tscn")
+	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
 	Global.play_music()
 	Global.can_pause = true
 	if Global.first_level:
@@ -35,7 +35,7 @@ func _exit_tree():
 
 func _on_Button_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scene/MainMenu.tscn")
+	get_tree().change_scene("res://Scene/UI/MainMenu.tscn")
 	Global.play_music()
 	if Global.first_level:
 		Effects.scene_changer.fade_out()
