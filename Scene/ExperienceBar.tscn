@@ -2,9 +2,9 @@
 
 [ext_resource path="res://assets/Level_Player/EXP_Bar1.png" type="Texture" id=1]
 [ext_resource path="res://assets/Level_Player/EXP_Bar2.png" type="Texture" id=2]
-[ext_resource path="res://Script/ExpBar.gd" type="Script" id=3]
-[ext_resource path="res://Script/ExperienceBar.gd" type="Script" id=4]
-[ext_resource path="res://Script/label_test.gd" type="Script" id=5]
+[ext_resource path="res://Script/LevelUpSystem/ExpBar.gd" type="Script" id=3]
+[ext_resource path="res://Script/LevelUpSystem/ExperienceBar.gd" type="Script" id=4]
+[ext_resource path="res://Script/LevelUpSystem/label_test.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFontData" id=2]
 font_path = "res://assets/Font_Textur/Born2bSportyV10.ttf"

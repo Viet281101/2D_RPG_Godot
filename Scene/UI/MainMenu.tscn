@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Enemies/blue_circle_magic.png" type="Texture" id=2]
 [ext_resource path="res://assets/Font_Textur/font_12.tres" type="DynamicFont" id=4]
 [ext_resource path="res://assets/Items/sun-broker-magic.png" type="Texture" id=7]
-[ext_resource path="res://Script/MainMenu.gd" type="Script" id=8]
+[ext_resource path="res://Script/UI/MainMenu.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFontData" id=38]
 font_path = "res://assets/Font_Textur/Pixel_Font_free.ttf"

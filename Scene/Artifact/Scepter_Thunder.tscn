@@ -369,6 +369,8 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+hitbox = NodePath("HitBoxPivot/HitBox")
+light_label = NodePath("Label")
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 15, 0 )

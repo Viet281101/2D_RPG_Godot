@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://Script/Bullet_UI.gd" type="Script" id=1]
+[ext_resource path="res://Script/UI/Bullet_UI.gd" type="Script" id=1]
 [ext_resource path="res://assets/Items/fire-3.png" type="Texture" id=2]
 [ext_resource path="res://assets/Explosion/Explosion_Sheet.png" type="Texture" id=3]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=4]
@@ -192,6 +192,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 light_label = NodePath("Label")
+hitbox = NodePath("HitBoxPivot/HitBox")
+light_fire = NodePath("Light")
 
 [node name="scepter" type="Sprite" parent="."]
 position = Vector2( 11, 0 )

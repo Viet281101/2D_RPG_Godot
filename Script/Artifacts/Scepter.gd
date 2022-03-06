@@ -9,8 +9,8 @@ var cursor_target_click = load("res://assets/Items/cursor.png")
 var arrow_cursor = load("res://assets/Items/arrow-cursor.png")
 
 export (NodePath) onready var light_label = get_node(light_label) as Label
-onready var hitbox = $HitBoxPivot/HitBox
-onready var light_fire = $Light
+export (NodePath) onready var hitbox = get_node(hitbox) as Area2D
+export (NodePath) onready var light_fire = get_node(light_fire) as Node2D
 var stats = PlayerStats
 
 var fire_time = false

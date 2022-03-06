@@ -3,13 +3,15 @@ extends Area2D
 var picked = false
 var stats = PlayerStats
 var cursor_target = load("res://assets/Items/cursor-3.png")
-onready var hitbox = $HitBoxPivot/HitBox
+
+export (NodePath) onready var hitbox = get_node(hitbox) as Area2D
+export (NodePath) onready var light_label = get_node(light_label) as Label
 
 func _ready():
 	self.scale = Vector2(0.5, 0.5)
 	for key in InputMap.get_action_list("ui_pick"):
 		if key is InputEventKey:
-			$Label.text = String(OS.get_scancode_string(key.scancode))
+			light_label.text = String(OS.get_scancode_string(key.scancode))
 
 func _physics_process(_delta):
 	hitbox.knockback_vector = Global.knockback_vector
@@ -42,11 +44,11 @@ func _input(_event):
 		active_finished()
 
 func _Label_invisible():
-	$Label.visible = false
+	light_label.visible = false
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player" and picked == false and stats.canPick == true:
-		$Label.visible = true
+		light_label.visible = true
 
 func _on_Area2D_body_exited(body):
 	if body.name == "Player" and picked == false:

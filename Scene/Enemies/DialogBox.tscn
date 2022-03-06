@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Script/Dialog.gd" type="Script" id=1]
+[ext_resource path="res://Script/Enemies/Dialog.gd" type="Script" id=1]
 [ext_resource path="res://assets/Enemies/cat_step_sprite_nva.png" type="Texture" id=2]
 [ext_resource path="res://assets/Enemies/black_cat_dialogbox.png" type="Texture" id=3]
 

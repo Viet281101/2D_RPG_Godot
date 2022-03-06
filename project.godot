@@ -42,7 +42,7 @@ _global_script_classes=[ {
 "base": "CanvasModulate",
 "class": "DayNightCycle",
 "language": "GDScript",
-"path": "res://Script/Day_Night.gd"
+"path": "res://Script/UI/Day_Night.gd"
 }, {
 "base": "Scale_Control",
 "class": "Dragable_Control",

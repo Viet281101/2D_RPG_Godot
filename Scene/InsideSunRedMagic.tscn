@@ -645,6 +645,21 @@ number_of_items = 5
 position = Vector2( 496.434, 163.232 )
 number_of_items = 8
 
+[node name="Chest6" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 955, 428 )
+items = [ "wood", "wood", "stone", "stone", "axe" ]
+number_of_items = 8
+
+[node name="Chest7" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 975, 428 )
+items = [ "wood", "wood", "stone", "stone", "stone", "wood", "stone", "stone" ]
+number_of_items = 8
+
+[node name="Chest8" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( 995, 428 )
+items = [ "wood", "wood", "stone", "stone", "stone", "wood", "stone", "stone" ]
+number_of_items = 8
+
 [node name="WorldPos" type="Position2D" parent="."]
 position = Vector2( 233.508, 321.598 )
 
@@ -782,7 +797,8 @@ margin_bottom = 62.2349
 
 [node name="Scepter" parent="." instance=ExtResource( 13 )]
 show_behind_parent = true
-position = Vector2( 330.837, 653.059 )
+position = Vector2( 328, 652 )
+scale = Vector2( 0.5, 0.5 )
 
 [connection signal="body_entered" from="GoInsideMagicSpell" to="GoInsideMagicSpell" method="_on_ExitSunRedMagic_body_entered"]
 [connection signal="body_entered" from="GoInsideMagicSpell/seek_player_exit" to="GoInsideMagicSpell" method="_on_seek_player_exit_body_entered"]

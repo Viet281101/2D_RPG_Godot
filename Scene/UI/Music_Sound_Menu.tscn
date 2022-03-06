@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Script/MenuSound.gd" type="Script" id=1]
+[ext_resource path="res://Script/UI/MenuSound.gd" type="Script" id=1]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/Font_Textur/Born2bSportyV10.ttf"
