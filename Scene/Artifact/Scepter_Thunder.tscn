@@ -4,8 +4,8 @@
 [ext_resource path="res://Script/Artifacts/Scepter_Thunder.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Artifact/LightningLaser.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=4]
-[ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Script/HitBoxPlayer.gd" type="Script" id=6]
+[ext_resource path="res://Scene/UI/HitBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Script/UI/HitBoxPlayer.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26.1425, 0.508234 )

@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scene/RetroExplosion.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Shadows/light.png" type="Texture" id=2]
-[ext_resource path="res://Scene/HitBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Script/HitBoxPlayer.gd" type="Script" id=4]
+[ext_resource path="res://Scene/UI/HitBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Script/UI/HitBoxPlayer.gd" type="Script" id=4]
 [ext_resource path="res://assets/Items/fire-2.png" type="Texture" id=5]
 [ext_resource path="res://Script/Artifacts/Bullet_Player.gd" type="Script" id=6]
 [ext_resource path="res://assets/Music & Sound/fire_1.ogg" type="AudioStream" id=7]

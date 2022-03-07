@@ -222,7 +222,7 @@ PlayerStats="*res://Scene/PlayerStats.tscn"
 Global="*res://Global.tscn"
 SettingsManger="*res://Script/Inventory/settings_manger.gd"
 RessourceManager="*res://Script/Inventory/ressource_manager.gd"
-Effects="*res://Scene/Effects.tscn"
+Effects="*res://Scene/UI/Effects.tscn"
 InventorySysteme="*res://Scene/InventorySysteme/InventorySysteme.tscn"
 BulletUi="*res://Scene/UI/Bullet_UI.tscn"
 

@@ -5,7 +5,7 @@ signal day_tick(day)
 
 const NIGHT_COLOR = Color("#000000")
 const DAY_COLOR = Color("#110000")
-const EVENING_COLOR = Color("#9e9e9e")
+const EVENING_COLOR = Color("#bbbbbb")
 const TIME_SCALE = 0.05
 
 var time = 0

@@ -3,10 +3,10 @@ extends CanvasLayer
 export var hearts = 4 setget set_hearts
 export var max_hearts = 5 setget set_max_hearts
 
-onready var heartUIFull = $HeartUIFull
-onready var heartUIEmpty = $HeartUIEmpty
-onready var heart_multi_ui = $heart_multi_ui/Control
-onready var heart_multi_nbr = $heart_multi_ui/Control/Number
+export (NodePath) onready var heartUIFull = get_node(heartUIFull) as TextureRect
+export (NodePath) onready var heartUIEmpty = get_node(heartUIEmpty) as TextureRect
+export (NodePath) onready var heart_multi_ui = get_node(heart_multi_ui) as Control
+export (NodePath) onready var heart_multi_nbr = get_node(heart_multi_nbr) as Label
 
 func set_hearts(value):
 	hearts = clamp(value, 0, max_hearts)
@@ -26,6 +26,8 @@ func _ready():
 	PlayerStats.connect("health_changed", self, "set_hearts")
 # warning-ignore:return_value_discarded
 	PlayerStats.connect("max_health_changed", self, "set_max_hearts")
+# warning-ignore:return_value_discarded
+	Global.connect("repellent_time", self, "_on_repellent_time")
 	heart_multi_ui.visible = false
 	heart_multi_nbr.set("custom_colors/font_color", Color("8a0808"))
 
@@ -40,4 +42,13 @@ func _process(_delta):
 		heartUIFull.visible = true
 		heart_multi_ui.visible = false
 		
+
+###################################################### Countdown ###
+func _on_repellent_time():
+	if Global.repellent == true and Global.timer > 0:
+		$Repellent.visible = true
+		$Repellent.text    = str(Global.timer)
+	else:
+		$Repellent.visible = false
+		Global.repellent   = false
 

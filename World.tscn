@@ -39,7 +39,7 @@ __meta__ = {
 }
 
 [node name="Day_Night" parent="." instance=ExtResource( 20 )]
-color = Color( 0.623529, 0.623529, 0.623529, 1 )
+color = Color( 0.67451, 0.67451, 0.67451, 1 )
 
 [node name="LevelNaviganion" type="Navigation2D" parent="." groups=["LevelNavigation"]]
 

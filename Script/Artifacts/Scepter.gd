@@ -18,6 +18,7 @@ var picked = false
 
 export var bullet_number = 0
 var bullet_speed = 1000
+var cooldown = false
 
 signal p_up 
 signal p_down
@@ -84,7 +85,7 @@ func _input(_event):
 		$AnimationPlayer2.play("teleport")
 		_Label_invisible()
 
-	if Input.is_action_just_pressed("ui_mouse_left") and picked == true and fire_time == true:
+	if Input.is_action_just_pressed("ui_mouse_left") and picked == true and fire_time == true and cooldown == false:
 		fire()
 		emit_signal("p_down")
 		light_fire_on()
@@ -100,7 +101,10 @@ func fire():
 	bullet.position = $fireballpos.get_global_position()
 	get_parent().add_child(bullet)
 	bullet.look_at(get_global_mouse_position())
+	cooldown = true
 	bullet_number -= 1
+	yield(get_tree().create_timer(0.4), "timeout")
+	cooldown = false
 
 func _on_Scepter_body_entered(body):
 	if body.name == "Player" and picked == false and stats.canPick2 == true:
