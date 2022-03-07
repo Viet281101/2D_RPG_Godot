@@ -41,7 +41,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_Bullet_Player_body_entered(_body):
-	var bullet_explosion = load("res://Scene/FireBallExplosion.tscn")
+	var bullet_explosion = load("res://Scene/Artifact/FireBallExplosion.tscn")
 	var explosion = bullet_explosion.instance()
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", explosion)
