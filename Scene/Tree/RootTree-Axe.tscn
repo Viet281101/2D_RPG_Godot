@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/World/root_tree_nva.png" type="Texture" id=1]
-[ext_resource path="res://assets/Iventory/Axe.png" type="Texture" id=2]
+[ext_resource path="res://assets/Iventory/Axe_1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Shadows/shadow.png" type="Texture" id=3]
 [ext_resource path="res://Script/Inventory/Axe_item.gd" type="Script" id=4]
 

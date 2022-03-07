@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pickaxe.png-4e1a25abffea122eb5abd5ecc7e2f832.stex"
+path="res://.import/Axe_1.png-6ea16fd41b02723c8ce13a4efab9fd82.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Iventory/Pickaxe.png"
-dest_files=[ "res://.import/Pickaxe.png-4e1a25abffea122eb5abd5ecc7e2f832.stex" ]
+source_file="res://assets/Iventory/Axe_1.png"
+dest_files=[ "res://.import/Axe_1.png-6ea16fd41b02723c8ce13a4efab9fd82.stex" ]
 
 [params]
 
