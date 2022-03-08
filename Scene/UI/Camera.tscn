@@ -39,8 +39,12 @@ current = true
 zoom = Vector2( 0.8, 0.8 )
 smoothing_enabled = true
 script = ExtResource( 1 )
+topLeft = NodePath("Limit/TopLeft")
+bottomRight = NodePath("Limit/BottomRight")
 camera_zoom = NodePath("ZoomAnimate")
 light = NodePath("Light2D")
+timer = NodePath("Timer")
+tween = NodePath("Tween")
 
 [node name="Limit" type="Node" parent="."]
 
@@ -59,3 +63,10 @@ shadow_enabled = true
 reset_on_save = false
 anims/normal = SubResource( 1 )
 anims/view_map = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

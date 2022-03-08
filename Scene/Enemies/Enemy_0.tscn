@@ -402,6 +402,11 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+hurtBox = NodePath("HurtBox")
+hitbox = NodePath("HitBox")
+stats = NodePath("Stats")
+softCollision = NodePath("SoftCollision")
+playerDetectionZone = NodePath("Area2D")
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 1 )

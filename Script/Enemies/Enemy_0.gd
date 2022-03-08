@@ -3,9 +3,11 @@ extends KinematicBody2D
 
 export var FRICTION = 200
 
-onready var hurtBox = $HurtBox
-onready var stats = $Stats
-onready var softCollision = $SoftCollision
+export (NodePath) onready var hurtBox = get_node(hurtBox) as Area2D
+export (NodePath) onready var hitbox = get_node(hitbox) as Area2D
+export (NodePath) onready var stats = get_node(stats) as Node
+export (NodePath) onready var softCollision = get_node(softCollision) as Area2D
+export (NodePath) onready var playerDetectionZone = get_node(playerDetectionZone) as Area2D
 
 var player = null
 var move = Vector2.ZERO
@@ -19,6 +21,7 @@ var rng = RandomNumberGenerator.new()
 var my_number
 
 func _physics_process(delta):
+	_repellent()
 	move = Vector2.ZERO
 	
 	if player != null:
@@ -40,7 +43,6 @@ func _on_Area2D_body_entered(body):
 	if body != self:
 		player = body
 
-
 func _on_Area2D_body_exited(_body):
 	player = null
 
@@ -50,7 +52,6 @@ func _on_HurtBox_area_entered(area):
 #	knockback = area.knockback_vector * 180
 	hurtBox.create_hit_effect()
 	hurtBox.start_invincibility(0.4)
-
 
 func _on_Stats_no_health():
 	var enemy_die_effect3 = load("res://Scene/Enemies/Enemy_0_DeathEffect.tscn")
@@ -71,10 +72,8 @@ func _on_Stats_no_health():
 func _on_HurtBox_invincible_ended():
 	$AnimationPlayer.play("idle")
 
-
 func _on_HurtBox_invincible_started():
 	$AnimationPlayer.play("hurt")
-
 
 func _on_HurtBox2_area_entered(area):
 	stats.health -= area.damage
@@ -82,7 +81,17 @@ func _on_HurtBox2_area_entered(area):
 	hurtBox.start_invincibility(0.4)
 #	print(area.damage)
 
-
 func _on_Area2D2_body_entered(_body):
 	queue_free()
 #	print("DISAPEAR")
+
+func _repellent():
+	if Global.repellent == true:
+		playerDetectionZone.monitoring = false
+		hitbox.monitoring = false
+	else:
+		playerDetectionZone.monitoring = true
+		hitbox.monitoring = true
+
+func _exit_tree():
+	self.queue_free()

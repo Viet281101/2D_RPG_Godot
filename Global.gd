@@ -40,6 +40,7 @@ var type_names = {
 	Game_Enums.ITEM_TYPE.MATERIAL: "Material",
 }
 
+var camera = null
 var get_start = false
 var see_credit = false
 var current_level
@@ -245,6 +246,8 @@ func reset():
 	knockback_vector = Vector2.ZERO
 	is_paused = true
 	paused_on = false
+	can_pause = true
+	repellent = false
 	
 # warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()

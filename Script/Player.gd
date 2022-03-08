@@ -43,7 +43,6 @@ signal leveling_up(lv_up)
 func _ready():
 	randomize()
 	stats.connect("no_health", self, "_player_death_function")
-# warning-ignore:return_value_discarded
 	Global.connect("item_dropped", self, "_on_item_dropped")
 	Global.connect("get_experience_point", self, "_get_level")
 	Global.connect("heal_player", self, "_on_healing_player")
@@ -75,7 +74,6 @@ func _physics_process(delta):
 
 ############################## LEVEL UP SYSTEME ################################
 
-# warning-ignore:shadowed_variable
 func get_required_experience(level):
 	return round(pow(level, 1.8) + level * 4)
 
@@ -322,7 +320,9 @@ func _on_item_dropped(item):
 ############################################### Using Repellent ###
 func _invisible():
 	if Global.repellent == true:
-		self.modulate = Color(1,1,1,0.3)
+		self.modulate = Color(1,1,1,0.2)
+		hurtBox.monitoring = false
 	else:
 		self.modulate = Color(1,1,1,1)
+		hurtBox.monitoring = true
 

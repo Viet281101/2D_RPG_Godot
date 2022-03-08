@@ -1,12 +1,10 @@
 class_name Item_Repellent extends Item_Usable
 
-# warning-ignore:unused_signal
 signal repellent(repellent_time)
 
 var repellent
 
 func _init(data, parent_item).(data, parent_item):
-# warning-ignore:return_value_discarded
 	self.connect("repellent", Global, "_on_repellent")
 	on_use_text = "Make you invisible in %s second."
 	condition = "Drink it now."

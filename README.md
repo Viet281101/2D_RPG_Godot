@@ -3,7 +3,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------
 
-#### Ressource du jeux, pour ce que nous avons prendre en ligne:
+#### ![alt text](assets/Iventory/sack.png)Ressource du jeux, pour ce que nous avons prendre en ligne:
 
 
 
