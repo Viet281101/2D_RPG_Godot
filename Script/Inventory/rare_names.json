@@ -49,9 +49,8 @@
       ],
       "ACCESSORY": [
         "Standard",
-    	  "Magic",
-    	  "Common",
         "Luxury",
+        "Virtual",
         "Legendary",
         "Ultimate",
         "Infinity",
@@ -112,10 +111,10 @@
     	  "Magic",
     	  "Common",
     	  "Useful",
-        "Luxury",
-        "Legendary",
-        "Ultimate",
-        "Infinity",        
+        "Beta",
+        "Alpha",
+        "Omega",
+        "Grand",
       ],
   }
 }

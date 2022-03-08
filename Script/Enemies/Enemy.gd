@@ -19,13 +19,14 @@ var state = IDLE
 
 var portal_id = 0
 
-onready var stats = $Stats
-onready var hp_bar = $HP_Bar
-onready var animationEnemy = $AnimationEnemy
-onready var playerDetectionZone = $PlayerDetectionZone
-onready var hurtBox = $HurtBox
-onready var softCollision = $SoftCollision
-onready var wanderController = $WanderController
+export (NodePath) onready var stats = get_node(stats) as Node
+export (NodePath) onready var hp_bar = get_node(hp_bar) as TextureRect
+export (NodePath) onready var animationEnemy = get_node(animationEnemy) as AnimationPlayer
+export (NodePath) onready var playerDetectionZone = get_node(playerDetectionZone) as Area2D
+export (NodePath) onready var hurtBox = get_node(hurtBox) as Area2D
+export (NodePath) onready var hitbox = get_node(hitbox) as Area2D
+export (NodePath) onready var softCollision = get_node(softCollision) as Area2D
+export (NodePath) onready var wanderController = get_node(wanderController) as Node2D
 
 const Drop = preload("res://Scene/Enemies/Enemy_0.tscn")
 var rng = RandomNumberGenerator.new()
@@ -37,6 +38,7 @@ func _ready():
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
+	_repellent()
 	
 	match state:
 		IDLE:
@@ -162,9 +164,17 @@ func _on_HurtBox2_area_entered(area):
 func _on_HurtBox2_invincible_ended():
 	animationEnemy.play("Stop")
 
-
 func _on_HurtBox2_invincible_started():
 	animationEnemy.play("Hurt")
+
+func _repellent():
+	if Global.repellent == true:
+		playerDetectionZone.monitoring = false
+		hitbox.monitoring = false
+	else:
+		playerDetectionZone.monitoring = true
+		hitbox.monitoring = true
+		
 
 func _exit_tree():
 	self.queue_free()

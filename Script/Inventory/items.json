@@ -36,6 +36,13 @@
 		"type": "CONSUMABLE",
 		"stack_size": 5,
 		"level": 1,
+		"usable": {
+			"type": "repellent",
+			"data": {
+				"repellent": 50,
+				"cooldown": 1,
+			}
+		}
 	},
 	"rarity_upgrade": {
 		"name": "Rarity Upgrade Kit",

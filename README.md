@@ -28,9 +28,8 @@ mais je l'ai choisi pour la simplicité du dessin et c'est très sympa pour moi.
 
 - En [_OpenGameArt.org_](https://opengameart.org/), j'ai pris 
 [_wooden house_](https://opengameart.org/content/wooden-house-with-animated-door-pixel-art)
-et le pont que j'ai dessiné est une référence à ce modèle du pont même si je ne l'ai pas très bien dessiné:
+et le pont que j'ai dessiné ![alt text](assets/World/Tileset-map/bridge2.png) est une référence à ce modèle du pont même si je ne l'ai pas très bien dessiné:
 [_wooden bridge_](https://opengameart.org/content/lpc-wooden-bridge-rework)
-![alt text](assets/World/Tileset-map/bridge2.png)
 
 - Le clift tileset , j'ai pris ici: 
 [_clift tileset_](https://github.com/uheartbeast/youtube-tutorials/blob/master/Action%20RPG/Action%20RPG%20Resources.zip)

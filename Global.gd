@@ -24,6 +24,7 @@ var usable = {
 	"healing": preload("res://Script/Inventory/item_healing.gd"),
 	"upgrade": preload("res://Script/Inventory/item_upgrade.gd"),
 	"experience": preload("res://Script/Inventory/item_experience.gd"),
+	"repellent": preload("res://Script/Inventory/item_repellent.gd"),
 }
 
 var equipment_names = {
@@ -389,9 +390,9 @@ func get_type_name( item ):
 
 
 ########## Repellent Potion Effect ###
-func _on_repellent():
+func _on_repellent(repellent_time):
 	repellent = true
-	timer = 11
+	timer = repellent_time
 	_countdown()
 
 func _countdown():

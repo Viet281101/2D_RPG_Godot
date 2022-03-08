@@ -616,6 +616,14 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+stats = NodePath("Stats")
+hp_bar = NodePath("HP_Bar")
+animationEnemy = NodePath("AnimationEnemy")
+playerDetectionZone = NodePath("PlayerDetectionZone")
+hurtBox = NodePath("HurtBox")
+hitbox = NodePath("HitBox")
+softCollision = NodePath("SoftCollision")
+wanderController = NodePath("WanderController")
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.768627, 0, 0, 1 )
