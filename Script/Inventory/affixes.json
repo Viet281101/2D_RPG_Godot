@@ -6,7 +6,7 @@
 			"OFFHAND",
 			"CHEST",
 			"HEAD",
-			"POTION"
+			"ACCESSORY",
 		],
 		"affixes": {
 			"unblemished": {
@@ -54,7 +54,7 @@
 			"OFFHAND",
 			"CHEST",
 			"HEAD",
-			"POTION"
+			"ACCESSORY",
 		],
 		"affixes": {
 			"vigorous": {
@@ -102,7 +102,7 @@
 			"OFFHAND",
 			"CHEST",
 			"HEAD",
-			"POTION"
+			"ACCESSORY",
 		],
 		"affixes": {
 			"lifetime": {
@@ -150,7 +150,7 @@
 			"OFFHAND",
 			"CHEST",
 			"HEAD",
-			"POTION"
+			"ACCESSORY",
 		],
 		"affixes": {
 			"of_power": {
@@ -207,7 +207,7 @@
 			"OFFHAND",
 			"CHEST",
 			"HEAD",
-			"POTION"
+			"ACCESSORY",
 		],
 		"affixes": {
 			"of_greed": {
@@ -263,7 +263,7 @@
 			"OFFHAND",
 			"CHEST",
 			"HEAD",
-			"POTION"
+			"ACCESSORY",
 		],
 		"affixes": {
 			"of_experience": {

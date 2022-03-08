@@ -29,6 +29,16 @@ func display(slot : Inventory_Slot):
 		if c.rect_size.x > max_width:
 			max_width = c.rect_size.x
 	rect_size = Vector2(max_width + 30, height + 8)
+	
+#	var window_size = get_viewport().get_visible_rect().size
+#	var scaled_y = ( rect_size.y * scale )
+#	var scaled_x = ( rect_size.x * scale )
+#
+#	if rect_global_position.y + scaled_y > window_size.y:
+#		rect_global_position.y = window_size.y - scaled_y
+#
+#	if rect_global_position.x + scaled_x > window_size.x:
+#		rect_global_position.x = slot.rect_global_position.x - scaled_x
 
 func add_line(line):
 	line_container.add_child(line)

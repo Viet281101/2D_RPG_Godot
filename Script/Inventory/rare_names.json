@@ -47,17 +47,14 @@
           "Incurable",
           "Punctured"
       ],
-      "POTION": [
-	  "Sweet",
-	  "Bitter",
-	  "Stinging",
-	  "Sardonic",
-	  "Spicy",
-	  "Hot-Spicy",
-	  "Musty",
-	  "Fresh",
-	  "Magic",
-	  "Common",
+      "ACCESSORY": [
+        "Standard",
+    	  "Magic",
+    	  "Common",
+        "Luxury",
+        "Legendary",
+        "Ultimate",
+        "Infinity",
       ],
   },
   "suffix": {
@@ -111,10 +108,14 @@
           "Ouch!",
           "Outrage"
       ],
-      "POTION": [
-	  "Magic",
-	  "Common",
-	  "Useful"
+      "ACCESSORY": [
+    	  "Magic",
+    	  "Common",
+    	  "Useful",
+        "Luxury",
+        "Legendary",
+        "Ultimate",
+        "Infinity",        
       ],
   }
 }
