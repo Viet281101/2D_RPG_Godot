@@ -44,11 +44,10 @@ Si vous avez besoin d'un lien vers les tutoriels que nous avons regardés pour c
 ![alt text](assets/heart-ui-nva.png)
 N'hésitez pas à nous demander.
 ![alt text](assets/heart-ui-nva2.png)
-Mais la plupart des instructions sont en anglais.
+Mais la plupart des instructions sont en anglais.![alt text](assets/World/tree-02-nva.png)
 
 
-![alt text](assets/World/tree-02-nva.png)
-
+![alt text](assets/Enemies/summoner-base-nva.png)
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -92,9 +91,6 @@ attaques, les arbres qui se cassent etc… ils ont été fait sur [_rfxgen_](htt
 
 
 ------------------------------------------------------------------------------------------------------
-![alt text](assets/Enemies/summoner-base-nva.png)
-
-
 ![alt text](assets/heart-ui-nva.png)
 Merci d'avoir regardé. J'espère que tu passeras une bonne journée :)) Ciao ciao, à la prochaine !
 ![alt text](assets/heart-ui-nva.png)
