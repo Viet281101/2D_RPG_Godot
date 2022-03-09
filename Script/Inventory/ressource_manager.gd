@@ -27,7 +27,7 @@ var font = {
 }
 
 var colors = {
-	Game_Enums.RARITY.NORMAL: Color("515151"),
+	Game_Enums.RARITY.NORMAL: Color("000000"),
 	Game_Enums.RARITY.MAGIC: Color("006ac2"),
 	Game_Enums.RARITY.RARE: Color("451361"),
 	Game_Enums.RARITY.UNIQUE: Color("930d0d")
