@@ -24,7 +24,7 @@ extents = Vector2( 25.1747, 20.366 )
 resource_name = "Hurt"
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:material:shader_param/active")
+tracks/0/path = NodePath("EnemySprite:material:shader_param/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -41,7 +41,7 @@ resource_name = "Idle"
 length = 0.3
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:scale")
+tracks/0/path = NodePath("EnemySprite:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -57,7 +57,7 @@ tracks/0/keys = {
 resource_name = "Stop"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:material:shader_param/active")
+tracks/0/path = NodePath("EnemySprite:material:shader_param/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -115,7 +115,7 @@ softCollision = NodePath("SoftCollision")
 animationEnemy = NodePath("AnimationEnemy_2")
 playerDetectionZone = NodePath("Area2D")
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="EnemySprite" type="Sprite" parent="."]
 material = SubResource( 1 )
 texture = ExtResource( 1 )
 

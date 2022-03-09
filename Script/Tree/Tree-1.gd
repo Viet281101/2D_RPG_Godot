@@ -25,7 +25,6 @@ func _summon_firefly():
 func _on_Timer_timeout():
 	_summon_firefly()
 
-
 func _on_HurtBox_area_entered(_area):
 	hurtBox.fire_hurt_effect(0.05, 1)
 	hurtBox.start_invincibility(0.4)

@@ -32,7 +32,7 @@ func _on_HurtBox_area_exited(_area):
 		drop.position = position
 
 func _on_HurtBox2_area_entered(_area):
-	hurtBox.fire_hurt_effect(0.04, 0.8)
+	hurtBox.fire_hurt_effect(0.04, 0.75)
 	hurtBox.start_invincibility(0.6)
 	rng.randomize()
 	my_number = rng.randi_range(0,80)

@@ -103,7 +103,7 @@ visible = false
 position = Vector2( 231.887, 255 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.776471, 0.776471, 0.776471, 1 )
+color = Color( 0.756863, 0.756863, 0.756863, 1 )
 
 [connection signal="body_entered" from="ExitHouse" to="ExitHouse" method="_on_ExitHouse_body_entered"]
 

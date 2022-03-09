@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var FRICTION = 200
 
 onready var Bullet = preload("res://Scene/Enemies/Bullet.tscn")
+
 export (NodePath) onready var hurtBox = get_node(hurtBox) as Area2D
 export (NodePath) onready var hitbox = get_node(hitbox) as Area2D
 export (NodePath) onready var stats = get_node(stats) as Node
@@ -64,7 +65,6 @@ func _on_HurtBox_area_entered(area):
 	max_hitpoints = stats.health
 	hp_bar.set_percent_value(max_hitpoints)
 	knockback = Global.knockback_vector * 220
-#	knockback = area.knockback_vector * 220
 	hurtBox.create_hit_effect()
 	hurtBox.start_invincibility(0.4)
 
@@ -74,11 +74,6 @@ func _on_Stats_no_health():
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect2)
 	enemy_death_effect2.global_position = global_position
-	
-	var enemy_die_effect3 = load("res://Scene/Heart_Healer.tscn")
-	var enemy_death_effect3 = enemy_die_effect3.instance()
-	world.call_deferred("add_child", enemy_death_effect3)
-	enemy_death_effect3.global_position = global_position
 	
 	rng.randomize()
 	my_number = rng.randi_range(0,80)
