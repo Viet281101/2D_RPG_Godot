@@ -3,10 +3,13 @@ extends KinematicBody2D
 export var FRICTION = 200
 
 onready var Bullet = preload("res://Scene/Enemies/Bullet.tscn")
-onready var hurtBox = $HurtBox
-onready var stats = $Stats
-onready var hp_bar = $HP_Bar_2
-onready var softCollision = $SoftCollision
+export (NodePath) onready var hurtBox = get_node(hurtBox) as Area2D
+export (NodePath) onready var hitbox = get_node(hitbox) as Area2D
+export (NodePath) onready var stats = get_node(stats) as Node
+export (NodePath) onready var hp_bar = get_node(hp_bar) as TextureRect
+export (NodePath) onready var softCollision = get_node(softCollision) as Area2D
+export (NodePath) onready var animationEnemy = get_node(animationEnemy) as AnimationPlayer
+export (NodePath) onready var playerDetectionZone = get_node(playerDetectionZone) as Area2D
 
 var player = null
 var move = Vector2.ZERO
@@ -21,6 +24,7 @@ var rng = RandomNumberGenerator.new()
 var my_number
 
 func _physics_process(delta):
+	_repellent()
 	move = Vector2.ZERO
 	
 	if player != null:
@@ -85,13 +89,13 @@ func _on_Stats_no_health():
 	queue_free()
 
 func _hurt_finish():
-	$AnimationEnemy_2.play("Idle")
+	animationEnemy.play("Idle")
 
 func _on_HurtBox_invincible_ended():
-	$AnimationEnemy_2.play("Idle")
+	animationEnemy.play("Idle")
 
 func _on_HurtBox_invincible_started():
-	$AnimationEnemy_2.play("Hurt")
+	animationEnemy.play("Hurt")
 
 func _on_HurtBox2_area_entered(area):
 	stats.health -= area.damage
@@ -101,10 +105,18 @@ func _on_HurtBox2_area_entered(area):
 	hurtBox.start_invincibility(0.4)
 
 func _on_HurtBox2_invincible_started():
-	$AnimationEnemy_2.play("Hurt")
+	animationEnemy.play("Hurt")
 
 func _on_HurtBox2_invincible_ended():
-	$AnimationEnemy_2.play("Stop")
+	animationEnemy.play("Stop")
+
+func _repellent():
+	if Global.repellent == true:
+		playerDetectionZone.monitoring = false
+		hitbox.monitoring = false
+	else:
+		playerDetectionZone.monitoring = true
+		hitbox.monitoring = true
 
 func _exit_tree():
 	self.queue_free()

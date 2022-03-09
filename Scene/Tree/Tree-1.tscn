@@ -18,6 +18,7 @@ height = 9.74944
 collision_mask = 2147483648
 script = ExtResource( 4 )
 time = NodePath("Timer")
+hurtBox = NodePath("HurtBox")
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

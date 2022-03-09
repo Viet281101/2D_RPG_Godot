@@ -1,6 +1,5 @@
 extends Node2D
 
-#const smallTreeEffect = preload("res://Scene/smal-tree-effect.tscn")
 const Drop = preload("res://Scene/Collect_EXP.tscn")
 var rng = RandomNumberGenerator.new()
 var my_number
@@ -17,7 +16,6 @@ func create_tree_effect():
 	var enemy_death_effect = enemy_die_effect.instance()
 	world.call_deferred("add_child", enemy_death_effect)
 	enemy_death_effect.global_position = $Hide_1.global_position
-
 
 func _on_HurtBox_area_entered(_area):
 	create_tree_effect()

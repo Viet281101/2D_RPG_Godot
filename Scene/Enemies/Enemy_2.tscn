@@ -107,6 +107,13 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
+hurtBox = NodePath("HurtBox")
+hitbox = NodePath("HitBox")
+stats = NodePath("Stats")
+hp_bar = NodePath("HP_Bar_2")
+softCollision = NodePath("SoftCollision")
+animationEnemy = NodePath("AnimationEnemy_2")
+playerDetectionZone = NodePath("Area2D")
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 1 )

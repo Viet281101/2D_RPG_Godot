@@ -5,7 +5,7 @@ var rng = RandomNumberGenerator.new()
 var my_number
 var firefly_apear_time = rand_range(30, 55)
 export (NodePath) onready var time = get_node(time) as Timer
-onready var hurtBox = $HurtBox
+export (NodePath) onready var hurtBox = get_node(hurtBox) as Area2D
 
 func _ready():
 	randomize()
