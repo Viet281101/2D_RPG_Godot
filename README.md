@@ -47,7 +47,7 @@ N'hésitez pas à nous demander.
 Mais la plupart des instructions sont en anglais.![alt text](assets/World/tree-02-nva.png)
 
 
-![alt text](assets/Enemies/summoner-base-nva.png)
+##### ![alt text](assets/Enemies/summoner-base-nva.png)
 
 ----------------------------------------------------------------------------------------------------------------------------
 
