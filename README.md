@@ -46,9 +46,6 @@ N'hésitez pas à nous demander.
 ![alt text](assets/heart-ui-nva2.png)
 Mais la plupart des instructions sont en anglais.![alt text](assets/World/tree-02-nva.png)
 
-
-###### ![alt text](assets/Enemies/summoner-base-nva.png)
-
 ----------------------------------------------------------------------------------------------------------------------------
 
 
