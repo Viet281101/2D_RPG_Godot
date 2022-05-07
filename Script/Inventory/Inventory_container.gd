@@ -13,7 +13,8 @@ func _ready():
 func close():
 	for i in current_inventories:
 		inventory_container.remove_child(i)
-		i.is_open = false
+		i.open()
+	
 	current_inventories = []
 	hide()
 
@@ -31,7 +32,7 @@ func _on_inventory_opened(inventory : Inventory):
 	show()
 
 func _on_inventory_closed( inventory : Inventory ):
-	inventory.is_open = false
+	inventory.close()
 	inventory_container.remove_child( inventory )
 	current_inventories.remove( current_inventories.find( inventory ) )
 	rect_size.y -= inventory.rect_size.y + inventory_container.get_constant( "separation" )

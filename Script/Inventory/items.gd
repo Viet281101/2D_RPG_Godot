@@ -18,6 +18,8 @@ var unique_data = null
 var lbl_quantity
 var item_slot setget set_slot
 
+onready var outline_shader = preload("res://Script/outer_outline.shader")
+
 func _init(item_id, data):
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	id = item_id
@@ -54,6 +56,7 @@ func _ready():
 #	lbl_quantity.set("rect_position", Vector2(-1.0, -3.5))
 	add_child( lbl_quantity )
 	set_quantity( quantity )
+	self.connect("mouse_entered", self, "_on_mouse_entered")
 
 func set_quantity( value ):
 	quantity = value
@@ -94,3 +97,7 @@ func destroy():
 	if item_slot:
 		item_slot.remove_item()
 
+func _on_mouse_entered():
+	self.material.shader = outline_shader
+	self.material.set_shader_param("line_thickness", 1)
+	print("touch item")

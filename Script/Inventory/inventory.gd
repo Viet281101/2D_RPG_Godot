@@ -42,6 +42,15 @@ func add_item( item ):
 				return null
 	return item
 
+func open():
+	is_open = true
+
+func close():
+	is_open = false
+	
+	for s in slots:
+		s.emit_signal( "mouse_exited" )
+
 func _on_item_changed():
 	emit_signal( "content_changed" )
 

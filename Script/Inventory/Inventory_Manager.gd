@@ -73,6 +73,11 @@ func _on_gui_input_slot(event : InputEvent, slot : Inventory_Slot):
 			
 		elif event.button_index == BUTTON_RIGHT and slot.item and slot.item.components.has( "usable" ):
 			slot.item.components.usable.use()
+	
+	if slot.item:
+		slot.emit_signal( "mouse_entered" )
+	else:
+		slot.emit_signal( "mouse_exited" )
 
 func set_hand_position( pos ):
 	set_item_void_filter()

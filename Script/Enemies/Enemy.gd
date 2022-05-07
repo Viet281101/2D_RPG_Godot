@@ -118,7 +118,6 @@ func _on_Stats_no_health():
 	var world = get_tree().current_scene
 	world.call_deferred("add_child", enemy_death_effect)
 	enemy_death_effect.global_position = global_position
-	yield(get_tree().create_timer(1), "timeout")
 	
 	var enemy_die_effect3 = load("res://Scene/Heart_Healer.tscn")
 	var enemy_death_effect3 = enemy_die_effect3.instance()
