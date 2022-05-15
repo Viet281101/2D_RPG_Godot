@@ -9,5 +9,5 @@ func set_items():
 		if item.equipment_type != Game_Enums.EQUIPEMENT_TYPE.NONE:
 			Global.generate_random_rarity(item, 100)
 		
-		item.quantity = item.stack_size
+#		item.quantity = item.stack_size
 		inventory.add_item(item)

@@ -20,22 +20,18 @@ func close():
 
 func _on_inventory_opened(inventory : Inventory):
 	inventory.is_open = true
-	if current_inventories.size() == 0:
-		rect_size.y = 20
 	
 	if current_inventories.has( inventory ):
 		return
 	
 	inventory_container.add_child( inventory )
 	current_inventories.append( inventory )
-	rect_size.y += inventory.rect_size.y + inventory_container.get_constant( "separation" )
 	show()
 
 func _on_inventory_closed( inventory : Inventory ):
 	inventory.close()
 	inventory_container.remove_child( inventory )
 	current_inventories.remove( current_inventories.find( inventory ) )
-	rect_size.y -= inventory.rect_size.y + inventory_container.get_constant( "separation" )
 	
 	if current_inventories.size() == 0:
 		hide()

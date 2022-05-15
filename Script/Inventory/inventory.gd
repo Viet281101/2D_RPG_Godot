@@ -1,4 +1,4 @@
-class_name Inventory extends NinePatchRect
+class_name Inventory extends Control
 
 signal content_changed()
 
@@ -26,7 +26,6 @@ func set_title():
 
 func set_inventory_size(value):
 	size = value
-	rect_min_size.y = 40 + (ceil(size / 5.0) - 1) * 22
 	
 	for s in size:
 		var new_slot = inventory_slot_res.instance()
