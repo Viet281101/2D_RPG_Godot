@@ -4,7 +4,6 @@
 [ext_resource path="res://Script/Inventory/equipment_slot.gd" type="Script" id=2]
 
 [node name="equipment_slot" instance=ExtResource( 1 )]
-mouse_filter = 2
 script = ExtResource( 2 )
 placeholder = NodePath("placeholder")
 

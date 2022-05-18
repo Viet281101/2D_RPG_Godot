@@ -173,6 +173,11 @@ _global_script_classes=[ {
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://Script/StateMachine.gd"
+}, {
+"base": "Dragable_Control",
+"class": "Window",
+"language": "GDScript",
+"path": "res://Script/Inventory/window.gd"
 } ]
 _global_script_class_icons={
 "Affix": "",
@@ -207,7 +212,8 @@ _global_script_class_icons={
 "Split_Stack": "",
 "Stat_Range": "",
 "Stat_Scale": "",
-"StateMachine": ""
+"StateMachine": "",
+"Window": ""
 }
 
 [application]

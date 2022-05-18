@@ -1,4 +1,4 @@
-extends Dragable_Control
+extends Window
 
 export (NodePath) onready var scale_slider = get_node(scale_slider) as HSlider
 export (NodePath) onready var fullscreen_check = get_node(fullscreen_check) as CheckBox
@@ -9,9 +9,6 @@ func _ready():
 	fullscreen_check.pressed = SettingsManger.fullscreen
 	lbl_min.text = "Min: %s" % scale_slider.min_value
 	lbl_max.text = "Max: %s" % scale_slider.max_value
-
-func _on_X_Button_pressed():
-	hide()
 
 func _on_scale_slider_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and not event.pressed:

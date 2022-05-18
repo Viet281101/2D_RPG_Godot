@@ -1,4 +1,4 @@
-extends Dragable_Control
+extends Window
 
 export (NodePath) onready var inventory_container = get_node(inventory_container) as Control
 
@@ -36,5 +36,3 @@ func _on_inventory_closed( inventory : Inventory ):
 	if current_inventories.size() == 0:
 		hide()
 
-func _on_X_Button_pressed():
-	close()
