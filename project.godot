@@ -104,7 +104,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Script/Inventory/item_healing.gd"
 }, {
-"base": "NinePatchRect",
+"base": "Scale_Control",
 "class": "Item_Info",
 "language": "GDScript",
 "path": "res://Script/Inventory/Item_Info.gd"

@@ -8,7 +8,7 @@ export(String) var inventory_name
 export(int) var size = 0 setget set_inventory_size
 
 export (NodePath) onready var title = get_node(title) as Label
-export (NodePath) onready var slot_container = get_node(slot_container) as Control
+export (NodePath) onready var slot_container = get_node(slot_container) as GridContainer
 
 var slots : Array = []
 var is_open = false
